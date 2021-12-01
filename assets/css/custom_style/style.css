@@ -16,23 +16,21 @@ box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
 	margin-top:25px;
 	border-radius: 16px;
 	background-color: #ffffff;
-	text-align:left;
-    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
     height:750px;
-    opacity: 100%
-    border:#707070;
-    width:255px;
+    opacity: 100%;
+    width: 255px;
    
 
  }
 #sidebar a {
   width: 180px;
+  margin-left: -30px;
   height:60px;
   padding: 16px 8px 10px 16px;
   font-size: 17px;
   color: #858585;
   display: block;
-  text-align: left;
   font-family: Poppins;
 
 }
@@ -45,16 +43,7 @@ box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
 	height:171px;
 	width:171px;
 }
-#sidebar a: hover{
-	margin-top:25px;
-	border-radius: 18px;
-	background-color: #26266c;
-	text-align:left;
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
-    color:#ffffff;
-    width: 250px;
 
-}
 #activity{
 	border-radius: 38px 38px 38px 38px;
 	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
