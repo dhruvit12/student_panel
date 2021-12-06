@@ -17,26 +17,46 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css" />
 <link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom_style/style.css">
+<style type="text/css">
+  .sidebar_icon
+  {
+    
+  }
+</style>
 <body>
+
+
    <div class="container-fluid">
    <div class="row">
-   <div class="col-lg-2">
+   <div class="col-lg-3 col-sm-8">
       <div class="jumbotron" id="sidebar">
          <img class="" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/logo.png"
-            style="margin-left: 10px;width:110px" style="margin-top:25px;border-radius: 16px;">
+            style="margin-left: 20px;width:150px;margin-top:25px;border-radius: 16px;">
              <br><br><img class="rounded-circle z-depth-2 header_logo" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/profile.png"
-            data-holder-rendered="true" style="height: 130px;width: 130px;" >
+            data-holder-rendered="true" style="height: 130px;width: 130px;margin-left: 20px;" >
          <br>
          <br>
          <br>
-            <a href="dashboard"><img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 1.png" id="img">  
-              Dashboard </a> 
-            <a href="course"><img src="<?php echo base_url()?>assets/images/student_portal_icon/course.png" id="img"> 
-            Courses </a>
-            <a href="#"><img src="<?php echo base_url()?>assets/images/student_portal_icon/rocket.png" id="img"> Excelerate </a> 
-            <a href="#"><img src="<?php echo base_url()?>assets/images/student_portal_icon/hirachical.png" id="img"> Program flow </a> 
-            <a href="#"><img src="<?php echo base_url()?>assets/images/student_portal_icon/user.png" id="img"> Edit Profile </a>
-            <a href="logout"><img src="<?php echo base_url()?>assets/images/student_portal_icon/logout.png" id="img"></i> Log out </a>    
+        <!--  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" class="sidebar_icon">
+  <g id="Group_1" data-name="Group 1" transform="translate(-131 -527.647)">
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="13" height="13" rx="3" transform="translate(131 527.647)" fill="#000"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="10" height="10" rx="3" transform="translate(145 530.647)" fill="#000"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="10" height="10" rx="3" transform="translate(134 542.647)" fill="#000"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="10" height="10" rx="3" transform="translate(145 542.647)" fill="#000"/>
+  </g>
+</svg> -->
+       <div class="row">
+           <div class="col-lg-6">
+           <a  style="margin-top:10px;" href="dashboard" id="sidebar_anchor"><img id="img" src="<?php echo base_url()?>assets/images/student_portal_icon/Group 1.png" >  
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard </a> 
+            <a  style="margin-top:10px;" href="course"><img id="img" src="<?php echo base_url()?>assets/images/student_portal_icon/course.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Courses </a>
+            <a  style="margin-top:10px;" href="#"><img id="img" src="<?php echo base_url()?>assets/images/student_portal_icon/rocket.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excelerate </a> 
+            <a  style="margin-top:10px;" href="#"><img id="img" src="<?php echo base_url()?>assets/images/student_portal_icon/hirachical.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Program flow </a> 
+            <a  style="margin-top:10px;" href="#"><img id="img" src="<?php echo base_url()?>assets/images/student_portal_icon/user.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit Profile </a>
+            <a  style="margin-top:10px;" href="logout"><img id="img" src="<?php echo base_url()?>assets/images/student_portal_icon/logout.png" ></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log out </a>    
 
+         </div>
+          </div>
+        
       </div>
    </div>

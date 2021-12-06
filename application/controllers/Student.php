@@ -40,6 +40,11 @@ class Student extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('recording');
 	}
+	public function forgot_password()
+	{
+		$this->load->view('forgot_password');
+	}
+	
 	public function logout()
 	{
 		session_unset();

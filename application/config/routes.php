@@ -8,6 +8,12 @@ $route['read']='student/read';
 $route['live_course']='student/live_course';
 $route['self_course']='student/self_course';
 $route['record']='student/record';
+$route['forgot_password']='student/forgot_password';
+
+
 $route['logout']='student/logout';
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

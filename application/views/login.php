@@ -224,7 +224,7 @@
                         
                       </form>
                       <div class="text-center">
-                        <a href="forgot-password.php" class="btn btn-link">
+                        <a href="forgot_password" class="btn btn-link">
                       Forgot Password
                       </a>
                       </div>
@@ -331,19 +331,11 @@
               if($is_disabled != 1){             
                 if($is_deleted != 1){
   
-                        ?>
-                    <script>
-                    var element = document.getElementById("login_success_alert");
-                    element.classList.remove("alerttoggle");
-                    console.log('su');
-                      
-                    </script>
-                  <?php
-                    
+                   
                     $_SESSION['ftip69_uid'] = $user_id;
                     $_SESSION['ftip69_role'] = $role;
                     $_SESSION['ftip69_name'] = $name;
-                    
+                   
                    defineHomePage();
                                   
                 } else{
@@ -354,8 +346,6 @@
                 element.classList.remove("alerttoggle");
                 console.log('su');                
               </script>
-  
-  
                 <?php
                 }
               }else{
@@ -387,28 +377,13 @@ function defineHomePage() {
 
   if($_SESSION['ftip69_role']=='student'){
     ?>
-  <script>
-    window.location = "dashboard";
-  </script>
+            <script>
+                    var element = document.getElementById("login_success_alert");
+                    element.classList.remove("alerttoggle");
+                    console.log('su');
+                     window.location = "dashboard";
+            </script>
 <?php            
-  }else if($_SESSION['ftip69_role']=='faculty'){
-    ?>
-    <script>
-      window.location = "../faculty/dashboard.php";
-    </script>
-  <?php 
-  }else if($_SESSION['ftip69_role']=='counselor'){
-    ?>
-    <script>
-      window.location = "../leads/dashboard.php";
-    </script>
-  <?php
-  }else if($_SESSION['ftip69_role']=='caller') {
-    ?>
-    <script>
-      window.location = "../leads/dashboard.php";
-    </script>
-  <?php
   }
   else
   {

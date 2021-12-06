@@ -1,7 +1,7 @@
 
 <style>
 #session{
-   box-shadow: 17px -1px 1px -1px #f0750b,2px 1px 2px 3px rgba(0,0,0,0.1);
+   box-shadow: 17px  -0.4px 1px -0.5px #f0750b,2px 1px 2px 3px rgba(0,0,0,0.1);
    background-color: #ffffff;
    border-radius: 26px;
    height: 150px;
@@ -17,7 +17,7 @@
    </head>
  <body>
     
- <div class="col-lg-9 mt-4" style="margin-left: 25px">
+ <div class="col-lg-8 mt-4" style="margin-left: -25px">
              <span id="course_card">Python Sessions</span>
                 <div class="row">
                 <div class="col-lg-12 mt-1">

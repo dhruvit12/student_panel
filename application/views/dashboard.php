@@ -402,17 +402,7 @@
       </style>
    </head>
    <body style="background-color:#ffffff;">
-      <!-- Loader starts-->
-     <!--  <div class="loader-wrapper">
-         <div class="loader bg-white">
-            <div class="whirly-loader"></div>
-         </div>
-      </div> -->
-      <!-- Loader ends-->
-      <!-- page-wrapper Start-->
-      <!-- <div class="page-wrapper"> -->
-         <!--change compact-wrapper-->
-         <!-- Page Body Start-->
+     
          <script>
             var getheader = document.getElementById('header_row');
             getheader.classList.add("open");
@@ -424,106 +414,101 @@
             get_brand_logo_top_header.style.display = "block";
          </script>
         <!--  <span style="font-family: Poppins;font-size: 30px;">Activity</span> -->
-          <div class="col-lg-9">
+    <div class="col-lg-8">
       <div class="card-body" id="header">
          <!-- <a href="#" style="color: #ffffff;" id="sidebarToggle"><i class="fa fa-bars" aria-hidden="true" style="height:5px;width: 5px;"></i></a> -->
-          <div class="media static-top-widget">
+          <div class="media static-top-widget" >
                <div class="align-self-center text-center">
                 <img class="" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/Finger Tips 01.png"
            style="width: 100px;height: 100px;">
                 </div>
                <div class="media-body">
-                  <div class="pull-right">
-                     <h1><?php echo "#".$student_id; ?></h1>
+                  <div class="pull-right" style="width:200px;margin-top:20px;text-align:center;">
+                   <div class="row">
+                       <div class="col-lg-10" >
+                       <h1 style="font-size:60px"><?php echo "#".$student_id; ?></h1>
+               
+                     </div>
+                      </div>   
                   </div>
-                  <span class="m-0">Welcome to Fingertips</span>
-                  <h5  >You have enrolled in <?php echo $student_course_name; ?></h5>
-                  <span class="m-0">Your Batch: <?php echo $student_batch_name; ?> <?php echo "(".$word.$student_batch_name_have_number.")"; ?></span>
+                  <span class="m-0" style="font-size:16px;">Welcome to Fingertips</span>
+                  <h5 style="font-size:22px;" >You have enrolled in <?php echo $student_course_name; ?></h5>
+                  <span class="m-0" style="font-size:10px;" >Your Batch: <?php echo $student_batch_name; ?> <?php echo "(".$word.$student_batch_name_have_number.")"; ?></span>
                </div>
             </div>
          </div>
        <br>
           <div class="container-fluid">
-         <div class="row">
-            
-                                 <div class="col-lg-8">
-                                   <?php 
-                                 $query200="SELECT * FROM `dashboard_notification` WHERE `batch_id`=$batch_id";
-                                 $runfetch200=mysqli_query($con,$query200);
-                                 $noofrow200=mysqli_num_rows($runfetch200);
-                                 if ($noofrow200 > 0 && $runfetch200 == TRUE) {
-                                    while ($data200=mysqli_fetch_assoc($runfetch200)) {
-                                       ?>
-                              <div id="success" class="alert  alert-dismissible fade show custom-primary" role="alert">
-                                 <?php echo $data200['notification'];?>
-                                 <button class="close" type="button" data-dismiss="alert" aria-label="Close" data-original-title="" title=""><span aria-hidden="true">×</span></button>
-                              </div>
-                              <!-- <div id="success" class="alert  alert-warning" role="alert">
-                                 <?php echo $data200['notification'];?>
-                                 </div> -->
-                              <?php
-                                 }
-                                 }else{
-                                 // echo "Error: " . $query3 . "<br>" . $con->error;
-                                 }
-                                 ?>
-                                <div class="row">
-                                   <div class="col-lg-3 ">
-                                       <span style="font-size: 40px;color:#858585;border:#707070;">Activity</span>
-                                   </div>
-                                </div>
-                                  <ul
-                                       class="nav nav-tabs border-tab"
-                                       id="top-tab"
-                                       role="tablist"
-                                       >
-                                       <li class="nav-item">
-                                          <a
-                                             class="nav-link active"
-                                             id="all-link"
-                                             data-toggle="tab"
-                                             href="#upcoming"
-                                             role="tab"
-                                             aria-selected="false"
-                                             data-original-title=""
-                                             title=""
-                                             >Upcoming</a
-                                             >
-                                          <div class="material-border"></div>
-                                       </li>
-                                       <!-- <li class="nav-item">
-                                          <a
-                                             class="nav-link"
-                                             id="image-link"
-                                             data-toggle="tab"
-                                             href="#ongoing"
-                                             role="tab"
-                                             aria-selected="false"
-                                             data-original-title=""
-                                             title=""
-                                             ></i>Ongoing</a
-                                             >
-                                          <div class="material-border"></div>
-                                       </li> -->
-                                       <li class="nav-item">
-                                          <a
-                                             class="nav-link"
-                                             id="video-link"
-                                             data-toggle="tab"
-                                             href="#completed"
-                                             role="tab"
-                                             aria-selected="false"
-                                             data-original-title=""
-                                             title=""
-                                             ></i>Completed</a
-                                             >
-                                          <div class="material-border"></div>
-                                       </li>
-                                    </ul>
+                   <div class="row">
+                        <div class="col-lg-9" style="margin-left:-60px;">
+                           <?php 
+                        $query200="SELECT * FROM `dashboard_notification` WHERE `batch_id`=$batch_id";
+                        $runfetch200=mysqli_query($con,$query200);
+                        $noofrow200=mysqli_num_rows($runfetch200);
+                        if ($noofrow200 > 0 && $runfetch200 == TRUE) {
+                           while ($data200=mysqli_fetch_assoc($runfetch200)) {
+                              ?>
+                     <div id="success" class="alert  alert-dismissible fade show custom-primary" role="alert">
+                        <?php echo $data200['notification'];?>
+                        <button class="close" type="button" data-dismiss="alert" aria-label="Close" data-original-title="" title=""><span aria-hidden="true">×</span></button>
+                     </div>
+                     <!-- <div id="success" class="alert  alert-warning" role="alert">
+                        <?php echo $data200['notification'];?>
+                        </div> -->
+                     <?php
+                        }
+                        }else{
+                        // echo "Error: " . $query3 . "<br>" . $con->error;
+                        }
+                        ?>
+                        <div class="row">
+                           <div class="col-lg-3 ">
+                              <span style="margin-left:20px;font-size: 40px;color:#858585;border:#707070;">Activity</span>
+                           </div>
+                        </div>
+                           <ul
+                              class="nav nav-tabs border-tab"
+                              id="top-tab"
+                              role="tablist"
+                              >
+                              <script>
+                                 $(document).ready(function(){
+                                    $('#upcoming').trigger("click");
+                              </script>
+                              <li class="nav-item">
+                                 <a
+                                    class="nav-link active"
+                                    id="all-link"
+                                    data-toggle="tab"
+                                    href="#upcoming"
+                                    role="tab"
+                                    aria-selected="false"
+                                    data-original-title=""
+                                    title=""
+                                    >Upcoming</a
+                                    >
+                                 <div class="material-border"></div>
+                              </li>
+                            
+                              <li class="nav-item">
+                                 <a
+                                    class="nav-link"
+                                    id="video-link"
+                                    data-toggle="tab"
+                                    href="#completed"
+                                    role="tab"
+                                    aria-selected="false"
+                                    data-original-title=""
+                                    title=""
+                                    ></i>Completed</a
+                                    >
+                                 <div class="material-border"></div>
+                              </li>
+                           </ul>
                               <div class="card" id="activity">
-                                 <div class="card-body">
+                                 <div class="card-body" style="margin-left:-10px;">
                                    
-                                    <div class="tab-content customScroll1" id="" style="max-height:300px; overflow-y:auto; overflow-x:hidden;">
+                                    <div class="tab-content customScroll1" id="" style="max-height:470px; overflow-y:auto; overflow-x:hidden;">
                                        <div
                                           class="search-links tab-pane fade active show"
                                           id="upcoming"
@@ -532,9 +517,9 @@
                                           >
                                           <div class="row">
                                              <div class="col-xl-12 xl-50">
-                                                <div class="card height-equal" style="box-shadow:0px 0px">
+                                                <div class="card height-equal" style=";margin-left:10px;box-shadow:0px 0px;margin-top:-25px;">
                                                    <div class="card-body">
-                                                      <div class="upcoming-event">
+                                                      <div class="upcoming-event" style="margin-top:-30x;"">
                                                          <?php
                                                             $date = date_create();
                                                             $timestamp = date_timestamp_get($date);
@@ -551,26 +536,20 @@
                                                             $noofrow10 = mysqli_num_rows($runfetch10);
                                                             if($noofrow10 == 0){
                                                                  ?>
-                                                         <div class="upcoming-innner media"  style="width:100%;">
-                                                            <div class="left m-r-30">
+                                                         <div class="upcoming-innner media"  style="width:100%;margin-left:-45px;padding-top:0px;">
+                                                            <div class="">
                                                                <img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 59.png" >
                                                             </div>
                                                             <div class="media-body">
-                                                               <p class="mb-0" style="color: #B1B1B1">
+                                                               <p class="mb-0" style="color: #B1B1B1;font-size:12px;">
                                                                   Offline Sessions <?php echo '(#'.$data['id'].')'; ?>
-                                                                  <span class="pull-right">
-                                                                  <?php 
-                                                                     $mydate=getdate($data['session_date']);
-                                                                     echo "$mydate[month] $mydate[mday]";
-                                                                     
-                                                                     ?>    
                                                                   </span>
                                                                </p>
-                                                               <h6  style="opacity: 100%"><?php echo $data['session_name']; ?></h6>
-                                                               <span style="color: #B1B1B1">Course: Python for Data Science</span>
-                                                               <br><span style="color: #B1B1B1">Starts at: Feb 25, 11:00 AM</span>
+                                                               <h5  style="opacity: 100%;font-size:15px;"><?php echo $data['session_name']; ?></h5>
+                                                               <span style="color: #B1B1B1;font-size:14px;">Course: Python for Data Science</span>
+                                                               <br><span style="color: #B1B1B1;font-size:13px;">Starts at: Feb 25, 11:00 AM</span>
                                                                <ul
-                                                                  class="nav "
+                                                                  class="nav"
                                                                   >
                                                                   <li class="nav-item" style="cursor:pointer;"  
                                                                      data-toggle="modal"
@@ -580,10 +559,8 @@
                                                                         $runfetch100 = mysqli_query($con, $query100);
                                                                         $noofrow100 = mysqli_num_rows($runfetch100);
                                                                         $indexnumber100 = 1;
-                                                                        
                                                                         if ($noofrow100 >0 && $runfetch100 == TRUE) { 
                                                                            while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                                                                        
                                                                               // use of explode 
                                                                               $reading_material = $data100['reading_material']; 
                                                                               $reading_material_array = explode (",", $reading_material);  
@@ -618,9 +595,9 @@
                                                                      )"
                                                                      >
                                                                      <form method="post" action="read">
-                                                                    <button id="activity_button">
+                                                                    <button id="activity_button" style="width:164px;margin-top:8px;">
                                                                          <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
-                                                                      Reading Material &nbsp;&nbsp;</button>
+                                                                      Reading Material </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                       </form> 
                                                                      <div class="material-border"></div>
                                                                   </li>
@@ -643,186 +620,7 @@
                                              </div>
                                           </div>
                                        </div>
-                                       <div
-                                          class="search-links tab-pane fade"
-                                          id="ongoing"
-                                          role="tabpanel"
-                                          aria-labelledby="ongoing"
-                                          >
-                                          <div class="row">
-                                             <div class="col-xl-12 xl-50">
-                                                <div class="card height-equal" style="box-shadow:0px 0px">
-                                                   <div class="card-body">
-                                                      <div class="upcoming-event">
-                                                         <?php
-                                                            $query = "SELECT * FROM `offline_session_log` WHERE `start_time` != 0 AND `is_completed` = 0 ";                                            
-                                                            $runfetch = mysqli_query($con, $query);                       
-                                                            $noofrow = mysqli_num_rows($runfetch);       
-                                                            
-                                                            if ($noofrow > 0 && $runfetch == TRUE) { 
-                                                              while ($data = mysqli_fetch_assoc($runfetch)) {
-                                                                $session_id = $data['session_id'];
-                                                            
-                                                            $query10 = "SELECT * FROM `offline_session` WHERE `id` = $session_id  AND `is_deleted` = 0;";                                            
-                                                            $runfetch10 = mysqli_query($con, $query10);                       
-                                                            $noofrow10 = mysqli_num_rows($runfetch10);       
-                                                            
-                                                            if ($noofrow10 > 0 && $runfetch10 == TRUE) { 
-                                                              while ($data10 = mysqli_fetch_assoc($runfetch10)) {
-                                                            
-                                                               if($data10['batch_Id'] == $batch_id){
-                                                            ?>
-                                                         <div class="upcoming-innner media">
-                                                            <div class="left m-r-20"  style="background-color: #26266C; opacity:15%;"> 
-                                                               <i data-feather="book-open"></i>
-                                                            </div>
-                                                            <div class="media-body">
-                                                               <p class="mb-0" style="color: #B1B1B1">
-                                                                  Offline Sessions <?php echo ' (#'.$data10['id'].')'; ?>
-                                                                  <span class="pull-right">
-                                                                  <?php 
-                                                                     $mydate=getdate($data10['session_date']);
-                                                                     echo "$mydate[month] $mydate[mday]";
-                                                                     
-                                                                     ?>    
-                                                                  </span>
-                                                               </p>
-                                                               <h6 class="f-w-600"><?php echo $data10['session_name']; ?></h6>
-                                                               <ul
-                                                                  class="nav "
-                                                                  >
-                                                                  <li class="nav-item" style="cursor:pointer;"  
-                                                                     data-toggle="modal"
-                                                                     data-target="#reading_material_list"
-                                                                     <?php
-                                                                        $query100 = "SELECT * FROM `offline_session` WHERE `id` = $session_id;";
-                                                                        $runfetch100 = mysqli_query($con, $query100);
-                                                                        $noofrow100 = mysqli_num_rows($runfetch100);
-                                                                        $indexnumber100 = 1;
-                                                                        
-                                                                        if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                                                           while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                                                                        
-                                                                              // use of explode 
-                                                                              $reading_material = $data100['reading_material']; 
-                                                                              $reading_material_array = explode (",", $reading_material);  
-                                                                              $no_of_reading_material =  sizeof($reading_material_array);
-                                                                              
-                                                                        
-                                                                           }
-                                                                        }
-                                                                             
-                                                                        ?>
-                                                                     onclick= "prepareReadingMaterialListModal(
-                                                                     <?php                                                                  
-                                                                        for($i= 0; $i < $no_of_reading_material-1; $i++){
-                                                                            
-                                                                            $anz_material_id = $reading_material_array[$i];
-                                                                            $query1000 = "SELECT * FROM `material` WHERE `id` = $anz_material_id;";
-                                                                           $runfetch1000 = mysqli_query($con, $query1000);
-                                                                           $noofrow1000 = mysqli_num_rows($runfetch1000);
-                                                                           
-                                                                           
-                                                                           if ($noofrow1000 >0 && $runfetch1000 == TRUE) { 
-                                                                              while ($data1000 = mysqli_fetch_assoc($runfetch1000)) { 
-                                                                                 echo "'".$data1000['topic_name']."'," ;
-                                                                              }}
-                                                                              echo $reading_material_array[$i];
-                                                                            if($i != $no_of_reading_material - 2){
-                                                                               echo ',';                                                                 
-                                                                           }
-                                                                           
-                                                                           }
-                                                                           ?>
-                                                                     )"
-                                                                     >
-                                                                     <!-- <a
-                                                                        class="text-primary"
-                                                                        ><i class="fas fa-book"></i>Reading Material &nbsp;&nbsp; </a
-                                                                        > -->
-
-                                                                         <button id="activity_button"><i class="fas fa-book"></i>Reading Material &nbsp;&nbsp;</button> 
-                                                                     <div class="material-border"></div>
-                                                                  </li>
-                                                                  <li class="nav-item" style="cursor:pointer;"  
-                                                                     data-toggle="modal"
-                                                                     data-target="#session_resource_list"
-                                                                     <?php
-                                                                        $query100 = "SELECT * FROM `offline_session` WHERE `id` = $session_id;";
-                                                                        $runfetch100 = mysqli_query($con, $query100);
-                                                                        $noofrow100 = mysqli_num_rows($runfetch100);
-                                                                        $indexnumber100 = 1;
-                                                                        
-                                                                        if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                                                           while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                                                                        
-                                                                              // use of explode 
-                                                                              $session_resource = $data100['session_resource']; 
-                                                                              $session_resource_array = explode (",", $session_resource);  
-                                                                              $no_of_session_resource =  sizeof($session_resource_array);
-                                                                              
-                                                                        
-                                                                           }
-                                                                        }
-                                                                             
-                                                                        ?>
-                                                                     onclick= "prepareSessionResourceListModal(
-                                                                     <?php                                                                  
-                                                                        for($i= 0; $i < $no_of_session_resource-1; $i++){
-                                                                         
-                                                                         $anz_material_id = $session_resource_array[$i];
-                                                                          $query1000 = "SELECT * FROM `material` WHERE `id` = $anz_material_id;";
-                                                                        $runfetch1000 = mysqli_query($con, $query1000);
-                                                                        $noofrow1000 = mysqli_num_rows($runfetch1000);
-                                                                        
-                                                                        
-                                                                        if ($noofrow1000 >0 && $runfetch1000 == TRUE) { 
-                                                                           while ($data1000 = mysqli_fetch_assoc($runfetch1000)) { 
-                                                                              echo "'".$data1000['topic_name']."'," ;
-                                                                           }}
-                                                                         echo $session_resource_array[$i];
-                                                                         if($i != $no_of_session_resource - 2){
-                                                                            echo ',';                                                                 
-                                                                        }
-                                                                        }
-                                                                        ?>
-                                                                     )"
-                                                                     >
-                                                                 &nbsp;     <button id="activity_button"><i class="fas fa-book"></i>Session Resource &nbsp;&nbsp;</button> 
-                                                                   <!--   <a
-                                                                        class="text-primary"
-                                                                        ><i class="fas fa-file-invoice"></i>Session Resource &nbsp;&nbsp; </a
-                                                                        > -->
-                                                                     <div class="material-border"></div>
-                                                                  </li>
-                                                               </ul>
-                                                            </div>
-                                                         </div>
-                                                         <?php
-                                                            }
-                                                               }
-                                                               } 
-                                                               }
-                                                               }else{
-                                                                  // echo "<div class='text-center'>No Data Found :(</div>";
-                                                                  }
-                                                               
-                                                               ?>
-                                                      </div>
-                                                      <div class="code-box-copy">
-                                                         <button
-                                                            class="code-box-copy__btn btn-clipboard"
-                                                            data-clipboard-target="#example-head"
-                                                            title="Copy"
-                                                            >
-                                                         <i class="icofont icofont-copy-alt"></i>
-                                                         </button>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
+                                       
                                        <div
                                           class="search-links tab-pane fade"
                                           id="completed"
@@ -831,7 +629,7 @@
                                           >
                                           <div class="row">
                                              <div class="col-xl-12 xl-50">
-                                                <div class="card height-equal" style="box-shadow:0px 0px">
+                                                <div class="card height-equal" style="box-shadow:0px 0px;margin-left:-38px;margin-top:-30px;">
                                                    <div class="card-body">
                                                       <div class="upcoming-event">
                                                          <?php
@@ -842,8 +640,6 @@
                                                             if ($noofrow > 0 && $runfetch == TRUE) { 
                                                               while ($data = mysqli_fetch_assoc($runfetch)) {
                                                                 $session_id = $data['session_id'];
-                                                              
-                                                            
                                                             $query10 = "SELECT * FROM `offline_session` WHERE `id` = $session_id  AND `is_deleted` = 0;";                                            
                                                             $runfetch10 = mysqli_query($con, $query10);                       
                                                             $noofrow10 = mysqli_num_rows($runfetch10);       
@@ -861,14 +657,16 @@
                                                                   Offline Sessions <?php echo ' (#'.$data10['id'].')'; ?>                                                               <span class="pull-right">
                                                                   <?php 
                                                                      $mydate=getdate($data10['session_date']);
-                                                                     echo "$mydate[month] $mydate[mday]";
-                                                                     
+                                                                   //  echo "$mydate[month] $mydate[mday]";
                                                                      ?>    
                                                                   </span>
                                                                </p>
-                                                               <h6 class=""><?php echo $data10['session_name']; ?></h6>
-                                                                <span style="color: #B1B1B1">Course: Python for Data Science</span>
-                                                                    <br><span style="color: #B1B1B1">Starts at: Feb 25, 11:00 AM</span>
+                                                               <h6 class="" style="font-size:15px;"><?php echo $data10['session_name']; ?></h6>
+                                                                <span style="color: #B1B1B1">Course:
+                                                               <?php 
+                                                                  echo   $data10['course'];
+                                                                   ?></span>
+                                                                    <br><span style="color: #B1B1B1">Starts at: <?php echo "$mydate[month] $mydate[mday]" ?>, 11:00 AM</span>
                                                                <ul
                                                                   class="nav "
                                                                   >
@@ -1055,78 +853,7 @@
                                                                      }
                                                                      
                                                                      ?>
-                                                                  <?php
-                                                                     $query512 = "SELECT * FROM `attendance` WHERE `student_id`=$student_id AND `batch_id`=$batch_id AND `session_id`=$session_id";
-                                                                     print_r($query512);
-                                                                     $runfetch512 = mysqli_query($con, $query512);
-                                                                     
-                                                                     $noofrow512 = mysqli_num_rows($runfetch512);
-                                                                     
-                                                                     if ($noofrow512 >
-                                                                     0 && $runfetch512 == TRUE) { while ($data512 =
-                                                                     mysqli_fetch_assoc($runfetch512)) { 
-                                                                        $attendance_for_rating=$data512['attendance'];
-                                                                        
-                                                                     }}
-                                                                     if ($attendance_for_rating=='present') {
-                                                                     
-                                                                     ?>
-                                                                  <li class="nav-item" style="cursor:pointer;margin-left:10px;"  
-                                                                     data-toggle="modal"
-                                                                     data-target="#rating_modal"
-                                                                     <?php
-                                                                        $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id;";
-                                                                        $runfetch100 = mysqli_query($con, $query100);
-                                                                        $noofrow100 = mysqli_num_rows($runfetch100);
-                                                                        $indexnumber100 = 1;
-                                                                        
-                                                                        if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                                                           while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                                                                        
-                                                                              // use of explode 
-                                                                              $string1 = $data100['recording_files']; 
-                                                                              $str_arr1 = explode (",", $string1);  
-                                                                              $no_of_videos =  sizeof($str_arr1);
-                                                                              
-                                                                        
-                                                                           }
-                                                                        }
-                                                                             
-                                                                        ?>
-                                                                     <?php
-                                                                        $query100 = "SELECT * FROM `offline_session_rating` WHERE `session_id` = $session_id AND `rate_by` = $student_id;";
-                                                                        $runfetch100 = mysqli_query($con, $query100);
-                                                                        $noofrow100 = mysqli_num_rows($runfetch100);
-                                                                        $indexnumber100 = 1;
-                                                                        
-                                                                        if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                                                           while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                                                                        
-                                                                              $rates_given = $data100['rate_count'];
-                                                                              $rate_description = $data100['rate_description'];
-                                                                              echo $rate_description;
-                                                                        
-                                                                           }
-                                                                        }else{
-                                                                           $rates_given = 'Rate Now';
-                                                                           $rate_description = '';
-                                                                        }
-                                                                             
-                                                                        ?>
-                                                                     onclick= "prepareRatingModal(
-                                                                     '<?php echo $session_id; ?>',
-                                                                     '<?php echo $rate_description; ?>'
-                                                                     ); ratingMouseOver('<?php if($rates_given == 'Rate Now'){echo '5';}else{echo $rate_description;} ?>');"
-                                                                     >
-                                                                     <a
-                                                                        class="text-warning"
-                                                                        ><i class="<?php if($rates_given=='Rate Now'){echo 'far';}else{echo 'fas';} ?> fa-star"></i><?php echo $rates_given; ?></a
-                                                                        >
-                                                                     <div class="material-border"></div>
-                                                                  </li>
-                                                                  <?php 
-                                                                     }
-                                                                     ?>
+                                                                
                                                                </ul>
                                                             </div>
                                                          </div>
@@ -1194,7 +921,7 @@
                                               <img src="<?php echo base_url()?>assets/images/student_portal_icon/2784128.png" id="img"
                                                 type="image/x-icon" style="width: 310px;height: 180px;">
                                              </div>
-                                             <div class="col-lg-6 " style="font-size: 25px;color: #5A5858">
+                                             <div class="col-lg-6 " style="font-size: 25px;color: #5A5858;">
                                               <B>REFER AND EARN</B><br>
                                               <span style="color:#949393;font-size: 12">Spread the gift of learning! Refer your friend and get rewarded.</span>
                                              </div>
@@ -1206,99 +933,49 @@
                                    </div>
                                  </div>
                                  </div>
-                                   <div class="col-lg-4">
-                                     <div class="card" id="assignment_css">
+                                   <div class="col-lg-3">
+                                     <div class="card" id="demo">
                                        <div class="card-body">
-                                          <div class="row" style="font-size: 12px;color:#5A5858;">
+                                          <div class="row" style="color:#5A5858;font-size:10px;">
                                              <div class="col-lg-4">
                                               Assignment
-                                              <br>1
+                                              <br><br><span style="margin-left:20px;font-size:15px;">1</span>
                                              </div>
-                                             <div class="col-lg-3">
+                                             <div class="col-lg-4">
                                               Project
-                                              <br>1
+                                              <br><br><span style="margin-left:20px;font-size:15px;">1</span>
                                              </div>
                                              <div class="col-lg-4">
                                               Cash study
-                                              <br>1
+                                              <br><br><span style="margin-left:20px;font-size:15px;">1</span>
                                              </div>
                                           </div>
                                           <br><br>
                                           <div class="row" style="font-size: 13px;color:#5A5858;">
-                                             <div class="col-lg-4 offset-lg-7">
+                                             <div class="col-lg-5 offset-lg-7">
                                               <span style="color: #26266C;font-size: 14px;"> View More </span>
                                           </div>
                                         </div>
                                        </div>
                                      </div>
-                                         <div class="card" id="assignment_css">
+                                         <div class="card" id="demo">
                                           <div class="card-body">
                                            
                                            <div class="row">
                                              <div class="col-lg-6">
-                                              <span style="color:#5A5858">ATTENDANCE</span>
+                                              <span style="color:#5A5858;font-family:Poppins;font-size:15px;">ATTENDANCE</span>
                                              </div>
                                              <div class="col-lg-4 offset-lg-2">
                                               <span style="color:#5A5858"> View All</span>
                                              </div>
                                              <div class="container">
-                                                 <img src="<?php echo base_url()?>assets/images/student_portal_icon/circle.png" alt="Nature" style="height: 300px">
-                                                 <br>
+                                                <img src="<?php echo base_url()?>assets/images/student_portal_icon/circle.png" alt="Nature" style="height: 250px;width:250px;margin-top:50px;">
+                                                <br>
 
                                                    <div id="chart"></div>
                                                  </div>
                                                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                                             <script type="text/javascript">
-                                               var options = {
-                                                    series: [100],
-                                                    chart: {
-                                                    height: 450,
-                                                    type: 'donut',
-                                                    offsetY: -10
-                                                  },
-                                                  plotOptions: {
-                                                    radialBar: {
-                                                      startAngle: -135,
-                                                      endAngle: 135,
-                                                      dataLabels: {
-                                                        name: {
-                                                          fontSize: '16px',
-                                                          color: undefined,
-                                                          offsetY: 120
-                                                        },
-                                                        value: {
-                                                          offsetY: 76,
-                                                          fontSize: '22px',
-                                                          color: undefined,
-                                                          formatter: function (val) {
-                                                    //        return val + "%";
-                                                             
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  fill: {
-                                                    type: 'gradient',
-                                                    gradient: {
-                                                        shade: 'gray',
-                                                        shadeIntensity: 0.15,
-                                                        inverseColors: false,
-                                                        opacityFrom: 1,
-                                                        opacityTo: 1,
-                                                        stops: [0, 50, 65, 91]
-                                                    },
-                                                  },
-                                                  stroke: {
-                                                    dashArray: 4
-                                                  },
-                                                  //labels: ['Median Ratio'],
-                                                  };
-
-                                                  var chart = new ApexCharts(document.querySelector("#chart"), options);
-                                                  chart.render();
-                                                
-                                             </script>
+                                        
                                           </div>
                                        </div>
                                      </div>
