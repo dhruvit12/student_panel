@@ -10,7 +10,7 @@ $route['self_course']='student/self_course';
 $route['record']='student/record';
 $route['forgot_password']='student/forgot_password';
 
-
+$route['test']='test/test';
 $route['logout']='student/logout';
 
 

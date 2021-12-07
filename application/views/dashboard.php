@@ -193,7 +193,7 @@
    if($con->query($query3)){
       if (isset($_POST['start_test'])) {?>
 <script>
-   window.location = "../test/mcq-test-view.php?q=1";
+   window.location = "firsttest";
 </script>
 <?php
    }else if (isset($_POST['start_test2'])) {?>
@@ -265,122 +265,7 @@
    }
    }
    ?>
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-         name="description"
-         content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
-         />
-      <meta
-         name="keywords"
-         content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
-         />
-      <meta name="author" content="pixelstrap" />
-      <link
-         rel="icon"
-         href="<?php echo base_url()?>assets/images/favicon.png"
-         type="image/x-icon"
-         />
-      <link
-         rel="shortcut icon"
-         href="<?php echo base_url()?>assets/images/favicon.png"
-         type="image/x-icon"
-         />
-      <title>Student Dashboard | Fingertips</title>
-      <!-- Google font-->
-      <link
-         href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <!-- Font Awesome-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/fontawesome.css"
-         />
-      <!-- ico-font-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/icofont.css"
-         />
-      <!-- Themify icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/themify.css"
-         />
-      <!-- Flag icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/flag-icon.css"
-         />
-      <!-- Feather icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/feather-icon.css"
-         />
-      <!-- Plugins css start-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/chartist.css"
-         />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/date-picker.css"
-         />
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/prism.css" />
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/tour.css" />
-      <!-- Plugins css Ends-->
-      <!-- Bootstrap css-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/bootstrap.css"
-         />
-      <!-- App css-->
-      <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css" />
-      <link
-         id="color"
-         rel="stylesheet"
-         href="<?php echo base_url()?>assets/css/light-1.css"
-         media="screen"
-         />
-      <!-- Responsive css-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/responsive.css"
-         />
-      <link
-         rel="stylesheet"
-         href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-         crossorigin="anonymous"
-         />
-     
 
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/rounded-circle.css"
-         />
       <style>
          .customScroll1::-webkit-scrollbar-track
          {
@@ -415,12 +300,16 @@
          </script>
         <!--  <span style="font-family: Poppins;font-size: 30px;">Activity</span> -->
     <div class="col-lg-8">
-      <div class="card-body" id="header">
+      <div class="card-body" id="header" >
          <!-- <a href="#" style="color: #ffffff;" id="sidebarToggle"><i class="fa fa-bars" aria-hidden="true" style="height:5px;width: 5px;"></i></a> -->
-          <div class="media static-top-widget" >
+         <div class="row">
+            <div class="col-lg-1">
+            <img class="" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/Finger Tips 01.png"
+           style="margin-left:-30px;margin-top:-18px;width: 170px;height: 184px;">
+            </div>
+            <div class="col-lg-11">
+                 <div class="media static-top-widget" >
                <div class="align-self-center text-center">
-                <img class="" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/Finger Tips 01.png"
-           style="width: 100px;height: 100px;">
                 </div>
                <div class="media-body">
                   <div class="pull-right" style="width:200px;margin-top:20px;text-align:center;">
@@ -430,17 +319,20 @@
                
                      </div>
                       </div>   
-                  </div>
+                  </div> 
+                  <BR> <?php echo $student_batch_name; ?> 
                   <span class="m-0" style="font-size:16px;">Welcome to Fingertips</span>
                   <h5 style="font-size:22px;" >You have enrolled in <?php echo $student_course_name; ?></h5>
                   <span class="m-0" style="font-size:10px;" >Your Batch: <?php echo $student_batch_name; ?> <?php echo "(".$word.$student_batch_name_have_number.")"; ?></span>
                </div>
             </div>
          </div>
-       <br>
+         </div>
+         </div>
+         <br>
           <div class="container-fluid">
                    <div class="row">
-                        <div class="col-lg-9" style="margin-left:-60px;">
+                        <div class="col-lg-8" style="margin-left:-60px;">
                            <?php 
                         $query200="SELECT * FROM `dashboard_notification` WHERE `batch_id`=$batch_id";
                         $runfetch200=mysqli_query($con,$query200);
@@ -466,15 +358,16 @@
                               <span style="margin-left:20px;font-size: 40px;color:#858585;border:#707070;">Activity</span>
                            </div>
                         </div>
+                         <script type="text/javascript"> 
+                                      $(document).ready(function() { 
+                                            $('#all-link').click();
+                                       });
+                                    </script>
                            <ul
                               class="nav nav-tabs border-tab"
                               id="top-tab"
                               role="tablist"
                               >
-                              <script>
-                                 $(document).ready(function(){
-                                    $('#upcoming').trigger("click");
-                              </script>
                               <li class="nav-item">
                                  <a
                                     class="nav-link active"
@@ -505,6 +398,7 @@
                                  <div class="material-border"></div>
                               </li>
                            </ul>
+                          
                               <div class="card" id="activity">
                                  <div class="card-body" style="margin-left:-10px;">
                                    
@@ -537,9 +431,7 @@
                                                             if($noofrow10 == 0){
                                                                  ?>
                                                          <div class="upcoming-innner media"  style="width:100%;margin-left:-45px;padding-top:0px;">
-                                                            <div class="">
                                                                <img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 59.png" >
-                                                            </div>
                                                             <div class="media-body">
                                                                <p class="mb-0" style="color: #B1B1B1;font-size:12px;">
                                                                   Offline Sessions <?php echo '(#'.$data['id'].')'; ?>
@@ -594,11 +486,17 @@
                                                                            ?>
                                                                      )"
                                                                      >
-                                                                     <form method="post" action="read">
+                                                                     <div class="row">
+                                                                         <div class="col-lg-12">
+                                                                         <form method="post" action="read">
                                                                     <button id="activity_button" style="width:164px;margin-top:8px;">
-                                                                         <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
+                                                                         <img style="margin-left:-30px;" src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
                                                                       Reading Material </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                       </form> 
+                                                                     
+                                                                        </div>
+                                                                     </div>
+
                                                                      <div class="material-border"></div>
                                                                   </li>
                                                                </ul>
@@ -614,6 +512,261 @@
                                                             }
                                                             
                                                             ?>
+
+
+                                                            <!-- test Exam code panel  -->
+                                                            <?php
+
+                                             $query = "SELECT * FROM `offline_session` WHERE `batch_id` = $batch_id AND `is_deleted` = 0;";
+
+                                             $runfetch = mysqli_query($con, $query);
+
+                                             $noofrow = mysqli_num_rows($runfetch);
+
+                                             $indexnumber = 1;
+
+                                             
+
+                                             if ($noofrow >0 && $runfetch == TRUE) { 
+
+                                                while ($data = mysqli_fetch_assoc($runfetch)) { 
+
+                                             
+
+                                                   $session_id_test = $data['id'];
+
+                                             
+
+                                                   
+
+                                                      
+
+                                                // use of explode 
+
+                                                $test = $data['test']; 
+
+                                                
+
+                                                $test_array = explode (",", $test);  
+
+                                                $no_of_test =  sizeof($test_array);
+
+                                                for($i= 0; $i < $no_of_test-1; $i++){
+
+                                                   
+
+                                             
+
+                                                   $query10 = "SELECT * FROM `mcq_test_log` WHERE `given_by` = $user_id  AND `test_id` = $test_array[$i];";
+
+                                                   $runfetch10 = mysqli_query($con, $query10);
+
+                                                   $noofrow10 = mysqli_num_rows($runfetch10);
+
+                                                   
+
+                                             
+
+                                                   if ($noofrow10 == 0){
+
+                                                      // echo $assignment_array[$i].'<br>';  
+
+                                             
+
+                                             
+
+                                                      // deriving submission date
+
+                                             
+
+                                                $query1000 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id_test;";
+
+                                                $runfetch1000 = mysqli_query($con, $query1000);
+
+                                                $noofrow1000 = mysqli_num_rows($runfetch1000);
+
+                                                $indexnumber1000 = 1;
+
+                                                
+
+                                                if ($noofrow1000 > 0 && $runfetch1000 == TRUE) { 
+
+                                                   while ($data1000 = mysqli_fetch_assoc($runfetch1000)) { 
+
+                                                      $test_submission = $data1000['test_submission'];
+
+                                                      if($test_submission == ""){
+
+                                                         $date = date_create();
+
+                                                         $timestamp = date_timestamp_get($date);
+
+                                             
+
+                                                         $test_submission = $timestamp;
+
+                                                      }
+
+                                                   }
+
+                                                }else{
+
+                                                   // echo "Error: " . $query1000 . "<br>" . $con->error;
+
+                                                   continue;
+
+                                                }
+
+                                             
+
+                                             
+
+                                             
+
+                                                   $query100 = "SELECT * FROM `mcq_test` WHERE `id` = $test_array[$i];";
+
+                                                   $runfetch100 = mysqli_query($con, $query100);
+
+                                                   $noofrow100 = mysqli_num_rows($runfetch100);
+
+                                                   $indexnumber = 1;
+
+                                                   
+
+                                                   if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+
+                                                      while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+
+                                             
+
+                                             
+
+                                                      ?>
+                                             <!--  <div class="upcoming-innner media"  style="width:100%;margin-left:-45px;padding-top:0px;">
+                                                               <img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 59.png" >
+                                                            <div class="media-body">
+                                                               <p class="mb-0" style="color: #B1B1B1;font-size:12px;">
+ -->
+                                               <div class="upcoming-innner media"  style="width:100%;margin-left:-45px;padding-top:0px;">
+                                                               <img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 59.png" >
+                                                            <div class="media-body">
+                                                               <p class="mb-0" style="color: #B1B1B1;font-size:12px;">
+                                                                  Offline Sessions <?php echo '(#'.$data100['id'].')'; ?>
+                                                                  </span>
+                                                               </p>
+                                                               <h5  style="opacity: 100%;font-size:15px;"><?php echo $data100['test_name'] ?></h5>
+                                                              <span style="color: #B1B1B1;font-size:13px;">Starts at:  <?php $mydate=getdate($test_submission);
+                                                                 echo "$mydate[month] $mydate[mday]"; ?>
+                                                                    <?php
+
+                                                   $test_id100=$data100['id'];
+
+                                                   $query4="SELECT * FROM `mcq_test_questions` WHERE test_id=$test_id100";
+
+                                                   $run4=mysqli_query($con,$query4);
+
+                                                   $data4=mysqli_fetch_assoc($run4);
+
+                                                      $question_type=$data4['question_type'];
+
+                                                      if ($question_type==1) {?>
+                                                   
+                                                           <form action="" method="post">
+                                                            <input type="hidden" name="test_id" value="<?php echo $data100['id'];?>">
+                                                                    <button id="activity_button" style="width:164px;margin-top:8px;" name="start_test">
+                                                                         <img style="margin-left:-30px;" src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
+                                                                      Start Test </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                      </form> 
+                                                                     
+                                               <!--  <form action="" method="post">
+
+                                                   <input type="hidden" name="test_id" value="<?php echo $data100['id'];?>">
+
+                                                   <button class="btn btn-sm text-white custom-primary" type="submit" name="start_test">
+
+                                                   Start Test
+
+                                                   </button>
+
+                                                </form> -->
+
+                                                <?php
+
+                                                   }elseif ($question_type==2 || $question_type==3) {
+
+                                                      ?>
+                                                   <!--  <form action="" method="post">
+                                                            <input type="hidden" name="test_id" value="<?php echo $data100['id'];?>">
+                                                                    <button id="activity_button" style="width:164px;margin-top:8px;" name="start_test2">
+                                                                         <img style="margin-left:-30px;" src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
+                                                                      Start Test </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                      </form>  -->
+                                                <form action="" method="post">
+
+                                                   <input type="hidden" name="test_id" value="<?php echo $data100['id'];?>">
+
+                                                   <button class="btn btn-sm text-white custom-primary" type="submit" name="start_test2">
+
+                                                   Start Test
+
+                                                   </button>
+
+                                                </form>
+
+                                                <?php
+
+                                                   }
+
+                                                   ?>
+
+
+                                                      </span>
+                                                             </div>
+                                         
+                                             
+                                             
+
+                                          </div>
+
+                                          <?php
+
+                                             }}
+
+                                             }else{
+
+                                                
+
+                                                
+
+                                                if($test_incomplete_no_data_found != 1){
+
+                                                   // echo "<div class='text-center'>No Data Found :(</div>";
+
+                                                }
+
+                                                $test_incomplete_no_data_found = 1;
+
+                                                
+
+                                             }
+
+                                                                                                  
+
+                                             }
+
+                                             
+
+                                             
+
+                                             }
+
+                                             }
+
+                                             
+
+                                             
+
+                                             ?>
                                                       </div>
                                                    </div>
                                                 </div>
@@ -649,9 +802,7 @@
                                                                if($data10['batch_Id'] == $batch_id){
                                                             ?>
                                                          <div class="upcoming-innner media">
-                                                           <div class="left m-r-30">
                                                                <img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 55.png" >
-                                                            </div>
                                                             <div class="media-body">
                                                                <p class="mb-0" style="color: #B1B1B1">
                                                                   Offline Sessions <?php echo ' (#'.$data10['id'].')'; ?>                                                               <span class="pull-right">
@@ -717,7 +868,7 @@
                                                                      >
                                                                      <form method="post" action="read">
                                                                     <button id="activity_button">
-                                                                         <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
+                                                                         <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;&nbsp;
                                                                       Reading Material &nbsp;&nbsp;</button>
                                                                       </form> 
                                                                         <!-- <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png" >&nbsp;&nbsp;Reading Material &nbsp;&nbsp;</button>  -->
@@ -867,6 +1018,249 @@
                                                                }
                                                             
                                                             ?>
+                                                            <!-- text exam code  -->
+                                                            <?php
+                                                            $query = "SELECT * FROM `offline_session_log` WHERE `is_completed` = 1";                                            
+                                                            $runfetch = mysqli_query($con, $query);                       
+                                                            $noofrow = mysqli_num_rows($runfetch);       
+                                                            
+                                                            if ($noofrow > 0 && $runfetch == TRUE) { 
+                                                              while ($data = mysqli_fetch_assoc($runfetch)) {
+                                                                $session_id = $data['session_id'];
+                                                            $query10 = "SELECT * FROM `offline_session` WHERE `id` = $session_id  AND `is_deleted` = 0;";                                            
+                                                            $runfetch10 = mysqli_query($con, $query10);                       
+                                                            $noofrow10 = mysqli_num_rows($runfetch10);       
+                                                            
+                                                            if ($noofrow10 > 0 && $runfetch10 == TRUE) { 
+                                                              while ($data10 = mysqli_fetch_assoc($runfetch10)) {
+                                                               if($data10['batch_Id'] == $batch_id){
+                                                            ?>
+
+                                                          
+
+
+
+                                                         <div class="upcoming-innner media">
+                                                           <div class="left m-r-30">
+                                                               <img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 55.png" >
+                                                            </div>
+                                                            <div class="media-body">
+                                                               <p class="mb-0" style="color: #B1B1B1">
+                                                                  Offline Sessions <?php echo ' (#'.$data10['id'].')'; ?>                                                               <span class="pull-right">
+                                                                  <?php 
+                                                                     $mydate=getdate($data10['session_date']);
+                                                                   //  echo "$mydate[month] $mydate[mday]";
+                                                                     ?>    
+                                                                  </span>
+                                                               </p>
+                                                               <h6 class="" style="font-size:15px;"><?php echo $data10['session_name']; ?></h6>
+                                                                <span style="color: #B1B1B1">Course:
+                                                               <?php 
+                                                                  echo   $data10['course'];
+                                                                   ?></span>
+                                                                    <br><span style="color: #B1B1B1">Starts at: <?php echo "$mydate[month] $mydate[mday]" ?>, 11:00 AM</span>
+                                                               <ul
+                                                                  class="nav "
+                                                                  >
+                                                                  <li class="nav-item" style="cursor:pointer;"  
+                                                                     data-toggle="modal"
+                                                                     data-target="#reading_material_list"
+                                                                     <?php
+                                                                        $query100 = "SELECT * FROM `offline_session` WHERE `id` = $session_id;";
+                                                                        $runfetch100 = mysqli_query($con, $query100);
+                                                                        $noofrow100 = mysqli_num_rows($runfetch100);
+                                                                        $indexnumber100 = 1;
+                                                                        
+                                                                        if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                                                                           while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+                                                                        
+                                                                              // use of explode 
+                                                                              $reading_material = $data100['reading_material']; 
+                                                                              $reading_material_array = explode (",", $reading_material);  
+                                                                              $no_of_reading_material =  sizeof($reading_material_array);
+                                                                              
+                                                                        
+                                                                           }
+                                                                        }
+                                                                             
+                                                                        ?>
+                                                                     onclick= "prepareReadingMaterialListModal(
+                                                                     <?php                                                                  
+                                                                        for($i= 0; $i < $no_of_reading_material-1; $i++){
+                                                                            
+                                                                            $anz_material_id = $reading_material_array[$i];
+                                                                            $query1000 = "SELECT * FROM `material` WHERE `id` = $anz_material_id;";
+                                                                           $runfetch1000 = mysqli_query($con, $query1000);
+                                                                           $noofrow1000 = mysqli_num_rows($runfetch1000);
+                                                                           
+                                                                           
+                                                                           if ($noofrow1000 >0 && $runfetch1000 == TRUE) { 
+                                                                              while ($data1000 = mysqli_fetch_assoc($runfetch1000)) { 
+                                                                                 echo "'".$data1000['topic_name']."'," ;
+                                                                              }}
+                                                                              echo $reading_material_array[$i];
+                                                                            if($i != $no_of_reading_material - 2){
+                                                                               echo ',';                                                                 
+                                                                           }
+                                                                           
+                                                                           }
+                                                                           ?>
+                                                                     )"
+                                                                     >
+                                                                     <form method="post" action="read">
+                                                                    <button id="activity_button">
+                                                                         <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;&nbsp;
+                                                                      Reading Material &nbsp;&nbsp;</button>
+                                                                      </form> 
+                                                                        <!-- <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png" >&nbsp;&nbsp;Reading Material &nbsp;&nbsp;</button>  -->
+                                                                     <!-- <a
+                                                                        class="text-primary"
+                                                                        ><i class="fas fa-book"></i>Reading Material &nbsp;&nbsp; </a
+ -->                                                                        
+                                                                     <div class="material-border"></div>
+                                                                  </li>
+                                                                  <li class="nav-item" style="cursor:pointer;"  
+                                                                     data-toggle="modal"
+                                                                     data-target="#session_resource_list"
+                                                                     <?php
+                                                                        $query100 = "SELECT * FROM `offline_session` WHERE `id` = $session_id;";
+                                                                        $runfetch100 = mysqli_query($con, $query100);
+                                                                        $noofrow100 = mysqli_num_rows($runfetch100);
+                                                                        $indexnumber100 = 1;
+                                                                        
+                                                                        if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                                                                           while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+                                                                        
+                                                                              // use of explode 
+                                                                              $session_resource = $data100['session_resource']; 
+                                                                              $session_resource_array = explode (",", $session_resource);  
+                                                                              $no_of_session_resource =  sizeof($session_resource_array);
+                                                                              
+                                                                        
+                                                                           }
+                                                                        }
+                                                                             
+                                                                        ?>
+                                                                     onclick= "prepareSessionResourceListModal(
+                                                                     <?php                                                                  
+                                                                        for($i= 0; $i < $no_of_session_resource-1; $i++){
+                                                                         
+                                                                         $anz_material_id = $session_resource_array[$i];
+                                                                          $query1000 = "SELECT * FROM `material` WHERE `id` = $anz_material_id;";
+                                                                        $runfetch1000 = mysqli_query($con, $query1000);
+                                                                        $noofrow1000 = mysqli_num_rows($runfetch1000);
+                                                                        
+                                                                        
+                                                                        if ($noofrow1000 >0 && $runfetch1000 == TRUE) { 
+                                                                           while ($data1000 = mysqli_fetch_assoc($runfetch1000)) { 
+                                                                              echo "'".$data1000['topic_name']."'," ;
+                                                                           }}
+                                                                         echo $session_resource_array[$i];
+                                                                         if($i != $no_of_session_resource - 2){
+                                                                            echo ',';                                                                 
+                                                                        }
+                                                                        }
+                                                                        ?>
+                                                                     )"
+                                                                     >
+                                                                      &nbsp;   <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/page.png" >&nbsp;&nbsp;RSession Resource &nbsp;&nbsp;&nbsp;&nbsp;</button> 
+                                                                    <!--  <a
+                                                                        class="text-primary"
+                                                                        ><i class="fas fa-file-invoice"></i>Session Resource &nbsp;&nbsp; </a
+                                                                        > -->
+                                                                     <div class="material-border"></div>
+                                                                  </li>
+                                                                  <?php
+                                                                     $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id;";
+                                                                     $runfetch100 = mysqli_query($con, $query100);
+                                                                     $noofrow100 = mysqli_num_rows($runfetch100);
+                                                                     $indexnumber100 = 1;
+                                                                     
+                                                                     if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                                                                        while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+                                                                     
+                                                                           // use of explode 
+                                                                           $string1 = $data100['recording_files']; 
+                                                                           $str_arr1 = explode (",", $string1);  
+                                                                           $no_of_videos =  sizeof($str_arr1);
+                                                                     
+                                                                           $video_comment = $data100['video_comment'];
+                                                                           
+                                                                           
+                                                                     
+                                                                        }
+                                                                     }
+                                                                          
+                                                                     ?>
+                                                                  <?php 
+                                                                     if($no_of_videos == 1){
+                                                                     
+                                                                        ?>
+                                                                  <li class="nav-item" style="cursor:pointer;"  
+                                                                     data-toggle="modal"
+                                                                     data-target="#no_video_reason"
+                                                                     onclick= "prepareNoVideoReason(
+                                                                     <?php                                                                  
+                                                                        echo "'".$video_comment."'";
+                                                                        ?>
+                                                                     )"
+                                                                     >
+                                                                     <form method="post" action="record">
+                                                                      <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" >&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
+                                                                     </form>
+                                                                      <!-- <a
+                                                                        class="text-primary"
+                                                                        ><i class="fas fa-play-circle"></i>Recordings </a
+                                                                        > -->
+                                                                     <div class="material-border"></div>
+                                                                  </li>
+                                                                  <?php
+                                                                     }else{
+                                                                        ?>
+                                                                  <li class="nav-item" style="cursor:pointer;"  
+                                                                     data-toggle="modal"
+                                                                     data-target="#video_list"
+                                                                     onclick= "prepareVideoListModal(
+                                                                     <?php                                                                  
+                                                                        for($i= 0; $i < $no_of_videos-1; $i++){
+                                                                         echo $session_id;
+                                                                         if($i != $no_of_videos - 2){
+                                                                            echo ',';                                                                 
+                                                                        }
+                                                                        }
+                                                                        ?>
+                                                                     )"
+                                                                     >
+                                                                      &nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" ></i>&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
+                                                                    <!--  <a class="text-primary"
+                                                                        ><i class="fas fa-play-circle"></i>Recordings </a
+                                                                        > -->
+                                                                     
+                                                                        
+                                                                     <div class="material-border"></div>
+
+                                                                  </li>
+                                                                  
+                                                                  <?php
+                                                                     }
+                                                                     
+                                                                     ?>
+                                                                
+                                                               </ul>
+                                                            </div>
+                                                         </div>
+                                                         <?php
+                                                            }
+                                                            }
+                                                            } 
+                                                            }
+                                                            }else{
+                                                               // echo "<div class='text-center'>No Data Found :(</div>";
+                                                               }
+                                                            
+                                                            ?>
+                                                             
+
                                                       </div>
                                                    </div>
                                                 </div>
@@ -883,9 +1277,10 @@
                                           <div class="row">
                                             <div class="col-lg-1">
                                             <img class="z-depth-2 header_logo" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/help.png" style="height:50px;width: 50px;"> 
+                                         
                                             </div>
-                                             <div class="col-lg-8 offset-lg-1" style="font-size:17px;color: #5A5858">
-                                              Need Assistance ?<br>
+                                             <div class="col-lg-9 offset-lg-1" style="font-size:17px;color: #5A5858">
+                                              Support ?<br>
                                               <span style="font-size:11px;color: #949393;">We are here to help. Click here to reach out to us.
                                              </div>
                                             
@@ -901,7 +1296,7 @@
                                             <div class="col-lg-1">
                                             <img class="z-depth-2 header_logo" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/newsletter.png" style="height:50px;width: 50px;"> 
                                             </div>
-                                             <div class="col-lg-8 offset-lg-1" style="font-size:17px;color: #5A5858">
+                                             <div class="col-lg-9 offset-lg-1" style="font-size:17px;color: #5A5858">
                                              Industry Articals<br>
                                               <span style="font-size:11px;color: #949393;">Curated articles on latest industry development and trends.
                                              </div>
@@ -919,7 +1314,7 @@
                                           <div class="row" >
                                              <div class="col-lg-6" >
                                               <img src="<?php echo base_url()?>assets/images/student_portal_icon/2784128.png" id="img"
-                                                type="image/x-icon" style="width: 310px;height: 180px;">
+                                                type="image/x-icon" style="width: 250px;height: 130px;">
                                              </div>
                                              <div class="col-lg-6 " style="font-size: 25px;color: #5A5858;">
                                               <B>REFER AND EARN</B><br>
@@ -933,27 +1328,28 @@
                                    </div>
                                  </div>
                                  </div>
-                                   <div class="col-lg-3">
+
+                                   <div class="col-lg-4" style="margin-top: 135px;">
                                      <div class="card" id="demo">
                                        <div class="card-body">
-                                          <div class="row" style="color:#5A5858;font-size:10px;">
+                                          <div class="row" style="color:#5A5858;font-size:17px;">
                                              <div class="col-lg-4">
                                               Assignment
-                                              <br><br><span style="margin-left:20px;font-size:15px;">1</span>
+                                              <br><br><span style="margin-left:20px;font-size:17px;">1</span>
                                              </div>
-                                             <div class="col-lg-4">
+                                             <div class="col-lg-4" >
                                               Project
-                                              <br><br><span style="margin-left:20px;font-size:15px;">1</span>
+                                              <br><br><span style="margin-left:20px;font-size:17px;">1</span>
                                              </div>
                                              <div class="col-lg-4">
                                               Cash study
-                                              <br><br><span style="margin-left:20px;font-size:15px;">1</span>
+                                              <br><br><span style="margin-left:20px;font-size:17px;">1</span>
                                              </div>
                                           </div>
-                                          <br><br>
+                                          
                                           <div class="row" style="font-size: 13px;color:#5A5858;">
-                                             <div class="col-lg-5 offset-lg-7">
-                                              <span style="color: #26266C;font-size: 14px;"> View More </span>
+                                             <div class="col-lg-4 offset-lg-8">
+                                              <span style="color: #26266C;font-size: 14px;color:#26266C;">View More </span>
                                           </div>
                                         </div>
                                        </div>
@@ -1042,3 +1438,4 @@
       <!-- custom js starts -->
       <script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
       <!-- custom js ends -->
+          <!--  -->
