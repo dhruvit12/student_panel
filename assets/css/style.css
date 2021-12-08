@@ -37416,9 +37416,11 @@ footer.blockquote-footer {
 }
 
 .upcoming-event .upcoming-innner {
-	border-bottom: 1px solid #f1f4fb;
-	padding: 20px 0
+	border-bottom: 2px solid #ACA8A8;
+	padding: 9px 0;
+    opacity:26px;	
 }
+
 
 .upcoming-event .upcoming-innner .left {
 	position: relative;
