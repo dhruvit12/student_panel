@@ -17,3 +17,6 @@ $route['logout']='student/logout';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['assignment']='assignment';

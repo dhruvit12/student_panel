@@ -89,9 +89,6 @@
    ?>
 <?php
    if (isset($_POST['start_test']) ||isset($_POST['start_test2'])) {
-   
-      
-      
       unset($_SESSION['ftip69_test_id']);
    
    
