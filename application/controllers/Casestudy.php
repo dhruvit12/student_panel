@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Assignment extends CI_Controller {
+class Casestudy extends CI_Controller {
 	function __construct() {
         parent::__construct();
 		if (!isset($_SESSION['ftip69_uid'])) {
@@ -12,7 +12,7 @@ class Assignment extends CI_Controller {
 	function index()
 	{
 		$this->load->view('header_sidebar');
-		$this->load->view('assignment');
+		$this->load->view('case_study');
 	}
 }
 

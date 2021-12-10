@@ -361,10 +361,11 @@
                            </div>
                         </div>
                          <script type="text/javascript"> 
-                                      $(document).ready(function() { 
-                                            $('#all-link').click();
-                                       });
-                                    </script>
+                                    $(document).ready(function(){
+                                          $('#all-link').trigger('click');
+                                        });
+
+                                      </script>
                            <ul
                               class="nav nav-tabs border-tab"
                               id="top-tab"
@@ -407,7 +408,7 @@
                                     <div class="tab-content customScroll1" id="" style="max-height:470px; overflow-y:auto; overflow-x:hidden;">
                                        <div
                                           class="search-links tab-pane fade active show"
-                                          id="upcoming"
+                                          id="upcoming" 
                                           role="tabpanel"
                                           aria-labelledby="upcoming"
                                           >

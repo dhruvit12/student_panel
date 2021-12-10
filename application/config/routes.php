@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'Login';
 $route['dashboard']='student/dashboard';
-$route['course']='student/course';
+$route['course']='course/course';
 $route['read']='student/read';
 $route['live_course']='student/live_course';
 $route['self_course']='student/self_course';
@@ -20,3 +20,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['assignment']='assignment';
+$route['case_study']='casestudy';
+$route['quiz']='quiz';
+$route['edit_profile']='student/edit_profile';

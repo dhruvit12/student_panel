@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Assignment extends CI_Controller {
+class Course extends CI_Controller {
 	function __construct() {
         parent::__construct();
 		if (!isset($_SESSION['ftip69_uid'])) {
@@ -9,11 +9,11 @@ class Assignment extends CI_Controller {
 			exit;
 		}
 	}
-	function index()
+	
+	public function course()
 	{
 		$this->load->view('header_sidebar');
-		$this->load->view('assignment');
+		$this->load->view('course');
 	}
 }
-
-?>
+	?>

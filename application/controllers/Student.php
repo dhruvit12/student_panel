@@ -11,12 +11,12 @@ class Student extends CI_Controller {
 	}
 	public function dashboard()
 	{
-			$this->load->view('sidebar');
+			$this->load->view('one_sidebar');
 	    	$this->load->view('dashboard');
 	}
 	public function course()
 	{
-		$this->load->view('sidebar');
+		$this->load->view('header_sidebar');
 		$this->load->view('course');
 	}
 	public function read()
@@ -26,13 +26,13 @@ class Student extends CI_Controller {
 	}
 	public function live_course()
 	{
-		$this->load->view('sidebar');
+		$this->load->view('one_sidebar');
 		$this->load->view('live_course');
 
 	}
 	public function self_course()
 	{
-		$this->load->view('sidebar');
+		$this->load->view('one_sidebar');
 		$this->load->view('self_learning_course');
 	}
 	public function record()
@@ -44,8 +44,12 @@ class Student extends CI_Controller {
 	{
 		$this->load->view('forgot_password');
 	}
-	
-	public function logout()
+    public function edit_profile()
+    {
+    	$this->load->view('one_sidebar');
+    	$this->load->view('profile');
+    }	
+ 	public function logout()
 	{
 		session_unset();
 		redirect('Login');
