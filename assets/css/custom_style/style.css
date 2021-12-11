@@ -23,7 +23,7 @@ box-shadow: 8px -0.4px 1px -0.5px #E46F0E, 2px 1px 2px 3px rgb(0 0 0 / 10%);
     opacity: 100%;
     width: 280px;
 	margin-left: 20px;
-	height: 740px;
+	height: auto;
 	position: fixed;
  }
 #sidebar a {
@@ -83,7 +83,7 @@ box-shadow: 8px -0.4px 1px -0.5px #E46F0E, 2px 1px 2px 3px rgb(0 0 0 / 10%);
 	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 	color:#ffffff;
 	width:240px;
-	height:60px;
+	height:auto;
 	background-color:linear-gradient( rgba(255, 255, 255, 0.5) 100%, rgba(0, 0, 0, 0.5)100%);
 	box-shadow: 6px -0.4px 1px -0.5px #E46F0E, 2px 1px 2px 3px rgb(0 0 0 / 10%);
 	svg:hover {

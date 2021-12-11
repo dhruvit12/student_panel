@@ -28,13 +28,13 @@
 </style>
  <span id="course_card"><b>Cash Study</b></span>
     <div class="row">
-      <div class="col-lg-12 mt-1">
-          <div class="card background" style="height:200px">
+      <div class="col-lg-11 mt-1">
+          <div class="card background" style="height:180px">
             <div class="card-body">
               <div class="row" style="">
                  <div class="col-lg-4">
                   <div class="image">
-                   <img  src="<?php echo base_url()?>assets/images/university/python-1.png"; style="height: 208px;margin-left: -3px;">
+                   <img  src="<?php echo base_url()?>assets/images/university/python-1.png"; style="margin-top:-2px;height: 190px;margin-left: -3px;">
                  </div>
                </div>
                  <div class="col-lg-8" style="font-family: poppins">
@@ -47,6 +47,7 @@
                       <span style="color:#949393;font-size: 10px;" id="sub-contect">November 30</span>
                       <br>
                         <button class="course_button">Knowledge check</button>&nbsp;&nbsp;
+
                  </div>
               </div>
             </div>

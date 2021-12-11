@@ -9,8 +9,7 @@ class Course extends CI_Controller {
 			exit;
 		}
 	}
-	
-	public function course()
+	public function index()
 	{
 		$this->load->view('header_sidebar');
 		$this->load->view('course');

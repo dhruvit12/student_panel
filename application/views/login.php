@@ -95,7 +95,7 @@
                 <div class="authentication-box">
 
                   <div class="text-center">
-                    <img src="<?php echo base_url()?>assets/images/logo/fingertip-logo.png" alt="" class="w-50" />
+                    <img src="<?php echo base_url()?>assets/images/logo/fingertip-logo.png" alt="" class="w-50" style="color:#26266c;"/>
                   </div>
                   
                   <div class="card mt-4">
@@ -178,13 +178,13 @@
 
                 <!-- alert backend -->
                       <div class="text-center">
-                        <h4>LOGIN</h4>
-                        <h6>Enter your Username and Password</h6>
+                        <h4 style="color:#26266c;">LOGIN</h4>
+                        <h6 style="color:#26266c;">Enter your Username and Password</h6>
                       </div>
                       <form class="theme-form" action="" method="POST">
                         <div class="form-group">
-                          <label class="col-form-label pt-0">Your Email</label>
-                          <input class="form-control" type="email" name="email" required="" placeholder="Enter your email"/>
+                          <label class="col-form-label pt-0" style="color:#26266c;">Your Email</label>
+                          <input class="form-control" type="email" name="email" required="" placeholder="Enter your email" />
                         </div>
 
                         
@@ -194,7 +194,7 @@
 
                        
 
-                          <label class="col-form-label">Password</label>
+                          <label class="col-form-label" style="color:#26266c;">Password</label>
                           <input
                             class="form-control"
                             type="password"
@@ -207,28 +207,25 @@
 
                         <div class="custom-control custom-checkbox" >
                           <input  onclick="showPassword();" type="checkbox" class="custom-control-input" id="customCheck" name="remember_me" value=1>
-                          <label class="custom-control-label" for="customCheck">Show Password</label>
+                          <label class="custom-control-label" for="customCheck" style="color:#26266c;">Show Password</label>
                         </div>
                           <br>
                         <!-- <div class="g-recaptcha" data-sitekey="6LdoItMaAAAAAFrw0twMdmBXfPCyeIL_J85Zy3iu" data-type="image"></div> -->
                         <div class="form-group form-row mt-3 mb-0">
                           <button
-                            class="btn btn-primary btn-block"
+                            class="btn btn-default btn-block"
                             type="submit"
                             name="login"
-                          >
+                           style="background-color:#26266c;color:#ffffff;">
                             Login
                           </button>
                         </div>                        
-                       
-                        
                       </form>
                       <div class="text-center">
-                        <a href="forgot_password" class="btn btn-link">
+                        <a href="forgot_password" class="btn btn-link" style="color:#26266c;">
                       Forgot Password
                       </a>
                       </div>
-
                       <script>
                       function showPassword(){
 

@@ -36,7 +36,7 @@
               <div class="row" style="">
                  <div class="col-lg-4">
                   <div class="image">
-                   <img  src="<?php echo base_url()?>assets/images/university/python-1.png"; style="height: 180px;width:250px">
+                   <img  src="<?php echo base_url()?>assets/images/university/python-1.png"; style="margin-top:-2px;height: 180px;width:250px">
                  </div>
                </div>
                  <div class="col-lg-3" style="font-family: poppins">

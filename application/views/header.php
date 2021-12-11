@@ -34,8 +34,9 @@
                 <div class="navbar-nav" id="header">
                     <a href="dashboard" class="nav-item nav-link" style="color:#26266C;">Dashboard</a>
                     <a href="course" class="nav-item nav-link" style="color:#26266C;">Courses</a>
-                    <a href="#" class="nav-item nav-link" style="color:#26266C;">Program Flow</a>
+                    <a href="program_flow" class="nav-item nav-link" style="color:#26266C;">Program Flow</a>
                     <a href="#" class="nav-item nav-link" tabindex="-1" style="color:#26266C;" >Practise</a>
+                    <a href="support" class="nav-item nav-link" tabindex="-1" style="color:#26266C;" >Support</a>
                 </div>
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
