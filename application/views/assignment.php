@@ -14,6 +14,7 @@
    box-shadow: 3px -0.4px 1px -0.5px #E46F0E, 2px 1px 2px 3px rgb(0 0 0 / 10%);
    padding-top:0px;
    padding-bottom:0px;
+   margin-left:-20px;
    }
    #course_button
    {

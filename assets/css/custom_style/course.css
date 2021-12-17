@@ -11,7 +11,6 @@
   font-size: 40px;
   color:#535252;
   font-weight: bold;
-  margin-top:30px;
   margin-left: -20px;
 }
 #icon{
@@ -64,10 +63,18 @@
    width:45px;
    border-radius: 20px;
    margin-left: 25px;
-   margin-top: 5px;
+   margin-top: 8px;
+}
+#line_last
+{
+   border-bottom: 5px solid #E46F0A;
+   width:45px;
+   border-radius: 20px;
+   margin-left: -5px;
+   margin-top: 8px;
 }
 .line a:hover {
-  border-bottom: 5px solid #E46F0A;
+   border-bottom: 5px solid #E46F0A;
    width:45px;
    border-radius: 20px;
    margin-left: 25px;

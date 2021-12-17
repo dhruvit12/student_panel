@@ -9,6 +9,7 @@
   {
     border-radius: 18px;
     box-shadow:1px 2px 2px 2px rgb(0 0 0 / 10%);
+    margin-left:-20px;
   }
   .course_button
   {

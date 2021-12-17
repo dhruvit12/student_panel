@@ -16287,12 +16287,12 @@ header h1 {
 .nav-tabs.nav-bottom .nav-item .nav-link.active,
 .nav-tabs.nav-bottom .nav-item .nav-link.focus,
 .nav-tabs.nav-bottom .nav-item .nav-link.hover {
-	border-color: #fff #dee2e6 #dee2e6
+	border-color: #fff #dee2e6 #dee2e6;
 }
 
 .tab-content~.nav-tabs.border-tab {
 	margin-bottom: 0;
-	margin-top: 30px
+	margin-top: 30px;
 }
 
 .border-tab.nav-tabs {
@@ -16328,8 +16328,10 @@ header h1 {
 .border-tab.nav-tabs .nav-item .nav-link.active,
 .border-tab.nav-tabs .nav-item .nav-link.show,
 .border-tab.nav-tabs .nav-item .nav-link:focus {
-border-bottom: 2px solid #26266C
+border-bottom: 3px solid #26266C
 }
+
+.border-tab.nav-tabs .nav-item .nav-link.active::before{position: absolute;content: ""; height: 3px; background:#f07e1f;right:0; width: 25%;top:43px;}
 
 .border-tab.nav-left .nav-link {
 	border-left: 2px solid transparent;
@@ -37416,9 +37418,10 @@ footer.blockquote-footer {
 }
 
 .upcoming-event .upcoming-innner {
-	border-bottom: 2px solid #ACA8A8;
+	border-bottom: 1px ridge gray;
 	padding: 9px 0;
-    opacity:26px;	
+    opacity:35px;
+	
 }
 
 

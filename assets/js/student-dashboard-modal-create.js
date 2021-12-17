@@ -257,7 +257,7 @@ function prepareReadingMaterialListModal(
   console.log(topic2);
   if (no1 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm1");
 
@@ -279,7 +279,7 @@ function prepareReadingMaterialListModal(
 
   if (no2 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm2");
 
@@ -301,7 +301,7 @@ function prepareReadingMaterialListModal(
 
   if (no3 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm3");
 
@@ -323,7 +323,7 @@ function prepareReadingMaterialListModal(
 
   if (no4 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm4");
 
@@ -345,7 +345,7 @@ function prepareReadingMaterialListModal(
 
   if (no5 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm5");
 
@@ -367,7 +367,7 @@ function prepareReadingMaterialListModal(
 
   if (no6 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm6");
 
@@ -381,6 +381,7 @@ function prepareReadingMaterialListModal(
     submitBtn.setAttribute("name", "download_material");
     submitBtn.setAttribute("class", "btn btn-link");
     submitBtn.setAttribute("value", topic6);
+    
 
     getreadingMaterialListModalId.appendChild(form);
     form.appendChild(hiddenInput);
@@ -389,7 +390,7 @@ function prepareReadingMaterialListModal(
 
   if (no7 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm7");
 
@@ -411,7 +412,7 @@ function prepareReadingMaterialListModal(
 
   if (no8 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm8");
 
@@ -433,7 +434,7 @@ function prepareReadingMaterialListModal(
 
   if (no9 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm9");
 
@@ -455,7 +456,7 @@ function prepareReadingMaterialListModal(
 
   if (no10 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "readingMaterialListModalForm10");
 

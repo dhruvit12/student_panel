@@ -25,3 +25,6 @@ $route['quiz']='quiz';
 $route['edit_profile']='student/edit_profile';
 $route['program_flow']='program_flow';
 $route['support']='support';
+
+//download material 
+$route['download_material']='Reading_material/download_material';

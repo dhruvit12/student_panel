@@ -1,4 +1,4 @@
-
+   
 <?php
    require('dbcon.php');
    $user_id = $_SESSION['ftip69_uid'];
@@ -109,11 +109,8 @@
      if ($noofrow100 >0 && $runfetch100 == TRUE) { 
        while ($data100 = mysqli_fetch_assoc($runfetch100)) {
           $allowed_attempt = $data100['allowed_attempt'];
-          
        }
-       
        }
-   
       // check for attempt
       $query100 = "SELECT * FROM `mcq_test_log` WHERE `test_id` = $test_id AND `given_by` = $user_id"; 
        $runfetch100 = mysqli_query($con, $query100);
@@ -122,16 +119,13 @@
      if ($noofrow100 >0 && $runfetch100 == TRUE) { 
        while ($data100 = mysqli_fetch_assoc($runfetch100)) {
           $attempt_count++;
-          
        }
       //  echo "<script>alert($attempt_count);</script>";
        }
-   
        if($attempt_count > $allowed_attempt){
          echo "<script>alert('You have used your $allowed_attempt attempt for this test!');</script>";
           
        }else{
-   
                // derive student id
        $query100 = "SELECT `student_id` FROM `user2` WHERE `id` = $user_id"; 
        $runfetch100 = mysqli_query($con, $query100);
@@ -152,13 +146,10 @@
           insertMcqTestQuestionLog($test_id);
             ?>
 <script>
-   // redirect to test question page 
-   // window.location = "mcq-test-view.php?q=1";
-   
+ 
 </script>
 <?php
    } else {
-      // echo "Error: " . $query3 . "<br>" . $con->error;
    ?>
 <script>
    alert('Fail to log this test');
@@ -295,9 +286,16 @@
             var get_brand_logo_top_header = document.getElementById('brand_logo_top_header');
             get_brand_logo_top_header.style.display = "block";
          </script>
+       
         <!--  <span style="font-family: Poppins;font-size: 30px;">Activity</span> -->
     <div class="col-lg-9">
-      <div class="row" style="width: 1100px;">
+   <!--upcoming  href tag is auto click js--> 
+   <script type="text/javascript"> 
+           $(document).ready(function(){
+               document.getElementById("all-link").click();
+            });
+          </script>  
+    <div class="row" style="width: 1100px;">
          <div class="col-lg-12" >
           <div class="card-body" id="header" >
          <!-- <a href="#" style="color: #ffffff;" id="sidebarToggle"><i class="fa fa-bars" aria-hidden="true" style="height:5px;width: 5px;"></i></a> -->
@@ -319,10 +317,12 @@
                      </div>
                       </div>   
                   </div> 
-                  <BR> <?php echo $student_batch_name; ?> 
-                  <span class="m-0" style="font-size:16px;">Welcome to Fingertips</span>
+                  <BR> 
+                  <span class="m-0" style="font-size:16px;font:bold;"><b>Welcome to Fingertips</b></span>
+                  <br><br>
                   <h5 style="font-size:22px;" >You have enrolled in <?php echo $student_course_name; ?></h5>
-                  <span class="m-0" style="font-size:10px;" >Your Batch: <?php echo $student_batch_name; ?> <?php echo "(".$word.$student_batch_name_have_number.")"; ?></span>
+                 
+                  <span class="m-0" style="font-size:14px;" >Your Batch: <?php echo $student_batch_name; ?> <?php echo "(".$word.$student_batch_name_have_number.")"; ?></span>
                </div>
             </div>
          </div>
@@ -360,12 +360,14 @@
                               <span style="margin-left:40px;font-size: 40px;color:#858585;border:#707070;">Activity</span>
                            </div>
                         </div>
-                         <script type="text/javascript"> 
-                                    $(document).ready(function(){
-                                          $('#all-link').trigger('click');
-                                        });
-
-                                      </script>
+                         <style>
+                             #all-link:hover{
+	                                 text-color:#B1B1B1;
+                                 }
+                                 #video-link:hover{
+	                                 text-color:#B1B1B1;
+                                 }
+                         </style>
                            <ul
                               class="nav nav-tabs border-tab"
                               id="top-tab"
@@ -381,6 +383,7 @@
                                     aria-selected="false"
                                     data-original-title=""
                                     title=""
+                                    style="color:#B1B1B1"
                                     >Upcoming</a
                                     >
                                  <div class="material-border"></div>
@@ -396,6 +399,7 @@
                                     aria-selected="false"
                                     data-original-title=""
                                     title=""
+                                    style="color:#B1B1B1"
                                     ></i>Completed</a
                                     >
                                  <div class="material-border"></div>
@@ -414,7 +418,7 @@
                                           >
                                           <div class="row">
                                              <div class="col-xl-12 xl-50">
-                                                <div class="card height-equal" style=";margin-left:10px;box-shadow:0px 0px;margin-top:-25px;">
+                                                <div class="card height-equal" style="margin-left: 10px; box-shadow: 0px 0px 0px ; margin-top: -25px;border-style:none; ">
                                                    <div class="card-body">
                                                       <div class="upcoming-event" style="margin-top:-30x;"">
                                                          <?php
@@ -494,7 +498,7 @@
                                                                          <div class="col-lg-12">
                                                                          <form method="post" action="read">
                                                                     <button id="activity_button" style="width:164px;margin-top:8px;">
-                                                                         <img style="margin-left:-30px;" src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
+                                                                         <img style="margin-left:-20px;" src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
                                                                       Reading Material </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                       </form> 
                                                                      
@@ -872,8 +876,9 @@
                                                                      )"
                                                                      >
                                                                      <form method="post" action="read">
+                                                                        <br>
                                                                     <button id="activity_button">
-                                                                         <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;&nbsp;
+                                                                         <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png" style="margin-left:8px;">&nbsp;&nbsp;
                                                                       Reading Material &nbsp;&nbsp;</button>
                                                                       </form> 
                                                                         <!-- <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png" >&nbsp;&nbsp;Reading Material &nbsp;&nbsp;</button>  -->
@@ -927,7 +932,7 @@
                                                                         ?>
                                                                      )"
                                                                      >
-                                                                      &nbsp;   <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/page.png" >&nbsp;&nbsp;RSession Resource &nbsp;&nbsp;&nbsp;&nbsp;</button> 
+                                                                        <br>&nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/page.png" style="margin-left:8px;">&nbsp;&nbsp;RSession Resource &nbsp;&nbsp;&nbsp;&nbsp;</button> 
                                                                     <!--  <a
                                                                         class="text-primary"
                                                                         ><i class="fas fa-file-invoice"></i>Session Resource &nbsp;&nbsp; </a
@@ -969,8 +974,9 @@
                                                                         ?>
                                                                      )"
                                                                      >
+                                                                     
                                                                      <form method="post" action="record">
-                                                                      <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" >&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
+                                                                     &nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" >&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
                                                                      </form>
                                                                       <!-- <a
                                                                         class="text-primary"
@@ -995,7 +1001,8 @@
                                                                         ?>
                                                                      )"
                                                                      >
-                                                                      &nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" ></i>&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
+                                                                     <br>
+                                                                     &nbsp; &nbsp;<button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" style="margin-left:8px;" ></i>&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
                                                                     <!--  <a class="text-primary"
                                                                         ><i class="fas fa-play-circle"></i>Recordings </a
                                                                         > -->
@@ -1169,7 +1176,7 @@
                                           <div class="row" >
                                              <div class="col-lg-6" >
                                               <img src="<?php echo base_url()?>assets/images/student_portal_icon/2784128.png" id="img"
-                                                type="image/x-icon" style="width: 250px;height: 130px;">
+                                                type="image/x-icon" style="width: 250px;height: 150px;margin-top:-20px;">
                                              </div>
                                              <div class="col-lg-6 " style="font-size: 25px;color: #5A5858;">
                                               <B>REFER AND EARN</B><br>
