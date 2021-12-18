@@ -157,7 +157,7 @@
                       } ?>
                    </div>
                     <div class="col-lg-2" id="header-text">
-                     <a href="<?php echo base_url()?>case_study">Cash Study</a>
+                     <a href="<?php echo base_url()?>case_study">Case Study</a>
                       <?php if($this->uri->segment(1)=='case_study'){
                         ?>
                         <div id="line">

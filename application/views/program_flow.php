@@ -22,7 +22,7 @@
 <script src="https://kit.fontawesome.com/5ded6d0b74.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="program_assets/mastercss/design.css">
 <!-- remove this link -->
-<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>    
+<!-- <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>     -->
 <script type="text/javascript" src="program_assets/masterjs/jquery-1.11.0.min.js"></script>
 
 <div class="row" style="margin-left:-50px;">

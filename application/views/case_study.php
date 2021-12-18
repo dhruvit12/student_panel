@@ -27,7 +27,7 @@
     width:140px;
     }
 </style>
- <span id="course_card"><b>Cash Study</b></span>
+ <span id="course_card"><b>Case Study</b></span>
     <div class="row">
       <div class="col-lg-11 mt-1">
           <div class="card background" style="height:180px">
