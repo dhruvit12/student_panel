@@ -11,8 +11,9 @@ class Quiz extends CI_Controller {
 	}
 	public function index()
 	{
-			$this->load->view('header_sidebar');
-	    	$this->load->view('quiz');
+		$this->load->view('one_sidebar');
+		$this->load->view('course_header');
+	    $this->load->view('quiz');
 	}
 }
 ?>

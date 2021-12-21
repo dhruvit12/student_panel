@@ -11,7 +11,8 @@ class Course extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('header_sidebar');
+		$this->load->view('one_sidebar');
+		$this->load->view('course_header');
 		$this->db->where('id',$_SESSION['ftip69_uid']);
 		$data['student_id']=$this->db->get('user2')->result();
 		if($data['student_id'])

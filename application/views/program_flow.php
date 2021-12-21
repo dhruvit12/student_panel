@@ -159,9 +159,8 @@ with understanding of the statistical population to modelling and testing.
                                    </div>
                                </div>
                                <div class="bg-color-data"  style="border-bottom-left-radius:10px;border-bottom-right-radius:10px"><a class="static-panel collapsed bg-color-data" data-toggle="collapse" href="#collapseExampleNewStatic" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                  7 Quiz &nbsp; &nbsp; &nbsp; 4 Assignment &nbsp; &nbsp; &nbsp; 3 Project &nbsp; &nbsp; &nbsp; 6 Handbook</a> </div>
+                                  7 Quiz &nbsp; &nbsp; &nbsp;  6 Handbook</a> </div>
                            </div>
-                  
                </div>
             </div>
           </div>

@@ -1,4 +1,21 @@
-   
+<script>
+     function  changeactivityfirstin(get_icon_number)
+     {
+       document.getElementById('all-link-'+get_icon_number).style.color='#484747';
+     }
+     function changeactivityfirstout(get_icon_number)
+     {
+      document.getElementById('all-link-'+get_icon_number).style.color='#B1B1B1';
+     }
+     function  changeactivitysecondin(get_icon_number)
+     {
+       document.getElementById('video-link-'+get_icon_number).style.color='#484747';
+     }
+     function changeactivitysecondout(get_icon_number)
+     {
+      document.getElementById('video-link-'+get_icon_number).style.color='#B1B1B1';
+     }
+     </script> 
 <?php
    require('dbcon.php');
    $user_id = $_SESSION['ftip69_uid'];
@@ -292,7 +309,7 @@
    <!--upcoming  href tag is auto click js--> 
    <script type="text/javascript"> 
            $(document).ready(function(){
-               document.getElementById("all-link").click();
+               document.getElementById("all-link-1").click();
             });
           </script>  
     <div class="row" style="width: 1100px;">
@@ -360,14 +377,7 @@
                               <span style="margin-left:40px;font-size: 40px;color:#858585;border:#707070;">Activity</span>
                            </div>
                         </div>
-                         <style>
-                             #all-link:hover{
-	                                 text-color:#B1B1B1;
-                                 }
-                                 #video-link:hover{
-	                                 text-color:#B1B1B1;
-                                 }
-                         </style>
+                      
                            <ul
                               class="nav nav-tabs border-tab"
                               id="top-tab"
@@ -376,15 +386,15 @@
                               <li class="nav-item">
                                  <a
                                     class="nav-link active"
-                                    id="all-link"
+                                    id="all-link-1"
                                     data-toggle="tab"
                                     href="#upcoming"
                                     role="tab"
                                     aria-selected="false"
                                     data-original-title=""
                                     title=""
-                                    style="color:#B1B1B1"
-                                    >Upcoming</a
+                                    style="color:#B1B1B1;font-family: 'Poppins', sans-serif;"
+                                    onmouseover="changeactivityfirstin(1)" onmouseout="changeactivityfirstout(1)">Upcoming</a
                                     >
                                  <div class="material-border"></div>
                               </li>
@@ -392,15 +402,15 @@
                               <li class="nav-item">
                                  <a
                                     class="nav-link"
-                                    id="video-link"
+                                    id="video-link-1"
                                     data-toggle="tab"
                                     href="#completed"
                                     role="tab"
                                     aria-selected="false"
                                     data-original-title=""
                                     title=""
-                                    style="color:#B1B1B1"
-                                    ></i>Completed</a
+                                    style="color:#B1B1B1;font-family: 'Poppins', sans-serif;"
+                                    onmouseover="changeactivitysecondin(1)" onmouseout="changeactivitysecondout(1)"></i>Completed</a
                                     >
                                  <div class="material-border"></div>
                               </li>
@@ -1216,7 +1226,8 @@
                                         </div>
                                        </div>
                                      </div>
-                                         <div class="card" id="attendance">
+                                     <a href="total_attendance">
+                                         <div class="card" id="attendance" >
                                           <div class="card-body">
                                            <div class="row">
                                              <div class="col-lg-6">
@@ -1226,16 +1237,45 @@
                                               <span style="color:#5A5858"> View All</span>
                                              </div>
                                            </div>
-                                           <div class="row">
-                                            <div class="col-lg-6 offset-lg-1">
-                                                <img src="<?php echo base_url()?>assets/images/student_portal_icon/circle.png" alt="Nature" style="height: 250px;width:250px;margin-top:40px;">
-                                                <br>
-                                                <div id="chart"></div>
-                                                 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                                                 </div>
-                                                 <img src="<?php echo base_url()?>assets/images/logo/attendance.png" alt="Nature" style="margin-left: 30px;">
-                                              </div>
+                                           <?php
+                                 $user_id = $_SESSION['ftip69_uid'];
+                                 $query = "SELECT * FROM `attendance` WHERE `student_id` = $student_id;";
+                                 $runfetch = mysqli_query($con, $query);
+                                 $noofrow = mysqli_num_rows($runfetch);
+                                 $totalCount = 0;
+                                 $presentCount = 0;
+                                 $absentCount = 0;
+                                 $attendacePercentage = 0;
+                                 
+                                 if ($noofrow >0 && $runfetch == TRUE) {   
+                                    while ($data = mysqli_fetch_assoc($runfetch)) { 
+                                      
+                                 
+                                     if($data['attendance'] == 'present'){
+                                       $presentCount++;
+                                       $totalCount++;
+                                     }else if($data['attendance'] == 'absent'){
+                                       $absentCount++;
+                                       $totalCount++;
+                                     }else{ 
+                                       echo "Counting Error!";
+                                     }
+                                    }
+                                    $attendacePercentage = ($presentCount / $totalCount) * 100;
+                                    $attendacePercentage = floor($attendacePercentage);
+                                   }
+                                 ?>
+                                    <div class="row">
+                                    <div class="col-lg-6 offset-lg-1">
+                                       <?php echo $attendacePercentage;?>
+                                       <img src="<?php echo base_url()?>assets/images/student_portal_icon/circle.png" alt="Nature" style="height: 250px;width:250px;margin-top:40px;">
+                                       <br>
+                                       <div id="chart"></div>
+                                          <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                                          </div>
+                                          <img src="<?php echo base_url()?>assets/images/logo/attendance.png" alt="Nature" style="margin-left: 10px;">
                                        </div>
+                              </div>
                                      </div>
                                      </div>
                                    </div>
@@ -1243,21 +1283,23 @@
       </div>
 
     </div>
- <style type="text/css">
-   .container {
-  position: relative;
-  font-family: Arial;
-}
+                                 </a>
+   
+         <style type="text/css">
+            .container {
+         position: relative;
+         font-family: 'Poppins', sans-serif;
+         }
 
-#chart {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
- </style>
+         #chart {
+         position: absolute;
+         bottom: 20px;
+         right: 20px;
+         color: white;
+         padding-left: 20px;
+         padding-right: 20px;
+         }
+         </style>
           <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
       <!-- Bootstrap js-->
       <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>

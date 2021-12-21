@@ -14,11 +14,12 @@ class Student extends CI_Controller {
 			$this->load->view('one_sidebar');
 	    	$this->load->view('dashboard');
 	}
-	public function course()
-	{
-		$this->load->view('header_sidebar');
-		$this->load->view('course');
-	}
+	// public function course()
+	// {
+	// 	$this->load->view('one_sidebar');
+	// 	$this->load->view('header_sidebar');
+	// 	$this->load->view('course');
+	// }
 	public function read()
 	{
 		$this->load->view('header');

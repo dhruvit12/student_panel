@@ -91,7 +91,7 @@
 <script type="text/javascript">
    
    
-   $("#second").hide();
+//    $("#second").display("none");
     function ShowHideDiv(chkPassport) {
     	 
     	if(document.getElementById("checkbox").checked = true)
@@ -101,7 +101,6 @@
     	}
        else 
     	{
-
          var dvPassport = document.getElementById("second");
          dvPassport.style.display = chkPassport.checked ? "block" : "none";
     	}
@@ -156,8 +155,7 @@
 			    </div>
 			  </div>
 			</div>
-			<div class="container">
-			<div class="row" id="second">
+			<div class="container" id="second">
 				 	 	 <div class="col-lg-6">Category <span>*</span>
                                      <select class="form-control">
                                      	<option></option>

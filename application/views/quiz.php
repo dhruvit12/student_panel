@@ -27,7 +27,7 @@
     width:140px;
     }
 </style>
-   <span id="course_card"><b>Quiz</b></span>
+   <span id="course_card" style="font-family: 'Poppins', sans-serif;"><b>Quiz</b></span>
     <div class="row">
       <div class="col-lg-9 mt-1">
       	<div class="row">
@@ -55,6 +55,7 @@
                  </div>
                  <div class="col-lg-3">
                  	<div class="row">
+                     
                  		<!--  <div class="col-lg-12">
                  		 	 <section id= 'first'>
 							    <h1>First</h1>

@@ -133,7 +133,7 @@
    width:140px;
    }
 </style>
-      <span id="course_card" style="margin-left:0px;"><b>Assignments</b></span>
+      <span id="course_card" style="margin-left:0px;font-family: 'Poppins', sans-serif;"><b>Assignments</b></span>
     
 <?php 
                   $query = "SELECT * FROM `offline_session` WHERE `batch_id` = $batch_id AND `is_deleted` = 0;";
@@ -143,10 +143,6 @@
                      while ($data = mysqli_fetch_assoc($runfetch)) {
                         $session_id_assignment = $data['id'];
                         $course_id=$data['course'];
-                  
-                        
-                        
-                        
                         $querys = "SELECT * FROM `course` WHERE `id` = $course_id;";
                         $runfetchs = mysqli_query($con, $querys);
                         $noofrows = mysqli_num_rows($runfetchs);
@@ -156,8 +152,8 @@
                               
 
                               $assignment = $data['assignment'];
-                        $assignment_array = explode(",", $assignment);
-                        $no_of_assignment = sizeof($assignment_array);
+                              $assignment_array = explode(",", $assignment);
+                              $no_of_assignment = sizeof($assignment_array);
 
 
 
@@ -176,6 +172,7 @@
                               $query1000 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id_assignment;";
                               $runfetch1000 = mysqli_query($con, $query1000);
                               $noofrow1000 = mysqli_num_rows($runfetch1000);
+                              
                               if ($noofrow1000 > 0 && $runfetch1000 == TRUE) {
                                  while ($data1000 = mysqli_fetch_assoc($runfetch1000)) {
                                  

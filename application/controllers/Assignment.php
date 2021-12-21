@@ -11,7 +11,8 @@ class Assignment extends CI_Controller {
 	}
 	function index()
 	{
-		$this->load->view('header_sidebar');
+		$this->load->view('one_sidebar');
+		$this->load->view('course_header');
 		$this->load->view('assignment');
 	}
 }
