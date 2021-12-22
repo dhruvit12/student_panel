@@ -143,7 +143,7 @@ window.location = 'http://localhost/student_portal/course';
                </div>
                <!-- Modal body -->
                <div class="modal-body text-center" >
-                  <span id='download_links' >
+                  <span id='download_links'>
                   </span>
                </div>
                <!-- Modal footer -->
@@ -162,7 +162,6 @@ window.location = 'http://localhost/student_portal/course';
           $file_name = trim($files_array[$i]);
           
           if($i == $no_of_files-2){
-              
               echo "'uploads/session/material/".$file_name."'";
           }else{
           echo "'uploads/session/material/".$file_name."',";
@@ -225,8 +224,7 @@ window.location = 'http://localhost/student_portal/course';
    
        var get_download_file = document.getElementsByClassName('download_file');
    for(var i = 0; i < get_download_file.length; i++){
-       // get_download_file[i].click();
-   
+       
        // window.history.back()
 // window.location = 'https://fingertips.co.in/en/auth/login.php';
    }
@@ -279,8 +277,8 @@ window.location = 'http://localhost/student_portal/course';
    function goBack(){
      console.log('go back call');
      window.history.back()
-window.location = 'https://fingertips.co.in/en/auth/login.php';
-     window.location = '../auth/login.php';
+window.location = 'http://localhost/student_portal/Login';
+     window.location = 'login';
    }
 </script>
 

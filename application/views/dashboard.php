@@ -475,18 +475,15 @@
                                                                               $reading_material = $data100['reading_material']; 
                                                                               $reading_material_array = explode (",", $reading_material);  
                                                                               $no_of_reading_material =  sizeof($reading_material_array);
-                                                                              
-                                                                        
                                                                            }
                                                                         }
-                                                                             
                                                                         ?>
                                                                      onclick= "prepareReadingMaterialListModal(
                                                                      <?php                                                                  
                                                                         for($i= 0; $i < $no_of_reading_material-1; $i++){
                                                                             
                                                                             $anz_material_id = $reading_material_array[$i];
-                                                                            $query1000 = "SELECT * FROM `material` WHERE `id` = $anz_material_id;";
+                                                                            $query1000 = "SELECT * FROM material WHERE id = $anz_material_id";
                                                                            $runfetch1000 = mysqli_query($con, $query1000);
                                                                            $noofrow1000 = mysqli_num_rows($runfetch1000);
                                                                            
@@ -499,19 +496,16 @@
                                                                             if($i != $no_of_reading_material - 2){
                                                                                echo ',';                                                                 
                                                                            }
-                                                                           
                                                                            }
                                                                            ?>
                                                                      )"
                                                                      >
                                                                      <div class="row">
                                                                          <div class="col-lg-12">
-                                                                         <form method="post" action="read">
-                                                                    <button id="activity_button" style="width:164px;margin-top:8px;">
-                                                                         <img style="margin-left:-20px;" src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
-                                                                      Reading Material </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                      </form> 
-                                                                     
+                                                                           <button id="activity_button" class="btn btn-deafult" style="width:164px;margin-top:8px;">
+                                                                             <img style="margin-left:-20px;" src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png">&nbsp;
+                                                                                 Reading Material 
+                                                                           </button>
                                                                         </div>
                                                                      </div>
 
@@ -804,8 +798,9 @@
                                                 <div class="card height-equal" style="box-shadow:0px 0px;margin-left:-38px;margin-top:-30px;">
                                                    <div class="card-body">
                                                       <div class="upcoming-event">
+                                                      <!-- ORDER BY id DESC; -->
                                                          <?php
-                                                            $query = "SELECT * FROM `offline_session_log` WHERE `is_completed` = 1";                                            
+                                                            $query = "SELECT * FROM `offline_session_log` WHERE `is_completed` = 1 ";                                            
                                                             $runfetch = mysqli_query($con, $query);                       
                                                             $noofrow = mysqli_num_rows($runfetch);       
                                                             
@@ -885,12 +880,12 @@
                                                                            ?>
                                                                      )"
                                                                      >
-                                                                     <form method="post" action="read">
-                                                                        <br>
+                                                                     <!-- <form method="post" action="read">-->
+                                                                        <br> 
                                                                     <button id="activity_button">
                                                                          <img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png" style="margin-left:8px;">&nbsp;&nbsp;
                                                                       Reading Material &nbsp;&nbsp;</button>
-                                                                      </form> 
+                                                                      <!-- </form>  -->
                                                                         <!-- <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/reading-material.png" >&nbsp;&nbsp;Reading Material &nbsp;&nbsp;</button>  -->
                                                                      <!-- <a
                                                                         class="text-primary"
@@ -942,7 +937,7 @@
                                                                         ?>
                                                                      )"
                                                                      >
-                                                                        <br>&nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/page.png" style="margin-left:8px;">&nbsp;&nbsp;RSession Resource &nbsp;&nbsp;&nbsp;&nbsp;</button> 
+                                                                        <br>&nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/page.png" style="margin-left:8px;">&nbsp;&nbsp;Session Resource &nbsp;&nbsp;&nbsp;&nbsp;</button> 
                                                                     <!--  <a
                                                                         class="text-primary"
                                                                         ><i class="fas fa-file-invoice"></i>Session Resource &nbsp;&nbsp; </a
@@ -1267,24 +1262,24 @@
                                  ?>
                                     <div class="row">
                                     <div class="col-lg-6 offset-lg-1">
-                                       <?php echo $attendacePercentage;?>
-                                       <img src="<?php echo base_url()?>assets/images/student_portal_icon/circle.png" alt="Nature" style="height: 250px;width:250px;margin-top:40px;">
+                                       <img src="<?php echo base_url()?>assets/attendance/<?php echo $attendacePercentage;?>.png" alt="Nature" style="height: auto;width:320px;margin-left:-20px;;">
                                        <br>
                                        <div id="chart"></div>
                                           <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
                                           </div>
                                           <img src="<?php echo base_url()?>assets/images/logo/attendance.png" alt="Nature" style="margin-left: 10px;">
                                        </div>
-                              </div>
+                                      </div>
                                      </div>
                                      </div>
                                    </div>
                                  </div>
+                                 
       </div>
 
-    </div>
+    </div> 
                                  </a>
-   
+                      
          <style type="text/css">
             .container {
          position: relative;
@@ -1300,6 +1295,21 @@
          padding-right: 20px;
          }
          </style>
+                    <div class="modal fade" id="reading_material_list">
+                        <div class="modal-dialog modal-md modal-dialog-centered">
+                           <div class="modal-content">
+                              <div class="modal-header">
+                                 <h4 class="modal-title">Reading Materials</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body text-center" id="readingMaterialListModalId" style="overflow-x:auto;" >
+                              </div>
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
           <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
       <!-- Bootstrap js-->
       <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
@@ -1343,3 +1353,4 @@
       <script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
       <!-- custom js ends -->
           <!--  -->
+      <script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>

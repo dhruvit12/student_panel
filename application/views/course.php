@@ -36,7 +36,6 @@
                                                 data-target="#reading_material_list"
                                                 <?php
                                                   $query100 = "SELECT * FROM `offline_session` WHERE `id` =$session_data->session_id";
-                                                  print_r($query100);
                                                   $runfetch100 = mysqli_query($con, $query100);
                                                   $noofrow100 = mysqli_num_rows($runfetch100);
                                                   $indexnumber100 = 1;
@@ -45,7 +44,6 @@
                                                   
                                                         // use of explode 
                                                         $reading_material = $data100['reading_material']; 
-                                                        print_r($reading_material);
                                                         $reading_material_array = explode (",", $reading_material);  
                                                         $no_of_reading_material =  sizeof($reading_material_array);
                                                       }
@@ -56,7 +54,8 @@
                                                   for($i= 0; $i < $no_of_reading_material-1; $i++){
                                                       
                                                       $anz_material_id = $reading_material_array[$i];
-                                                      $query1000 = "SELECT * FROM `material` WHERE `id` = $anz_material_id;";
+                                                      $query1000 = "SELECT * FROM `material` WHERE `id` = $anz_material_id";
+                                                      print_r($query1000);
                                                       $runfetch1000 = mysqli_query($con, $query1000);
                                                       $noofrow1000 = mysqli_num_rows($runfetch1000);
                                                       
@@ -94,7 +93,7 @@
            
           
  </div>
- <div class="modal fade" id="reading_material_list">
+                    <div class="modal fade" id="reading_material_list">
                         <div class="modal-dialog modal-md modal-dialog-centered">
                            <div class="modal-content">
                               Modal Header 

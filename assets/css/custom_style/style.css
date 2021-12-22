@@ -1,4 +1,4 @@
-body{
+	body{
 	background-color: #ffffff;
 }
 #header{
@@ -102,7 +102,7 @@ box-shadow: 8px -0.4px 1px -0.5px #E46F0E, 0px 3px 6px rgb(0 0 0 / 16%);
 {
 	border-radius: 38px;
 	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
-    height: 435px;
+    height: 480px;
 } 
 .icon
 {
