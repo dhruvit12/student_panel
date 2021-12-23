@@ -13,7 +13,14 @@ class Quiz extends CI_Controller {
 	{
 		$this->load->view('one_sidebar');
 		$this->load->view('course_header');
-	    $this->load->view('quiz');
+		$this->load->view('quiz');
 	}
+	public function mcq_test()
+	{
+		$this->load->view('one_sidebar');
+		$this->load->view('course_header');
+		$data['id']=$this->uri->segment(2);
+	    $this->load->view('test/mcq-test-view',$data);
+	 }
 }
 ?>

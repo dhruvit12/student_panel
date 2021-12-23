@@ -71,7 +71,7 @@
    if ($noofrow >0 && $runfetch == TRUE) { 
       while ($data = mysqli_fetch_assoc($runfetch)) { 
    $student_course_name = $data['name'];
-   
+   $_SESSION['student_course_name']=$student_course_name;
    }}
    ?>
 <?php
