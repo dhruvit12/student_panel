@@ -50,7 +50,7 @@ box-shadow: 8px -0.4px 1px -0.5px #E46F0E, 0px 3px 6px rgb(0 0 0 / 16%);
 	border-radius: 38px 38px 38px 38px;
 	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
 	border:#707070;
-	height:543px;
+	height:450px;
 }
 #assistance
 {
@@ -103,8 +103,81 @@ box-shadow: 8px -0.4px 1px -0.5px #E46F0E, 0px 3px 6px rgb(0 0 0 / 16%);
 	border-radius: 38px;
 	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
     height: 480px;
+	
 } 
 .icon
 {
 	text-shadow: 0px 3px 3px 0px;
 }
+@media (min-width: 1281px) {
+  
+	/* CSS */
+	
+  }
+  
+  /* 
+	##Device = Laptops, Desktops
+	##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+	
+	/* CSS */
+	
+  }
+  
+  /* 
+	##Device = Tablets, Ipads (portrait)
+	##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+	
+	/* CSS */
+	
+  }
+  
+  /* 
+	##Device = Tablets, Ipads (landscape)
+	##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	
+	/* CSS */
+	
+  }
+  
+  /* 
+	##Device = Low Resolution Tablets, Mobiles (Landscape)
+	##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+	
+	/* CSS */
+	
+  }
+  
+  /* 
+	##Device = Most of the Smartphones Mobiles (Portrait)
+	##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+	
+	#sidebar{
+		position: relative;
+		border-radius:0px;
+	}
+	#sidebar a{
+		margin-left: 20px;
+		text-align: center;
+    float: none;
+	}
+	#header{
+		width:280px;
+		margin-left:20px;
+	}
+	
+  }

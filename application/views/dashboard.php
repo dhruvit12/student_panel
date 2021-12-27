@@ -313,8 +313,8 @@
             });
           </script>  
     <div class="row" style="width: 1100px;">
-         <div class="col-lg-12" >
-          <div class="card-body" id="header" >
+         <div class="col-lg-12 " >
+          <div class="card-body" id="header"  >
          <!-- <a href="#" style="color: #ffffff;" id="sidebarToggle"><i class="fa fa-bars" aria-hidden="true" style="height:5px;width: 5px;"></i></a> -->
          <div class="row">
             <div class="col-lg-1">
@@ -419,7 +419,7 @@
                               <div class="card" id="activity">
                                  <div class="card-body" style="margin-left:-10px;">
                                    
-                                    <div class="tab-content customScroll1" id="" style="max-height:470px; overflow-y:auto; overflow-x:hidden;">
+                                    <div class="tab-content customScroll1" id="" style="max-height:380px; overflow-y:auto; overflow-x:hidden;">
                                        <div
                                           class="search-links tab-pane fade active show"
                                           id="upcoming" 
@@ -831,7 +831,7 @@
                                                                <?php 
                                                                   echo   $data10['course'];
                                                                    ?></span>
-                                                                    <br><span style="color: #B1B1B1">Starts at: <?php echo "$mydate[month] $mydate[mday]" ?>, 11:00 AM</span>
+                                                                    <br><span style="color: #B1B1B1">Starts at: <?php echo "$mydate[month] $mydate[mday] " ?></span>
                                                                <ul
                                                                   class="nav "
                                                                   >
@@ -980,9 +980,10 @@
                                                                      )"
                                                                      >
                                                                      
-                                                                     <form method="post" action="record">
+                                                                     <!-- <form method="post" action="record">
                                                                      &nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" >&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
-                                                                     </form>
+                                                                     </form> -->
+                                                                     <br>&nbsp; &nbsp;<button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" style="margin-left:8px;" ></i>&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
                                                                       <!-- <a
                                                                         class="text-primary"
                                                                         ><i class="fas fa-play-circle"></i>Recordings </a
@@ -1280,7 +1281,7 @@
     </div> 
                                  </a>
                       
-         <style type="text/css">
+         <!-- <style type="text/css">
             .container {
          position: relative;
          font-family: 'Poppins', sans-serif;
@@ -1294,9 +1295,9 @@
          padding-left: 20px;
          padding-right: 20px;
          }
-         </style>
+         </style> -->
                     <div class="modal fade" id="reading_material_list">
-                        <div class="modal-dialog modal-md modal-dialog-centered">
+                        <div class="modal-dialog modal-md modal-dialog-centered"  >
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h4 class="modal-title">Reading Materials</h4>
@@ -1304,6 +1305,42 @@
                               </div>
                               <div class="modal-body text-center" id="readingMaterialListModalId" style="overflow-x:auto;" >
                               </div>
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal fade" id="video_list">
+                        <div class="modal-dialog modal-md modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                 <h4 class="modal-title">Class Recordings</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body text-center" id="videoListModalId">
+                              </div>
+                              <!-- Modal footer -->
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal fade" id="no_video_reason">
+                        <div class="modal-dialog modal-md modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                 <h4 class="modal-title">Class Recordings</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body text-center" id="noVideoReasonModalId" style="overflow-x:auto;">
+                              </div>
+                              <!-- Modal footer -->
                               <div class="modal-footer">
                                  <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
                               </div>

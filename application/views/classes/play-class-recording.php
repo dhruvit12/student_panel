@@ -1,7 +1,8 @@
 <?php
-   session_start();
+   // session_start();
+   // print_R($_SESSION['ftip69_uid']);exit;
    if (!isset($_SESSION['ftip69_uid'])) {
-     header('location:../auth/login.php');
+     header('location:login');
    } else{
     $user_id = $_SESSION['ftip69_uid'];
    if($user_id == 99){
@@ -15,7 +16,10 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
    } 
    ?>
 <?php
-   require_once '../../dbcon.php';
+   $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
+   if (!$con) {
+     echo "Connection Failed!";
+   }
    $user_id = $_SESSION['ftip69_uid'];
    $query = "SELECT * FROM `user2` WHERE `id` = $user_id;";
    $run = mysqli_query($con, $query);
@@ -24,7 +28,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
    
    $ftip69_acc_classes = $data['acc_classes'];
    $ftip69_acc_student = $data['acc_student'];
-   
+   // print_r($ftip69_acc_classes);exit;
    
    // success
    if ($ftip69_acc_classes==1||$ftip69_acc_student==1) {
@@ -53,99 +57,11 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
    }
    ?>
 <?php
-   require '../../dbcon.php';
+  $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
+  if (!$con) {
+    echo "Connection Failed!";
+  }
    ?>
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-         name="description"
-         content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
-         />
-      <meta
-         name="keywords"
-         content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
-         />
-      <meta name="author" content="pixelstrap" />
-      <link
-         rel="icon"
-         href="../../assets/images/favicon.png"
-         type="image/x-icon"
-         />
-      <link
-         rel="shortcut icon"
-         href="../../assets/images/favicon.png"
-         type="image/x-icon"
-         />
-      <title>Play Class Recording | Fingertips</title>
-      <!-- Google font-->
-      <link
-         href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <!-- Font Awesome-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/fontawesome.css"
-         />
-      <!-- ico-font-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/icofont.css"
-         />
-      <!-- Themify icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/themify.css"
-         />
-      <!-- Flag icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/flag-icon.css"
-         />
-      <!-- Feather icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/feather-icon.css"
-         />
-      <!-- Plugins css start-->
-      <!-- Plugins css Ends-->
-      <!-- Bootstrap css-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/bootstrap.css"
-         />
-      <!-- App css-->
-      <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
-      <link
-         id="color"
-         rel="stylesheet"
-         href="../../assets/css/light-1.css"
-         media="screen"
-         />
-      <!-- Responsive css-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/responsive.css"
-         />
       <link
          rel="stylesheet"
          href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -154,7 +70,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
          />
          <link rel="stylesheet" href="https://players.brightcove.net/videojs-overlay/2/videojs-overlay.css">
       <!-- video js files starts -->
-      <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+      <link href="<?php echo base_url()?>assets/css/video/video-js.css" rel="stylesheet" />
       <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
       <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
       <!-- video js files ends -->
@@ -200,7 +116,6 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       <!-- page-wrapper Start-->
       <div class="page-wrapper">
          <!--change compact-wrapper-->
-         <?php require_once '../elements/header.php' ?>
          <!-- Page Body Start-->
          <script>
             var getheader = document.getElementById('header_row');
@@ -213,40 +128,99 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                get_brand_logo_top_header.style.display = "block";
             
          </script>
-         <div class="page-body-wrapper open">
-            <!-- sidebar-icon -->
-            <!-- Page Sidebar Start-->
-            <!-- Page Sidebar Ends-->
-            <div class="page-body">
-               <div class="container-fluid">
-                  <div class="page-header">
-                     <div class="row">
-                        <div class="col">
-                           <div class="page-header-left">
-                              <h3>Play Class Recording</h3>
-                              <ol class="breadcrumb">
-                                 <li class="breadcrumb-item">
-                                    <a href="../auth/login.php"><i data-feather="home"></i></a>
-                                 </li>
-                                 <li class="breadcrumb-item active">Classes</li>
-                              </ol>
-                           </div>
-                        </div>
+                             <?php
+                                 $query100 = "SELECT * FROM `offline_session` WHERE `id` = $session_id;";
+                                 $runfetch100 = mysqli_query($con, $query100);
+                                 $noofrow100 = mysqli_num_rows($runfetch100);
+                                 $indexnumber100 = 1;
+                                 
+                                 if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                                    while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+                                 
+                                      $session_date = $data100['session_date'];
+                                      $assigned_to = $data100['assigned_to'];
+                                      $course_id= $data100['course'];
+                                      $mydate=getdate($data100['session_date']);
+                                    }
+                                  }
+                                  $query1010 = "SELECT * FROM `course` WHERE `id` = $course_id;";
+                                  $runfetch1010 = mysqli_query($con, $query1010);
+                                  $noofrow1010 = mysqli_num_rows($runfetch1010);
+                                  $indexnumber1010 = 1;
+                                  
+                                  if ($noofrow1010 >0 && $runfetch1010 == TRUE) { 
+                                    while ($data1010 = mysqli_fetch_assoc($runfetch1010)) { 
+                                  
+                                       $course_name = $data1010['name'];
+                                     }
+                                   }
+ 
+  
+                                   
+                                 
+                                 ?>
+                        <?php
+                           $user_id = $_SESSION['ftip69_uid'];
+                           $query = "SELECT `faculty_id` FROM `user2` WHERE `id` = $assigned_to";
+                           $runfetch = mysqli_query($con, $query);
+                           $noofrow = mysqli_num_rows($runfetch);
+                           $indexnumber = 1;
+                           if ($noofrow > 0 && $runfetch == TRUE) { 
+                              while ($data = mysqli_fetch_assoc($runfetch)) {
+                                    $faculty_id = $data['faculty_id'];
+                                    } 
+                                 } 
+                              $user_id = $_SESSION['ftip69_uid'];
+                              $query = "SELECT * FROM `faculty` WHERE `id` = $faculty_id";
+                              $runfetch = mysqli_query($con, $query);
+                              $noofrow = mysqli_num_rows($runfetch);
+                              $indexnumber = 1;
+                              if ($noofrow > 0 && $runfetch == TRUE) { 
+                                 while ($data = mysqli_fetch_assoc($runfetch)) {
+                                       $first_name = $data['first_name'];
+                                       $last_name = $data['last_name'];
+                                       
+                                       } 
+                                    } 
+                                 ?>
+          
+          <div class="container-fluid">
+         <div class="row m-5">
+              <div class="col-lg-1">
+                 <img src="<?php echo base_url() ?>assets/images/student_portal_icon/play.png" height="101px" width="101px" alt="CoolBrand">
+              </div>
+              <div class="col-lg-8">
+                <div class="row">
+                     <div class="col-lg-12">
+                        <span id="playclass_class">PLAY CLASS RECORDING
                      </div>
-                  </div>
+                 </div>
+                        <div class="row">
+                             <div class="col-lg-12">
+                                <span id="second2">This class has been completed but you can learn from video.</span>
+                             </div>
+                        </div>
+                </div>
+
+              <div class="col-lg-11">
+                <div class="row">
+                     <div class="col-lg-8 ">
+                        <span id="intro">Introduction of <?php echo $course_name; ?> by Mr.
+                         <?php echo $first_name .' '.$last_name; ?></span>
+                        <br>
+                        <!-- <span id="intro1">Course: <?php echo $course_name; ?></span> -->
+                        <br>
+                        <span id="intro2">Starts at: <?php echo "$mydate[month] $mydate[mday] " ?></span>
+                     </div>
+                     <!-- <div class="col-lg-2 offset-lg-1">
+                        <span id="intro3">Other Lectures</span>
+                     </div> -->
+                 </div>
                </div>
-               <!-- Container-fluid starts-->
-               <div class="container-fluid">
-                  <div class="row">
-                     <div class="col-md-8">
-                        <div class="card">
-                           <div class="card-header">
-                              <h5>Play Class Recording</h5>
-                              <span
-                                 >This class has been completed but you can learn from
-                              video.</span
-                                 >
-                           </div>
+                
+                <div class="row">
+             <div class="col-lg-8">
+
                            <div class="card-body">
                               <?php
                                  $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id;";
@@ -266,6 +240,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                          // echo $str_arrgit 1[$i];
                                        
                                  ?>
+                                 </div>
                               <div style="height:0px; overflow:hidden;" id="<?php echo "div-my-video-large".$i ?>">
                               <span id="video_location_span_tag"></span>
 
@@ -275,7 +250,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                     controlsList="nodownload"
                                     onclick="changeMa`inVideo(<?php echo $i; ?>);"
                                     data-setup="{}"
-                                    >
+                                   >
                                     <track
                                        kind="captions"
                                        src="//example.com/path/to/captions.vtt"
@@ -302,67 +277,16 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                  
                                  ?>
                            </div>
-                        </div>
-                        <br /><br /><br /><br />
-                     </div>
+                              
+                      
+                    
                      <div class="col-md-4" id="right-sidebar">
                         <div class="card">
                            <div class="card-body">
-                              <?php
-                                 $query100 = "SELECT * FROM `offline_session` WHERE `id` = $session_id;";
-                                 $runfetch100 = mysqli_query($con, $query100);
-                                 $noofrow100 = mysqli_num_rows($runfetch100);
-                                 $indexnumber100 = 1;
-                                 
-                                 if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                    while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                                 
-                                      $session_date = $data100['session_date'];
-                                      $assigned_to = $data100['assigned_to'];
-                                 
-                                    }
-                                  }
-
- 
-                                 
-                                 ?>
-                                                                          <?php
-          $user_id = $_SESSION['ftip69_uid'];
-          $query = "SELECT `faculty_id` FROM `user2` WHERE `id` = $assigned_to";
-          $runfetch = mysqli_query($con, $query);
-          $noofrow = mysqli_num_rows($runfetch);
-          $indexnumber = 1;
-          if ($noofrow > 0 && $runfetch == TRUE) { 
-              while ($data = mysqli_fetch_assoc($runfetch)) {
-                    $faculty_id = $data['faculty_id'];
-                    } 
-                } 
-          
-          
-              ?>
-
-<?php
-          $user_id = $_SESSION['ftip69_uid'];
-          $query = "SELECT * FROM `faculty` WHERE `id` = $faculty_id";
-          $runfetch = mysqli_query($con, $query);
-          $noofrow = mysqli_num_rows($runfetch);
-          $indexnumber = 1;
-          if ($noofrow > 0 && $runfetch == TRUE) { 
-              while ($data = mysqli_fetch_assoc($runfetch)) {
-                   $first_name = $data['first_name'];
-                   $last_name = $data['last_name'];
-                   
-                    } 
-                } 
-          
-          
-              ?>
                               <h5 class="mb-4"><strong>Session Details</strong></h5>
                               <div class="row">
                                  <div class="col-lg-12 pb-3">
                                     <strong>Session Date</strong> <span><?php
-                                    
-                                    
                                     $mydate=getdate($session_date);
                                                    echo "$mydate[mday]/$mydate[mon]/$mydate[year]";
                                     ?></span>
@@ -384,7 +308,6 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                     >This class has been completed but you can learn from
                                  videos.</span
                                     >
-                               
                                  <?php
                                     $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id;";
                                     $runfetch100 = mysqli_query($con, $query100);
@@ -439,18 +362,12 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                     ?>
                               </div>
                            </div>
-                           <br /><br /><br /><br />
                         </div>
                      </div>
                   </div>
                   <!-- Container-fluid Ends-->
                </div>
                <!-- footer start-->
-               <?php require_once '../elements/footer.php' ?>
-               <script>
-                  var get_footer = document.getElementById('footer_id');
-                  get_footer.style.marginLeft = "0px";
-               </script>
                
             </div>
             
@@ -460,32 +377,33 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
 
       
       <!-- latest jquery-->
-      <script src="../../assets/js/jquery-3.2.1.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
       <!-- Bootstrap js-->
-      <script src="../../assets/js/bootstrap/popper.min.js"></script>
-      <script src="../../assets/js/bootstrap/bootstrap.js"></script>
+      <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
       <!-- feather icon js-->
-      <script src="../../assets/js/icons/feather-icon/feather.min.js"></script>
-      <script src="../../assets/js/icons/feather-icon/feather-icon.js"></script>
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
       <!-- Sidebar jquery-->
-      <script src="../../assets/js/sidebar-menu.js"></script>
-      <script src="../../assets/js/config.js"></script>
+      <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/config.js"></script>
       <!-- Plugins JS start-->
-      <script src="../../assets/js/typeahead/handlebars.js"></script>
-      <script src="../../assets/js/typeahead/typeahead.bundle.js"></script>
-      <script src="../../assets/js/typeahead/typeahead.custom.js"></script>
-      <script src="../../assets/js/chat-menu.js"></script>
-      <script src="../../assets/js/tooltip-init.js"></script>
-      <script src="../../assets/js/typeahead-search/handlebars.js"></script>
-      <script src="../../assets/js/typeahead-search/typeahead-custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/chat-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
       <!-- Plugins JS Ends-->
       <!-- Theme js-->
-      <script src="../../assets/js/script.js"></script>
+      <script src="<?php echo base_url()?>assets/js/script.js"></script>
       <!-- videjs  -->
       <script src="https://vjs.zencdn.net/7.10.2/video.js"></script>
       <script src="https://cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
       <script src="https://players.brightcove.net/videojs-overlay/2/videojs-overlay.min.js"></script>
       <!-- Plugin used-->
+      
       <script>
          var js_str_arr1 = <?php echo json_encode($str_arr1); ?>;
          function changeMainVideo(i){
@@ -531,7 +449,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
          
            sources: [
              {
-               src: "../../../resources/offline-session-recordings/<?php $string_yoo = preg_replace('/\s+/', '', $str_arr1[$j]); echo $string_yoo; ?>",
+               src: "https://fingertips.co.in/resources/offline-session-recordings/<?php $string_yoo = preg_replace('/\s+/', '', $str_arr1[$j]); echo $string_yoo; ?>",
                type: "video/mp4",
              },
            ],
@@ -565,7 +483,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
          
            sources: [
              {
-               src: "../../../resources/offline-session-recordings/<?php $string_yoo = preg_replace('/\s+/', '', $str_arr1[$j]); echo $string_yoo; ?>",
+               src: "https://fingertips.co.in/resources/offline-session-recordings/<?php $string_yoo = preg_replace('/\s+/', '', $str_arr1[$j]); echo $string_yoo; ?>",
                type: "video/mp4",
              },
            ],

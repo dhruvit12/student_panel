@@ -94,7 +94,7 @@ window.location = "http://fingertips.co.in/cloud/"
    if($question_number > $number_of_mcq ){
    ?>
 <script>
-   window.location = "mcq-test/1";
+   window.location = "<?php echo base_url()?>mcq-test/1";
 </script>
 <?php
    }
@@ -471,7 +471,7 @@ window.location = "../test/mcq-test-list.php" ;
                                  <div class="card-footer">
                                     
                                    
-                                   <a href="mcq-test/<?php echo $question_number+1; ?>"><div class="btn btn-light">Skip </div></a>
+                                   <a href="<?php echo base_url()?>mcq-test/<?php echo $question_number+1; ?>"><div class="btn btn-light">Skip </div></a>
 
                                    
                                    <input type="submit" class="btn btn-primary" name="mark_for_review" value="Mark For Review">
@@ -601,7 +601,7 @@ window.location = "../test/mcq-test-list.php" ;
                                           
                                             ?>
                                        <div class="col-2 text-center p-1">
-                                          <a href="mcq-test/<?php echo $matrix_question_number; ?>">
+                                          <a href="<?php echo base_url()?>mcq-test/<?php echo $matrix_question_number; ?>">
                                              <div
                                                 style="
                                                 width: 100%;
@@ -649,7 +649,7 @@ window.location = "../test/mcq-test-list.php" ;
                                        <div class="form-layout form-layout-1">
                                           <div class="form-layout-footer mt-3">
                                              <a
-                                                href = "mcq-test/<?php echo $test_id ?>"
+                                                href = "<?php echo base_url()?>mcq-test/<?php echo $test_id ?>"
                                                 class="btn btn-primary waves-effect btn-block btn-lg"
                                                 type="submit"
                                                 name="complete_test"

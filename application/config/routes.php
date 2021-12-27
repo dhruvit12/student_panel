@@ -30,3 +30,6 @@ $route['total_attendance']='total_attendance';
 //download material 
 $route['download_material']='Reading_material/download_material';
 $route['mcq-test/(:num)']='Quiz/mcq_test/$1';
+
+//video play
+$route['video-play']='Video/play';

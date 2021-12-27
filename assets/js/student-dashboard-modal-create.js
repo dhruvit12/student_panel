@@ -35,7 +35,7 @@ function prepareVideoListModal(no1, no2, no3, no4, no5, no6) {
 
   if (no1 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/play-class-recording.php");
+    form.setAttribute("action", "video-play");
     form.setAttribute("method", "post");
     form.setAttribute("id", "videoListModalForm1");
 
@@ -56,7 +56,7 @@ function prepareVideoListModal(no1, no2, no3, no4, no5, no6) {
 
   if (no2 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/play-class-recording.php");
+    form.setAttribute("action", "video-play");
     form.setAttribute("method", "post");
     form.setAttribute("id", "videoListModalForm2");
 
@@ -77,7 +77,7 @@ function prepareVideoListModal(no1, no2, no3, no4, no5, no6) {
 
   if (no3 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/play-class-recording.php");
+    form.setAttribute("action", "video-play");
     form.setAttribute("method", "post");
     form.setAttribute("id", "videoListModalForm3");
 
@@ -98,7 +98,7 @@ function prepareVideoListModal(no1, no2, no3, no4, no5, no6) {
 
   if (no4 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/play-class-recording.php");
+    form.setAttribute("action", "video-play");
     form.setAttribute("method", "post");
     form.setAttribute("id", "videoListModalForm4");
 
@@ -119,7 +119,7 @@ function prepareVideoListModal(no1, no2, no3, no4, no5, no6) {
 
   if (no5 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/play-class-recording.php");
+    form.setAttribute("action", "video-play");
     form.setAttribute("method", "post");
     form.setAttribute("id", "videoListModalForm5");
 
@@ -140,7 +140,7 @@ function prepareVideoListModal(no1, no2, no3, no4, no5, no6) {
 
   if (no6 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/play-class-recording.php");
+    form.setAttribute("action", "video-play");
     form.setAttribute("method", "post");
     form.setAttribute("id", "videoListModalForm6");
 

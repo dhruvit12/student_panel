@@ -11,9 +11,90 @@
                      <div class="jumbotron" id="session">
                         <div class="row" style="margin-top: -27px;">
                             <div class="col-lg-1">
-                                <a href="" data-toggle="modal" data-target="#myModal" data-id="<? echo $session_data['session_id']; ?>">
+                             
+                            <?php
+                    $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_data->id;";
+                    $runfetch100 = mysqli_query($con, $query100);
+                    $noofrow100 = mysqli_num_rows($runfetch100);
+                    $indexnumber100 = 1;
+                    
+                    if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                    while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+                    
+                        // use of explode 
+                        $string1 = $data100['recording_files']; 
+                        $str_arr1 = explode (",", $string1);  
+                        $no_of_videos =  sizeof($str_arr1);
+                        $video_comment = $data100['video_comment'];
+                        
+                        
+                    
+                    }
+                    }
+                        
+                    ?>
+                <?php 
+                    if($no_of_videos == 1){
+                    
+                    ?>
+                    <ul class="nav">
+                <li class="nav-item" style="cursor:pointer;"  
+                    data-toggle="modal"
+                    data-target="#no_video_reason"
+                    onclick= "prepareNoVideoReason(
+                    <?php                                                                  
+                    echo "'".$video_comment."'";
+                    ?>
+                    )"
+                    >
+                                                                     
+                            <!-- <form method="post" action="record">
+                            &nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" >&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
+                            </form> -->
+                            <a><img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
+                    </a><!-- <a
+                            class="text-primary"
+                            ><i class="fas fa-play-circle"></i>Recordings </a
+                            > -->
+                            <div class="material-border"></div>
+                        </li>
+                        <?php
+                            }else{
+                            ?>
+                        <li class="nav-item" style="cursor:pointer;"  
+                            data-toggle="modal"
+                            data-target="#video_list"
+                            onclick= "prepareVideoListModal(
+                            <?php                                                                  
+                            for($i= 0; $i < $no_of_videos-1; $i++){
+                                echo $session_data->id;
+                                if($i != $no_of_videos - 2){
+                                echo ',';                                                                 
+                            }
+                            }
+                            ?>
+                            )"
+                            >
+                            <a><img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
+                        </a> 
+                        <!--  <a class="text-primary"
+                            ><i class="fas fa-play-circle"></i>Recordings </a
+                            > -->
+                            
+                            
+                            <div class="material-border"></div>
+
+                        </li>
+                        
+                        <?php
+                            }
+                            
+                            ?>
+<!--                             
+                    <a href="" data-toggle="modal" data-target="#myModal" data-id="<? echo $session_data['session_id']; ?>">
                             <img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
-                                </a></div>
+                                </a>       -->
+                         </div>
                             <div class="col-lg-4 mt-3" id="content">
                                 <span style="margin-top: -50px;color: #858585;font-size: 19px;" ><?php print_r($session_data->session_name);?></span>
                                 <br><span style="color:#949393;" id="sub-contect">Course: <?php print_r($course_name[0]->name);?></span>
@@ -30,7 +111,6 @@
                             </div>
                             <div class="col-lg-6 offset-lg-1">
                             <button id="course_button">Knowledge check</button>&nbsp;&nbsp;
-                              
                                          <span class="nav-item" style="cursor:pointer;"  
                                                 data-toggle="modal"
                                                 data-target="#reading_material_list"
@@ -109,5 +189,42 @@
                            </div>
                         </div>
                      </div>
+                     <div class="modal fade" id="video_list">
+                        <div class="modal-dialog modal-md modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                 <h4 class="modal-title">Class Recordings</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body text-center" id="videoListModalId">
+                              </div>
+                              <!-- Modal footer -->
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal fade" id="no_video_reason">
+                        <div class="modal-dialog modal-md modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                 <h4 class="modal-title">Class Recordings</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body text-center" id="noVideoReasonModalId" style="overflow-x:auto;">
+                              </div>
+                              <!-- Modal footer -->
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                      <script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
                      <script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>
+                    
