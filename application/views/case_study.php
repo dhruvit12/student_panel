@@ -28,6 +28,7 @@
     }
 </style>
  <span id="course_card" style="font-family: 'Poppins', sans-serif;"><b>Case Study</b></span>
+ <br><br><br>
     <div class="row">
       <div class="col-lg-11 mt-1">
           <div class="card background" style="height:180px">

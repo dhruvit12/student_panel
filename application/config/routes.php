@@ -8,8 +8,8 @@ $route['read']='student/read';
 $route['live_course']='student/live_course';
 $route['self_course']='student/self_course';
 $route['record']='student/record';
-$route['forgot_password']='student/forgot_password';
-
+$route['forgot_password']='Forgot/forgot_password';
+$route['project']='project';
 $route['test']='test';
 $route['logout']='student/logout';
 
@@ -29,7 +29,9 @@ $route['total_attendance']='total_attendance';
 
 //download material 
 $route['download_material']='Reading_material/download_material';
+$route['download-solution']='Reading_material/download_solution';
 $route['mcq-test/(:num)']='Quiz/mcq_test/$1';
 
 //video play
 $route['video-play']='Video/play';
+

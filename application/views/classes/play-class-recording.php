@@ -219,8 +219,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                </div>
                 
                 <div class="row">
-             <div class="col-lg-8">
-
+             <div class="col-lg-7">
                            <div class="card-body">
                               <?php
                                  $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id;";
@@ -277,9 +276,6 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                  
                                  ?>
                            </div>
-                              
-                      
-                    
                      <div class="col-md-4" id="right-sidebar">
                         <div class="card">
                            <div class="card-body">

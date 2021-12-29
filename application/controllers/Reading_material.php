@@ -14,6 +14,11 @@ class Reading_material extends CI_Controller {
         $this->load->view('dbcon.php');
 		$this->load->view('classes/download-material');
 	}
+	function download_solution()
+	{
+		$this->load->view('dbcon.php');
+		$this->load->view('utility/download-material');
+	}
 }
 
 ?>

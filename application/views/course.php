@@ -2,6 +2,7 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 <div class="row">
              <span id="course_card" style="margin-left:0px;"><b>List of Sessions</b></span>
+             <br><br><br> <br><br><br>
              <?php 
               if(!empty($session_list)){
                                 foreach($session_list as $session_data)
@@ -20,15 +21,11 @@
                     
                     if ($noofrow100 >0 && $runfetch100 == TRUE) { 
                     while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                    
                         // use of explode 
                         $string1 = $data100['recording_files']; 
                         $str_arr1 = explode (",", $string1);  
                         $no_of_videos =  sizeof($str_arr1);
                         $video_comment = $data100['video_comment'];
-                        
-                        
-                    
                     }
                     }
                         
@@ -51,8 +48,8 @@
                             <!-- <form method="post" action="record">
                             &nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" >&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
                             </form> -->
-                            <a><img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
-                    </a><!-- <a
+                            <img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
+                   <!-- <a
                             class="text-primary"
                             ><i class="fas fa-play-circle"></i>Recordings </a
                             > -->
@@ -75,8 +72,8 @@
                             ?>
                             )"
                             >
-                            <a><img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
-                        </a> 
+                            <img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
+                       
                         <!--  <a class="text-primary"
                             ><i class="fas fa-play-circle"></i>Recordings </a
                             > -->

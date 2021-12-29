@@ -68,7 +68,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <body>
-  <div class="container-fluid">
+<div class="container-fluid"> 
    <div class="row">
    <div class="col-lg-3">
       <div class="jumbotron mt-5" id="sidebar">
@@ -78,18 +78,18 @@
             data-holder-rendered="true" style="height: 130px;width: 130px;margin-left: 20px;" >
          <br>
          <br>
-        
+      
        <div class="row">
            <div class="col-lg-6" style="margin-left: -30px;text-align: left" id="sidebar_hover">
            <div>
-           <a href="<?php echo base_url()?>dashboard" onmouseover="changeSidebarIconColor(1)" onmouseout="changeSidebarIconColorOut(1)">
+           <a href="<?php echo base_url()?>dashboard" onmouseover="changeSidebarIconColor(1)" onmouseout="changeSidebarIconColorOut(1)" >
               <svg id="sidebar_icon_1"  class="icon" style="height: auto;width: 23px;margin-bottom:5px;font-family:Poppins" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.11 413.39" fill="#808080">
               <rect x="27.56" y="24.09" width="184.2" height="184.2" rx="42.51"/>
                 <rect x="226.42" y="66.6" width="141.69" height="141.69" rx="32.7"/>
                 <rect x="70.07" y="228.71" width="141.69" height="141.69" rx="32.7"/>
                 <rect x="226.42" y="226.34" width="141.69" height="141.69" rx="32.7"/>
               </svg>
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span >Dashboard</span> </a></div > 
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Dashboard</span> </a></div > 
             <a href="<?php echo base_url()?>course" onmouseover="changeSidebarIconColor(2)" onmouseout="changeSidebarIconColorOut(2)">
              <svg id="sidebar_icon_2"  version="1.1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 773.4 774.33" style="height: auto;width: 20px;fill:#808080;margin-top:-7px;font-family:Poppins" xml:space="preserve">

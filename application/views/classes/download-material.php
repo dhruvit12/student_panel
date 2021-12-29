@@ -4,7 +4,7 @@
    if (!$con) {
      echo "Connection Failed!";
    }
-
+   
 
    if (isset($_POST['download_material'])) {
           $material_id = $_POST['material_id'];
@@ -19,9 +19,10 @@
           
                 // use of explode 
                 $files = $data['file_name']; 
-                
+                     
                 $files_array = explode (",", $files); 
                 $no_of_files =  sizeof($files_array);
+              
                 if($files == ''){
                     ?>
 <script>
@@ -148,7 +149,7 @@ window.location = 'http://localhost/student_portal/course';
                </div>
                <!-- Modal footer -->
                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="goBack();">Close</button>
+                  <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal" onclick="goBack();">Close</button>
                </div>
             </div>
          </div>
@@ -159,18 +160,18 @@ window.location = 'http://localhost/student_portal/course';
 <script>
    var links = [<?php
       for($i= 0; $i < $no_of_files-1; $i++){
+         
           $file_name = trim($files_array[$i]);
-          
           if($i == $no_of_files-2){
-              echo "'uploads/session/material/".$file_name."'";
+         
+            echo "'../uploads/session/material/".$file_name."'";
           }else{
-          echo "'uploads/session/material/".$file_name."',";
+          echo "'../uploads/session/material/".$file_name."',";
       }
           
       }?>];
    
    function downloadAll(urls) {
-     
    var get_download_links = document.getElementById('download_links');
      for (var i = 0; i < urls.length; i++) {
        var link = document.createElement('a');

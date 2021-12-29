@@ -74,19 +74,19 @@
                                    box-shadow:0px 3px 6px 0px rgb(0 0 0 / 10%);">
                 <div class="row mt-3">
                    <div class="col-lg-2" id="header-text">
-                     <a href="<?php echo base_url()?>course">Recording</a>
+                     <a href="<?php echo base_url()?>course"> Recording</a>
                       <?php if($this->uri->segment(1)=='course'){
                         ?>
-                        <div id="line">
+                        <div id="line" style="margin-left:16px;">
                         </div>
                       <?php
                       } ?>
                    </div>
                     <div class="col-lg-2" id="header-text">
-                     <a href="#">Project</a>
+                     <a href="<?php echo base_url()?>project">Project</a>
                       <?php if($this->uri->segment(1)=='project'){
                         ?>
-                        <div id="line">
+                       <div id="line" style="margin-left:5px;">
                         </div>
                       <?php
                       } ?>
@@ -111,9 +111,9 @@
                    </div>
                     <div class="col-lg-2" id="header-text" >
                      <a href="<?php echo base_url()?>quiz">Quiz</a>
-                     <?php if($this->uri->segment(1)=='quiz'){
+                     <?php if($this->uri->segment(1)=='quiz' || $this->uri->segment(1)=='mcq-test'){
                         ?>
-                        <div id="line_last" >
+                        <div id="line_last"  style="margin-left:-3px;">
                         </div>
                       <?php
                       } ?>

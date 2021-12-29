@@ -312,14 +312,15 @@
                document.getElementById("all-link-1").click();
             });
           </script>  
-    <div class="row" style="width: 1100px;">
+    <div class="row" style="">
          <div class="col-lg-12 " >
           <div class="card-body" id="header"  >
          <!-- <a href="#" style="color: #ffffff;" id="sidebarToggle"><i class="fa fa-bars" aria-hidden="true" style="height:5px;width: 5px;"></i></a> -->
          <div class="row">
             <div class="col-lg-1">
-            <img class="" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/Finger Tips 01.png"
-           style="margin-left:-30px;margin-top:-18px;width: 170px;height: 184px;">
+
+            <img class="logo" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/Finger Tips 01.png"
+           style="" id="logos" >
             </div>
             <div class="col-lg-11">
                  <div class="media static-top-widget" >
@@ -334,13 +335,15 @@
                      </div>
                       </div>   
                   </div> 
+                
                   <BR> 
-                  <span class="m-0" style="font-size:16px;font:bold;"><b>Welcome to Fingertips</b></span>
+                  <span class="m-0" style="font-size:16px;font:bold;" id="header_text1"><b>Welcome to Fingertips</b></span>
                   <br><br>
-                  <h5 style="font-size:22px;" >You have enrolled in <?php echo $student_course_name; ?></h5>
+                  <h5 style="font-size:22px;" id="header_text2" >You have enrolled in <?php echo $student_course_name; ?></h5>
                  
-                  <span class="m-0" style="font-size:14px;" >Your Batch: <?php echo $student_batch_name; ?> <?php echo "(".$word.$student_batch_name_have_number.")"; ?></span>
-               </div>
+                  <span class="m-0" style="font-size:14px;" id="header_text3">Your Batch: <?php echo $student_batch_name; ?> <?php echo "(".$word.$student_batch_name_have_number.")"; ?></span>
+              
+                </div>
             </div>
          </div>
          </div>
@@ -374,7 +377,7 @@
                         ?>
                         <div class="row">
                            <div class="col-lg-12">
-                              <span style="margin-left:40px;font-size: 40px;color:#858585;border:#707070;">Activity</span>
+                              <p id="dashboard_activity">Activity</p>
                            </div>
                         </div>
                       
@@ -937,13 +940,10 @@
                                                                         ?>
                                                                      )"
                                                                      >
-                                                                        <br>&nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/page.png" style="margin-left:8px;">&nbsp;&nbsp;Session Resource &nbsp;&nbsp;&nbsp;&nbsp;</button> 
-                                                                    <!--  <a
-                                                                        class="text-primary"
-                                                                        ><i class="fas fa-file-invoice"></i>Session Resource &nbsp;&nbsp; </a
-                                                                        > -->
+                                                                     <br>&nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/page.png" style="margin-left:8px;">&nbsp;&nbsp;Session Resource &nbsp;&nbsp;&nbsp;&nbsp;</button> 
                                                                      <div class="material-border"></div>
                                                                   </li>
+                                                                        
                                                                   <?php
                                                                      $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id;";
                                                                      $runfetch100 = mysqli_query($con, $query100);
@@ -1296,16 +1296,16 @@
          padding-right: 20px;
          }
          </style> -->
-                    <div class="modal fade" id="reading_material_list">
+                    <div class="modal fade" id="reading_material_list" >
                         <div class="modal-dialog modal-md modal-dialog-centered"  >
                            <div class="modal-content">
-                              <div class="modal-header">
+                              <div class="modal-header border-0" >
                                  <h4 class="modal-title">Reading Materials</h4>
                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
                               </div>
-                              <div class="modal-body text-center" id="readingMaterialListModalId" style="overflow-x:auto;" >
+                              <div class="modal-body text-center " id="readingMaterialListModalId" style="" >
                               </div>
-                              <div class="modal-footer">
+                              <div class="modal-footer border-0" >
                                  <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
                               </div>
                            </div>
@@ -1316,7 +1316,7 @@
                            <div class="modal-content">
                               <!-- Modal Header -->
                               <div class="modal-header">
-                                 <h4 class="modal-title">Class Recordings</h4>
+                                 <h5 class="modal-title">Class Recordings</h5>
                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
                               </div>
                               <!-- Modal body -->
@@ -1339,6 +1339,24 @@
                               </div>
                               <!-- Modal body -->
                               <div class="modal-body text-center" id="noVideoReasonModalId" style="overflow-x:auto;">
+                              </div>
+                              <!-- Modal footer -->
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-default" style="background-color:#26266C;color:#ffffff" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal fade" id="session_resource_list">
+                        <div class="modal-dialog modal-md modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                 <h4 class="modal-title">Session Resources</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body text-center" id="sessionResourceListModalId" style="overflow-x:auto;">
                               </div>
                               <!-- Modal footer -->
                               <div class="modal-footer">

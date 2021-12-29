@@ -594,7 +594,7 @@ function prepareSessionResourceListModal(
 
   if (no1 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm1");
 
@@ -616,7 +616,7 @@ function prepareSessionResourceListModal(
 
   if (no2 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm2");
 
@@ -638,7 +638,7 @@ function prepareSessionResourceListModal(
 
   if (no3 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm3");
 
@@ -660,7 +660,7 @@ function prepareSessionResourceListModal(
 
   if (no4 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm4");
 
@@ -682,7 +682,7 @@ function prepareSessionResourceListModal(
 
   if (no5 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm5");
 
@@ -704,7 +704,7 @@ function prepareSessionResourceListModal(
 
   if (no6 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm6");
 
@@ -726,7 +726,7 @@ function prepareSessionResourceListModal(
 
   if (no7 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm7");
 
@@ -748,7 +748,7 @@ function prepareSessionResourceListModal(
 
   if (no8 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm8");
 
@@ -770,7 +770,7 @@ function prepareSessionResourceListModal(
 
   if (no9 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm9");
 
@@ -792,7 +792,7 @@ function prepareSessionResourceListModal(
 
   if (no10 != undefined) {
     var form = document.createElement("form");
-    form.setAttribute("action", "../classes/download-material.php");
+    form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");
     form.setAttribute("id", "sessionResourceListModalForm10");
 

@@ -4,6 +4,7 @@
      
    } 
    ?>
+
 <?php
    require_once 'dbcon.php';
    $user_id = $_SESSION['ftip69_uid'];
@@ -134,7 +135,156 @@
    }
 </style>
       <span id="course_card" style="margin-left:0px;font-family: 'Poppins', sans-serif;"><b>Assignments</b></span>
-    
+      <br><br><br>
+      <script>
+   function prepareAssignmentDownloadModal(no1,no2,no3,no4,no5,no6,no7,no8,no9,no10){
+      if(no1 == undefined){
+         no1 = '';
+      }else{
+      var name_array = no1.split('.');
+      no1_extension = name_array[1];
+      no1_file_name = no1.substring(0, 20);
+         
+      }
+      if(no2 == undefined){
+         no2 = '';
+      }
+      else{
+      var name_array = no2.split('.');
+      no2_extension = name_array[1];
+      no2_file_name = no2.substring(0, 20);
+         
+      }
+      if(no3 == undefined){
+         no3 = '';
+      }
+      else{
+      var name_array = no3.split('.');
+      no3_extension = name_array[1];
+      no3_file_name = no3.substring(0, 20);
+         
+      }
+      if(no4 == undefined){
+         no4 = '';
+      }
+      else{
+      var name_array = no4.split('.');
+      no4_extension = name_array[1];
+      no4_file_name = no4.substring(0, 20);
+         
+      }
+      if(no5 == undefined){
+         no5 = '';
+      }
+      else{
+      var name_array = no5.split('.');
+      no5_extension = name_array[1];
+      no5_file_name = no5.substring(0, 20);
+         
+      }
+      if(no6 == undefined){
+         no6 = '';
+      }
+      else{
+      var name_array = no6.split('.');
+      no6_extension = name_array[1];
+      no6_file_name = no6.substring(0, 20);
+         
+      }
+      if(no7 == undefined){
+         no7 = '';
+      }
+      else{
+      var name_array = no7.split('.');
+      no7_extension = name_array[1];
+      no7_file_name = no7.substring(0, 20);
+         
+      }
+      if(no8 == undefined){
+         no8 = '';
+      }
+      else{
+      var name_array = no8.split('.');
+      no8_extension = name_array[1];
+      no8_file_name = no8.substring(0, 20);
+         
+      }
+      if(no9 == undefined){
+         no9 = '';
+      }
+      else{
+      var name_array = no9.split('.');
+      no9_extension = name_array[1];
+      no9_file_name = no9.substring(0, 20);
+         
+      }
+      if(no10 == undefined){
+         no10 = '';
+      }
+      else{
+      var name_array = no10.split('.');
+      no10_extension = name_array[1];
+      no10_file_name = no10.substring(0, 20);
+         
+      }
+   
+   
+      var get_assignment_download_a_tag_1 = document.getElementById('assignment_download_a_tag_1');
+      var get_assignment_download_a_tag_2 = document.getElementById('assignment_download_a_tag_2');
+      var get_assignment_download_a_tag_3 = document.getElementById('assignment_download_a_tag_3');
+      var get_assignment_download_a_tag_4 = document.getElementById('assignment_download_a_tag_4');
+      var get_assignment_download_a_tag_5 = document.getElementById('assignment_download_a_tag_5');
+      var get_assignment_download_a_tag_6 = document.getElementById('assignment_download_a_tag_6');
+      var get_assignment_download_a_tag_7 = document.getElementById('assignment_download_a_tag_7');
+      var get_assignment_download_a_tag_8 = document.getElementById('assignment_download_a_tag_8');
+      var get_assignment_download_a_tag_9 = document.getElementById('assignment_download_a_tag_9');
+      var get_assignment_download_a_tag_10 = document.getElementById('assignment_download_a_tag_10');
+   
+      var link = 'http://localhost/student_portal/uploads/session/material/';
+   no1 = no1.trim();
+   get_assignment_download_a_tag_1.href = link+no1;
+   
+   no2 = no2.trim();
+   get_assignment_download_a_tag_2.href = link+no2;
+   no3 = no3.trim();
+   get_assignment_download_a_tag_3.href = link+no3;
+   no4 = no4.trim();
+   get_assignment_download_a_tag_4.href = link+no4;
+   no5 = no5.trim();
+   get_assignment_download_a_tag_5.href = link+no5;
+   no6 = no6.trim()
+   get_assignment_download_a_tag_6.href = link+no6;
+   no7 = no7.trim()
+   get_assignment_download_a_tag_7.href = link+no7;
+   no8 = no8.trim()
+   get_assignment_download_a_tag_8.href = link+no8;
+   no9 = no9.trim()
+   get_assignment_download_a_tag_9.href = link+no9;
+   no10 = no10.trim()
+   get_assignment_download_a_tag_10.href = link+no10;
+   
+      get_assignment_download_a_tag_1.innerHTML = no1_file_name+'.'+no1_extension;
+      get_assignment_download_a_tag_2.innerHTML = no2_file_name+'.'+no2_extension;
+      get_assignment_download_a_tag_3.innerHTML = no3_file_name+'.'+no3_extension;
+      get_assignment_download_a_tag_4.innerHTML = no4_file_name+'.'+no4_extension;
+      get_assignment_download_a_tag_5.innerHTML = no5_file_name+'.'+no5_extension;
+      get_assignment_download_a_tag_6.innerHTML = no6_file_name+'.'+no6_extension;
+      get_assignment_download_a_tag_7.innerHTML = no7_file_name+'.'+no7_extension;
+      get_assignment_download_a_tag_8.innerHTML = no8_file_name+'.'+no8_extension;
+      get_assignment_download_a_tag_9.innerHTML = no9_file_name+'.'+no9_extension;
+      get_assignment_download_a_tag_10.innerHTML = no10_file_name+'.'+no10_extension;
+   
+   }
+   
+   
+</script>
+<script>
+   function projectDownloadMaterial(downloadproject) {
+      var get_download_project = downloadproject;
+   
+   }
+</script>
+
 <?php 
                   $query = "SELECT * FROM `offline_session` WHERE `batch_id` = $batch_id AND `is_deleted` = 0;";
                   $runfetch = mysqli_query($con, $query);
@@ -199,7 +349,7 @@
                               while ($data100 = mysqli_fetch_assoc($runfetch100)) {
                   
                               $assignment_solution = $data100['assignment_solution'];
-                                       
+                                 //   print_r($assignment_solution);    
                                        ?>
                                          <div class="row" >
                                              <div class="col-lg-12 mt-1" >
@@ -267,9 +417,12 @@
                                                       }
                                                       ?>
                                                    )"
-                                                   >Download Files</button>&nbsp;&nbsp;
-                                                         <button class="text-default" type="submit" name="download_material" id="course_button" >Download Solution
+                                                   >Download Files</button>
+                                                   <form action="download-solution" method="post">
+                                                   <input type="hidden" name="material_id" value="<?php echo $assignment_solution;?>">
+                                                          <button class="text-default" type="submit" name="download_material" id="course_button" >Download Solution
                                                          </button>
+                                                   </form>
                                                       </span>
                                                    
                                                    </div>
@@ -306,4 +459,34 @@
    </div>
    </div>
    <div class="m-4"></div>
+   <script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <div class="modal fade" id="assignment_download_modal">
+                        <div class="modal-dialog modal-md modal-dialog-centered">
+                           <div class="modal-content">
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                 <h4 class="modal-title">Assignments Resources</h4>
+                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="modal-body text-center" style="overflow-x:auto;">
+                                 <div><a href="" id="assignment_download_a_tag_1" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_2" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_3" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_4" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_5" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_6" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_7" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_8" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_9" download></a></div>
+                                 <div><a href="" id="assignment_download_a_tag_10" download></a></div>
+                              </div>
+                              <!-- Modal footer -->
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+               

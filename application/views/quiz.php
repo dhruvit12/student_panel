@@ -312,6 +312,7 @@ echo "Error: " . $query3 . "<br>" . $con->error;
     }
 </style>
    <span id="course_card" style="font-family: 'Poppins', sans-serif;"><b>Quiz</b></span>
+   <br><br><br>
       <div class="row">
       <div class="col-lg-9 mt-1">
      <!--

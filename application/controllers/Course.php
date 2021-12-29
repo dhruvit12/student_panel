@@ -59,9 +59,7 @@ class Course extends CI_Controller {
 		{
             $data['student_id']="";
 		}
-	
-	        
-				 $this->load->view('course',$data);
+	        	 $this->load->view('course',$data);
 	}
 }
 	?>

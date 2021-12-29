@@ -145,49 +145,6 @@ window.location = "../test/mcq-test-list.php" ;
 
 
 ?>
-      <link
-         href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/fontawesome.css"
-         />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/icofont.css"
-         />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/themify.css"
-         />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/flag-icon.css"
-         />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/feather-icon.css"
-         />
-      <!-- Plugins css start-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="<?php echo base_url()?>assets/css/datatables.css"
-         />
       <!-- Plugins css Ends-->
       <!-- Bootstrap css-->
       <link
@@ -197,23 +154,11 @@ window.location = "../test/mcq-test-list.php" ;
          />
       <!-- App css-->
       <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css" />
-      <link
-         id="color"
-         rel="stylesheet"
-         href="<?php echo base_url()?>assets/css/light-1.css"
-         media="screen"
-         />
       <!-- Responsive css-->
       <link
          rel="stylesheet"
          type="text/css"
          href="<?php echo base_url()?>assets/css/responsive.css"
-         />
-      <link
-         rel="stylesheet"
-         href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-         crossorigin="anonymous"
          />
       <link
          rel="stylesheet"
