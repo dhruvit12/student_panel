@@ -145,8 +145,6 @@ window.location = "../test/mcq-test-list.php" ;
 
 
 ?>
-      <!-- Plugins css Ends-->
-      <!-- Bootstrap css-->
       <link
          rel="stylesheet"
          type="text/css"
@@ -187,7 +185,7 @@ window.location = "../test/mcq-test-list.php" ;
                            <div class="pull-right">
                            
                               <form action="login" method="post">
-                              <input type="submit" name="cancel_test" value="Cancel Test" class="btn btn-primary btn-sm waves-effect" style="padding: 5px 10px;">
+                              <input type="submit" name="cancel_test" value="Cancel Test" class="btn  btn-sm waves-effect" style="padding: 5px 10px;background-color:#26266C;color:#ffffff;">
                               
                               
                               </form>
@@ -220,7 +218,7 @@ window.location = "../test/mcq-test-list.php" ;
                                     }
                                     }
                                     ?>
-                                 <div class="card-header bg-primary">
+                                 <div class="card-header" style="background-color:#26266C;color:#ffffff;">
                                     <h4><?php echo $test_name; ?></h4>
                                     <p><strong>Topic: </strong><?php echo $topic_name; ?></p>
                                     <div class="pull-right">
@@ -235,7 +233,7 @@ window.location = "../test/mcq-test-list.php" ;
                                           // derive data from mcq test question table and counting total marks 
                                           $offset = $question_number-1;
                                           $query100 = "SELECT * FROM `mcq_test_questions` WHERE `test_id` = $test_id ORDER BY `id` DESC LIMIT 1 OFFSET $offset"; 
-                                          $runfetch100 = mysqli_query($con, $query100);
+                                         $runfetch100 = mysqli_query($con, $query100);
                                           $noofrow100 = mysqli_num_rows($runfetch100);
                                           
                                           
@@ -419,7 +417,7 @@ window.location = "../test/mcq-test-list.php" ;
                                    <a href="<?php echo base_url()?>mcq-test/<?php echo $question_number+1; ?>"><div class="btn btn-light">Skip </div></a>
 
                                    
-                                   <input type="submit" class="btn btn-primary" name="mark_for_review" value="Mark For Review">
+                                   <input type="submit" class="btn " name="mark_for_review" value="Mark For Review" style="background-color:#26266C;color:#ffffff;">
                                    <input type="submit" class="btn btn-success float-right" name="mark_completed" value="Save & Next">
                                    
                 
@@ -594,11 +592,12 @@ window.location = "../test/mcq-test-list.php" ;
                                        <div class="form-layout form-layout-1">
                                           <div class="form-layout-footer mt-3">
                                              <a
-                                                href = "<?php echo base_url()?>mcq-test/<?php echo $test_id ?>"
-                                                class="btn btn-primary waves-effect btn-block btn-lg"
+                                                href = "<?php echo base_url()?>mcq-test-result/<?php echo $test_id ?>"
+                                                class="btn  waves-effect btn-block btn-lg"
                                                 type="submit"
                                                 name="complete_test"
-                                                >
+                                                onclick="Hello(); "
+                                                style="background-color:#26266C;color:#ffffff;">
                                                 <!-- <i class="fas fa-plus-circle"></i> -->
                                                 Complete Test
                                              </a>
@@ -624,24 +623,24 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
                   <br>
                   <br>
                </div>
-               <!-- Container-fluid Ends-->
             </div>
-            <!-- footer start-->
          </div>
       </div>
-      <!-- latest jquery-->
+      <!-- <script>
+		function Hello(){
+         if ($('input:checkbox').filter(':checked').length < 1){
+                  alert("Please Complete test!");
+            return false;
+            }
+		}
+   </script> -->
       <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
-      <!-- Bootstrap js-->
       <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
-      <!-- feather icon js-->
       <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
-      <!-- Sidebar jquery-->
       <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
       <script src="<?php echo base_url()?>assets/js/config.js"></script>
-      <!-- Plugins JS start-->
-      <!-- Plugins JS start-->
       <script src="<?php echo base_url()?>assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/datatable/datatables/datatable.custom.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
@@ -651,10 +650,7 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
       <script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
-      <!-- Plugins JS Ends-->
-      <!-- Theme js-->
       <script src="<?php echo base_url()?>assets/js/script.js"></script>
-      <!-- Plugin used-->
       <script>
          if (su == 1) {
            var element = document.getElementById("success");
@@ -678,7 +674,7 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
            );
            if (hintDisplayCount % 2 != 0) {
              // show
-             get_hint_btn.innerHTML = "Hide Hint";
+            get_hint_btn.innerHTML = "Hide Hint";
              get_hint_col.style.display = "block";
            } else {
              // hide
@@ -743,7 +739,7 @@ if (isset($_POST['mark_completed'])) {
       ?>
       <script>
       window.history.back()
-window.location = 'https://fingertips.co.in/en/auth/login.php';
+window.location = 'login';
       </script>
           <?php
       

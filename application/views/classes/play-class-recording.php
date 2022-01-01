@@ -276,7 +276,8 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                  
                                  ?>
                            </div>
-                     <div class="col-md-4" id="right-sidebar">
+                           
+                     <div class="col-md-4 m-4" id="right-sidebar">
                         <div class="card">
                            <div class="card-body">
                               <h5 class="mb-4"><strong>Session Details</strong></h5>

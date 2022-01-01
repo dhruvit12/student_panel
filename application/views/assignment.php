@@ -240,7 +240,7 @@
       var get_assignment_download_a_tag_9 = document.getElementById('assignment_download_a_tag_9');
       var get_assignment_download_a_tag_10 = document.getElementById('assignment_download_a_tag_10');
    
-      var link = 'http://localhost/student_portal/uploads/session/material/';
+      var link = '../uploads/session/material/';
    no1 = no1.trim();
    get_assignment_download_a_tag_1.href = link+no1;
    
@@ -402,7 +402,7 @@
                                                    ?>
                                                       <br>
                                                       <span style="width:180px;margin-left:-50px;margin-top:-80px; ">
-                                                      <button   id="course_button" style="cursor:pointer"
+                                                 <button   id="course_button" style="cursor:pointer"
                                                    data-toggle="modal"
                                                    data-target="#assignment_download_modal"
                                                    onclick="prepareAssignmentDownloadModal(
@@ -418,11 +418,16 @@
                                                       ?>
                                                    )"
                                                    >Download Files</button>
-                                                   <form action="download-solution" method="post">
+                                                   &nbsp;&nbsp;
+                                                   <button style="display:none"> 
+                                                     <form action="download-solution" method="post">
                                                    <input type="hidden" name="material_id" value="<?php echo $assignment_solution;?>">
                                                           <button class="text-default" type="submit" name="download_material" id="course_button" >Download Solution
                                                          </button>
                                                    </form>
+                                                 </button>
+                                                   <!-- <a href="download-solution/<?php echo $assignment_solution;?>" id="course_button" class="btn">Download Solution</a> -->
+                                                  
                                                       </span>
                                                    
                                                    </div>

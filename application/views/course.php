@@ -8,27 +8,24 @@
                                 foreach($session_list as $session_data)
                                 {
                             ?>
-                <div class="col-lg-12 ">
-                     <div class="jumbotron" id="session">
-                        <div class="row" style="margin-top: -27px;">
-                            <div class="col-lg-1">
-                             
+                    <div class="col-lg-12 ">
+                        <div class="jumbotron" id="session">
+                            <div class="row" style="margin-top: -27px;">
+                                <div class="col-lg-1">
                             <?php
-                    $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_data->id;";
-                    $runfetch100 = mysqli_query($con, $query100);
-                    $noofrow100 = mysqli_num_rows($runfetch100);
-                    $indexnumber100 = 1;
-                    
-                    if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                    while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                        // use of explode 
-                        $string1 = $data100['recording_files']; 
-                        $str_arr1 = explode (",", $string1);  
-                        $no_of_videos =  sizeof($str_arr1);
-                        $video_comment = $data100['video_comment'];
-                    }
-                    }
-                        
+                                $query100 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_data->id;";
+                                $runfetch100 = mysqli_query($con, $query100);
+                                $noofrow100 = mysqli_num_rows($runfetch100);
+                                $indexnumber100 = 1;
+                                if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                                while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+                                    // use of explode 
+                                    $string1 = $data100['recording_files']; 
+                                    $str_arr1 = explode (",", $string1);  
+                                    $no_of_videos =  sizeof($str_arr1);
+                                    $video_comment = $data100['video_comment'];
+                                 }
+                            }
                     ?>
                 <?php 
                     if($no_of_videos == 1){
@@ -44,16 +41,9 @@
                     ?>
                     )"
                     >
-                                                                     
-                            <!-- <form method="post" action="record">
-                            &nbsp;&nbsp; <button id="activity_button"><img src="<?php echo base_url()?>assets/images/student_portal_icon/button.png" >&nbsp;&nbsp;Recordings &nbsp;&nbsp;</button> 
-                            </form> -->
-                            <img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
-                   <!-- <a
-                            class="text-primary"
-                            ><i class="fas fa-play-circle"></i>Recordings </a
-                            > -->
-                            <div class="material-border"></div>
+                        &nbsp;&nbsp;&nbsp; 
+                      <img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand" >
+                     <div class="material-border"></div>
                         </li>
                         <?php
                             }else{
@@ -72,8 +62,10 @@
                             ?>
                             )"
                             >
-                            <img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
-                       
+                           
+                              
+                              <img src="<?php echo base_url()?>assets/images/student_portal_icon/play.png" id="icon" style="height: 73px;margin-top:12px;" alt="CoolBrand">
+                             
                         <!--  <a class="text-primary"
                             ><i class="fas fa-play-circle"></i>Recordings </a
                             > -->
@@ -224,4 +216,4 @@
                      </div>
                      <script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
                      <script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>
-                    
+                   

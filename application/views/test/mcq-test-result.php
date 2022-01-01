@@ -1,12 +1,14 @@
 <?php
-   session_start();
    if (!isset($_SESSION['ftip69_uid'])) {
-     header('location:../auth/login.php');
+     header('location:login');
    } 
    ?>
 
 <?php
-         require_once '../../dbcon.php';
+        $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
+        if (!$con) {
+          echo "Connection Failed!";
+        }
          $user_id = $_SESSION['ftip69_uid'];
          $query = "SELECT * FROM `user2` WHERE `id` = $user_id;";
          $run = mysqli_query($con, $query);
@@ -33,8 +35,8 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
    ?>
 <?php
    // to check if parameters are provided
-    if (!empty($_GET['id'])) {
-    $test_id = $_GET['id'];
+    if (!empty($id)) {
+    $test_id = $id;
    
     }else{
       ?>
@@ -49,7 +51,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
    $user_id = $_SESSION['ftip69_uid']; 
    
    
-   require '../../dbcon.php';
+   
    
    
       // send user back if the requested questin number is more then total questinos 
@@ -80,101 +82,27 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
    
    
    ?>
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-         name="description"
-         content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
-         />
-      <meta
-         name="keywords"
-         content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
-         />
-      <meta name="author" content="pixelstrap" />
-      <link
-         rel="icon"
-         href="../../assets/images/favicon.png"
-         type="image/x-icon"
-         />
-      <link
-         rel="shortcut icon"
-         href="../../assets/images/favicon.png"
-         type="image/x-icon"
-         />
-      <title>Test | Fingertip Portal</title>
-      <!-- Google font-->
-      <link
-         href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-         rel="stylesheet"
-         />
-      <!-- Font Awesome-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/fontawesome.css"
-         />
-      <!-- ico-font-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/icofont.css"
-         />
-      <!-- Themify icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/themify.css"
-         />
-      <!-- Flag icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/flag-icon.css"
-         />
-      <!-- Feather icon-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/feather-icon.css"
-         />
-      <!-- Plugins css start-->
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../../assets/css/datatables.css"
-         />
+
       <!-- Plugins css Ends-->
       <!-- Bootstrap css-->
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/bootstrap.css"
+         href="<?php echo base_url()?>assets/css/bootstrap.css"
          />
       <!-- App css-->
-      <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css" />
       <link
          id="color"
          rel="stylesheet"
-         href="../../assets/css/light-1.css"
+         href="<?php echo base_url()?>assets/css/light-1.css"
          media="screen"
          />
       <!-- Responsive css-->
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/responsive.css"
+         href="<?php echo base_url()?>assets/css/responsive.css"
          />
       <link
          rel="stylesheet"
@@ -185,39 +113,25 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/rounded-circle.css"
+         href="<?php echo base_url()?>assets/css/rounded-circle.css"
          />
    </head>
    <body>
-      <!-- Loader starts-->
-      <div class="loader-wrapper">
-         <div class="loader bg-white">
-            <div class="whirly-loader"></div>
-         </div>
-      </div>
-      <!-- Loader ends-->
-      <div class="page-wrapper compact-wrapper">
-         <!--change compact-wrapper-->
-         <?php require_once '../elements/header.php' ?>
-         <!-- Page Body Start-->
+      <div class="compact-wrapper">
          <div class="page-body-wrapper sidebar-icon">
-            <!-- sidebar-icon -->
-            <!-- Page Sidebar Start-->
-            <?php require_once '../elements/compact_sidebar_admin.php' ?>
-            <!-- Page Sidebar Ends-->
             <div class="page-body">
                <div class="container-fluid">
                   <div class="page-header">
                      <div class="row">
                         <div class="col">
                            <div class="page-header-left">
-                              <h3>Test</h3>
-                              <ol class="breadcrumb">
+                              <h1>Result</h1>
+                              <!-- <ol class="breadcrumb">
                                  <li class="breadcrumb-item">
-                                    <a href="../auth/login.php"><i data-feather="home"></i></a>
+                                    <a href="<?php echo base_url()?>login"><i data-feather="home"></i></a>
                                  </li>
                                  <li class="breadcrumb-item active">Test</li>
-                              </ol>
+                              </ol> -->
                            </div>
                         </div>
                      </div>
@@ -248,7 +162,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                     }
                                     }
                                     ?>
-                                 <div class="card-header bg-primary">
+                                 <div class="card-header " style="background-color:#26266C;color:#ffffff;">
                                     <h4><?php echo $test_name; ?></h4>
                                     <p><strong>Topic: </strong><?php echo $topic_name; ?></p>
                                     <div class="pull-right">
@@ -448,18 +362,14 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                     $runfetch100 = mysqli_query($con, $query100);
                                     $noofrow100 = mysqli_num_rows($runfetch100);
                                     $test_total_marks = 0;
-                                    
                                      if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                    while ($data100 = mysqli_fetch_assoc($runfetch100)) {
-                                      $test_total_marks += $data100['marks'];
+                                      while ($data100 = mysqli_fetch_assoc($runfetch100)) {
+                                        $test_total_marks += $data100['marks'];
                                       }
                                     }
-                                    
-                                    
-                                    
-                                    
                                     // derive data from mcq test question log table and counting total incomplete complete and in review question  
                                     $query100 = "SELECT * FROM `mcq_test_questions_log` WHERE `mcq_test_log_id` = $mcq_test_log_id"; 
+                                 
                                     $runfetch100 = mysqli_query($con, $query100);
                                     $noofrow100 = mysqli_num_rows($runfetch100);
                                     $completed_question = 0;
@@ -538,11 +448,11 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                                     <div class="form-layout form-layout-1">
                                        <div class="form-layout-footer mt-3">
                                           <a
-                                          href="../student/dashboard.php"
-                                             class="btn btn-primary waves-effect btn-block btn-lg"
+                                          href="<?php echo base_url()?>dashboard"
+                                             class="btn waves-effect btn-block btn-lg"
                                              type="submit"
                                              name="add_degree"
-                                             >
+                                             style="background-color:#26266C;color:#ffffff;">
                                              <!-- <i class="fas fa-plus-circle"></i> -->
                                              View Progress
                                           </a>
@@ -571,34 +481,33 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
                <!-- Container-fluid Ends-->
             </div>
             <!-- footer start-->
-            <?php require_once '../elements/footer.php' ?>
          </div>
       </div>
       <!-- latest jquery-->
-      <script src="../../assets/js/jquery-3.2.1.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
       <!-- Bootstrap js-->
-      <script src="../../assets/js/bootstrap/popper.min.js"></script>
-      <script src="../../assets/js/bootstrap/bootstrap.js"></script>
+      <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
       <!-- feather icon js-->
-      <script src="../../assets/js/icons/feather-icon/feather.min.js"></script>
-      <script src="../../assets/js/icons/feather-icon/feather-icon.js"></script>
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
       <!-- Sidebar jquery-->
-      <script src="../../assets/js/sidebar-menu.js"></script>
-      <script src="../../assets/js/config.js"></script>
+      <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/config.js"></script>
       <!-- Plugins JS start-->
       <!-- Plugins JS start-->
-      <script src="../../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-      <script src="../../assets/js/datatable/datatables/datatable.custom.js"></script>
-      <script src="../../assets/js/typeahead/handlebars.js"></script>
-      <script src="../../assets/js/typeahead/typeahead.bundle.js"></script>
-      <script src="../../assets/js/typeahead/typeahead.custom.js"></script>
-      <script src="../../assets/js/chat-menu.js"></script>
-      <script src="../../assets/js/tooltip-init.js"></script>
-      <script src="../../assets/js/typeahead-search/handlebars.js"></script>
-      <script src="../../assets/js/typeahead-search/typeahead-custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/datatable/datatables/datatable.custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/chat-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
       <!-- Plugins JS Ends-->
       <!-- Theme js-->
-      <script src="../../assets/js/script.js"></script>
+      <script src="<?php echo base_url()?>assets/js/script.js"></script>
       <!-- Plugin used-->
       <script>
          if (su == 1) {

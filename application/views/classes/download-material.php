@@ -165,7 +165,7 @@ window.location = 'http://localhost/student_portal/course';
           if($i == $no_of_files-2){
          
             echo "'../uploads/session/material/".$file_name."'";
-          }else{
+          }else{  
           echo "'../uploads/session/material/".$file_name."',";
       }
           
@@ -278,8 +278,8 @@ window.location = 'http://localhost/student_portal/course';
    function goBack(){
      console.log('go back call');
      window.history.back()
-window.location = 'http://localhost/student_portal/Login';
-     window.location = 'login';
+window.location = 'http://localhost/student_portal/dashboard';
+     window.location = 'dashboard';
    }
 </script>
 

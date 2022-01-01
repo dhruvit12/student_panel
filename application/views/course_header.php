@@ -65,8 +65,7 @@
          />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
-  
-   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom_style/course.css">
+ <link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom_style/course.css">
  <div class="col-lg-9 mt-4" style="margin-left: -25px;border: none;">
     <div class="row">
        <div class="col-lg-12 mt-3" style="margin-left: 50px">
@@ -111,7 +110,7 @@
                    </div>
                     <div class="col-lg-2" id="header-text" >
                      <a href="<?php echo base_url()?>quiz">Quiz</a>
-                     <?php if($this->uri->segment(1)=='quiz' || $this->uri->segment(1)=='mcq-test'){
+                     <?php if($this->uri->segment(1)=='quiz' || $this->uri->segment(1)=='mcq-test' || $this->uri->segment(1)=='mcq-test-result'){
                         ?>
                         <div id="line_last"  style="margin-left:-3px;">
                         </div>

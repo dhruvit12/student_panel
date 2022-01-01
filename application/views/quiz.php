@@ -2,7 +2,6 @@
 <?php  require_once('dbcon.php');
 if (!isset($_SESSION['ftip69_uid'])) {
   header('location:../auth/login.php');
-  
 } 
 ?>
 <?php
@@ -12,11 +11,7 @@ $query = "SELECT * FROM `user2` WHERE `id` = $user_id;";
 $run = mysqli_query($con, $query);
 $row = mysqli_num_rows($run);
 $data = mysqli_fetch_assoc($run);
-
-
    $ftip69_acc_student = $data['acc_student'];
-   
-
 // success
 if ($ftip69_acc_student==1) {
 // getting users credentials
@@ -292,7 +287,7 @@ echo "Error: " . $query3 . "<br>" . $con->error;
   .background
   {
     border-radius: 18px;
-    box-shadow:1px 2px 2px 2px rgb(0 0 0 / 10%);
+    box-shadow:30px -0.4px 1px -0.5px #1DA218;0px 3px 6px 0px rgb(0 0 0 / 10%);
     margin-left:-20px;
   }
   .course_button
@@ -314,105 +309,58 @@ echo "Error: " . $query3 . "<br>" . $con->error;
    <span id="course_card" style="font-family: 'Poppins', sans-serif;"><b>Quiz</b></span>
    <br><br><br>
       <div class="row">
-      <div class="col-lg-9 mt-1">
-     <!--
-      	<div class="row">
-      		 <div class="col-lg-12">
-          <div class="card background" style="height:170px">
-            <div class="card-body">
-              <div class="row" style="">
-                 <div class="col-lg-4">
-                  <div class="image">
-                   <img  src="<?php echo base_url()?>assets/images/university/python-1.png"; style="margin-top:-2px;height: 180px;width:250px">
-                 </div>
-               </div>
-               //
-                 <div class="col-lg-3" style="font-family: poppins">
-                   <h3 style="color:#858585;">TABLEAU QUIZ</h3>
-                      <span style="color:#858585;font-size: 10px;" id="sub-contect">Course: </span>
-                      <br>
-                      <span style="color:#858585;font-size: 10px;" id="sub-contect">Starts at: </span>
-                      <br>
-                      <span style="color:#858585;font-size: 10px;" id="sub-contect">Starts at: Feb 25, 11:00 AM</span>
-                 </div>
-                 <div class="col-lg-2 mt-4">
-               
-                 	<a  class="course_button"><p style="margin-top:2px;">Start Quiz</p></a><br><br>
-                  <a  class="course_button"><p style="margin-top:2px;">Restart Quiz</p></a><br>
-                 	 <br><button class="course_button">Restart Quiz</button><br> -->
-
-
-               <!--  </div> -->
-                 
-                 
-                     
-                 
-                                    
-                                  
-<!-- 
-              </div>
-            </div>
-          </div>
-		      </div>
-		  </div>
-          </div>
-      </div> -->
-        
+      <div class="col-lg-10 mt-1">
       <?php      
-                                             $query = "SELECT * FROM `offline_session` WHERE `batch_id` = $batch_id AND `is_deleted` = 0;";
-                                             $runfetch = mysqli_query($con, $query);
-                                             $noofrow = mysqli_num_rows($runfetch);
-                                             $indexnumber = 1;
-                                             
-                                             if ($noofrow >0 && $runfetch == TRUE) { 
-                                                while ($data = mysqli_fetch_assoc($runfetch)) { 
-                                             
-                                                   $session_id_test = $data['id'];
-                                             
-                                                   
-                                                         
-                                                   // use of explode 
-                                                   $test = $data['test']; 
-                                                   $test_array = explode (",", $test);  
-                                                   $no_of_test =  sizeof($test_array);
-                                                   for($i= 0; $i < $no_of_test-1; $i++){
-                                                      
-                                             
-                                                      $query10 = "SELECT * FROM `mcq_test_log` WHERE `given_by` = $user_id AND `test_id` = $test_array[$i];";
-                                                      $runfetch10 = mysqli_query($con, $query10);
-                                                      $noofrow10 = mysqli_num_rows($runfetch10);
-                                                      
-                                             
-                                                      if ($noofrow10 != 0){
-                                                   $query1000 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id_test;";
-                                                   $runfetch1000 = mysqli_query($con, $query1000);
-                                                   $noofrow1000 = mysqli_num_rows($runfetch1000);
-                                                   $indexnumber1000 = 1;
-                                                   if ($noofrow1000 > 0 && $runfetch1000 == TRUE) { 
-                                                      while ($data1000 = mysqli_fetch_assoc($runfetch1000)) { 
-                                                         $test_submission = $data1000['test_submission'];
-                                                         if($test_submission == ""){
-                                                            $date = date_create();
-                                                            $timestamp = date_timestamp_get($date);
-                                             
-                                                            $test_submission = $timestamp;
-                                                         }
-                                                      }
-                                                   }else{
-                                                      continue;
-                                                   }
-                                                         $query100 = "SELECT * FROM `mcq_test` WHERE `id` = $test_array[$i];";
-                                                      $runfetch100 = mysqli_query($con, $query100);
-                                                      $noofrow100 = mysqli_num_rows($runfetch100);
-                                                      $indexnumber = 1;
-                                                      
-                                                      if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                                         while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-                                             
-                                             
-                                                         ?>
+                     $query = "SELECT * FROM `offline_session` WHERE `batch_id` = $batch_id AND `is_deleted` = 0;";
+                     $runfetch = mysqli_query($con, $query);
+                     $noofrow = mysqli_num_rows($runfetch);
+                     $indexnumber = 1;
+                     
+                     if ($noofrow >0 && $runfetch == TRUE) { 
+                        while ($data = mysqli_fetch_assoc($runfetch)) { 
+                     
+                           $session_id_test = $data['id'];
+                     
+                           
+                                 
+                           // use of explode 
+                           $test = $data['test']; 
+                           $test_array = explode (",", $test);  
+                           $no_of_test =  sizeof($test_array);
+                           for($i= 0; $i < $no_of_test-1; $i++){
+                               $query10 = "SELECT * FROM `mcq_test_log` WHERE `given_by` = $user_id AND `test_id` = $test_array[$i];";
+                              $runfetch10 = mysqli_query($con, $query10);
+                              $noofrow10 = mysqli_num_rows($runfetch10);
+                           if ($noofrow10 != 0){
+                           $query1000 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id_test;";
+                           $runfetch1000 = mysqli_query($con, $query1000);
+                           $noofrow1000 = mysqli_num_rows($runfetch1000);
+                           $indexnumber1000 = 1;
+                           if ($noofrow1000 > 0 && $runfetch1000 == TRUE) { 
+                              while ($data1000 = mysqli_fetch_assoc($runfetch1000)) { 
+                                 $test_submission = $data1000['test_submission'];
+                                 if($test_submission == ""){
+                                    $date = date_create();
+                                    $timestamp = date_timestamp_get($date);
+                     
+                                    $test_submission = $timestamp;
+                                 }
+                              }
+                           }else{
+                              continue;
+                           }
+                                 $query100 = "SELECT * FROM `mcq_test` WHERE `id` = $test_array[$i];";
+                              $runfetch100 = mysqli_query($con, $query100);
+                              $noofrow100 = mysqli_num_rows($runfetch100);
+                              $indexnumber = 1;
+                              
+                              if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                                 while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
+                     
+                     
+                                 ?>
                                          	<div class="row">
-                                            <div class="col-lg-12">
+                                            <div class="col-lg-9">
                                             <div class="card background" style="height:170px">
                                               <div class="card-body">
                                                 <div class="row" style="">
@@ -430,6 +378,7 @@ echo "Error: " . $query3 . "<br>" . $con->error;
                                                                                       echo "$mydate[month] $mydate[mday]";
                                                                                       ?>     </span>
                                                 </div>
+                                              
                                                 <?php
                                                    $test_id100=$data100['id'];
                                                    $query4="SELECT * FROM `mcq_test_questions` WHERE test_id=$test_id100";
@@ -458,9 +407,17 @@ echo "Error: " . $query3 . "<br>" . $con->error;
                                                    ?>
                                              </div>
                                           </div>
+                                        
+                                           
+                                       </div>
+                                      
+                                         
+                                     </div>  
+                                     <div class="col-lg-1 close" >
+
+                                     </div>
                                           </div>
-                                          </div>
-                                          </div>
+                                          
                                           <?php
                                              }}
                                              }else{

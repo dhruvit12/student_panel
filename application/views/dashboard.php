@@ -313,7 +313,7 @@
             });
           </script>  
     <div class="row" style="">
-         <div class="col-lg-12 " >
+         <div class="col-lg-11 " >
           <div class="card-body" id="header"  >
          <!-- <a href="#" style="color: #ffffff;" id="sidebarToggle"><i class="fa fa-bars" aria-hidden="true" style="height:5px;width: 5px;"></i></a> -->
          <div class="row">
@@ -1052,7 +1052,7 @@
                               <div class="row">
                                <div class="col-lg-6" >
                                      <div class="card" id="assignment_css">
-                                       <div class="card-body">
+                                      <a href="<?php echo base_url()?>support"> <div class="card-body">
                                           <div class="row">
                                             <div class="col-lg-1">
                                             <!-- <img class="z-depth-2 header_logo" alt="100x100" src="<?php echo base_url()?>assets/images/student_portal_icon/help.png" style="height:50px;width: 50px;"> --> 
@@ -1127,6 +1127,7 @@
                                            </div>
 
                                         </div>
+                                                            </a>
                                        </div>
                                      </div>
                                       <div class="col-lg-6" >
