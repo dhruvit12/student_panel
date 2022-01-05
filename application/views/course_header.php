@@ -73,47 +73,52 @@
                                    box-shadow:0px 3px 6px 0px rgb(0 0 0 / 10%);">
                 <div class="row mt-3">
                    <div class="col-lg-2" id="header-text">
-                     <a href="<?php echo base_url()?>course"> Recording</a>
+                     <a href="<?php echo base_url()?>course" id="course">Recording</a>
                       <?php if($this->uri->segment(1)=='course'){
                         ?>
                         <div id="line" style="margin-left:16px;">
                         </div>
+                        <script>document.getElementById('course').style.color='#5A4242';</script>
                       <?php
                       } ?>
                    </div>
                     <div class="col-lg-2" id="header-text">
-                     <a href="<?php echo base_url()?>project">Project</a>
+                     <a href="<?php echo base_url()?>project" id="project">Project</a>
                       <?php if($this->uri->segment(1)=='project'){
                         ?>
                        <div id="line" style="margin-left:5px;">
                         </div>
+                        <script>document.getElementById('project').style.color='#5A4242';</script>
                       <?php
                       } ?>
                    </div>
                     <div class="col-lg-2" id="header-text">
-                     <a href="assignment">Assignment</a>
+                     <a href="assignment" id="assignment">Assignment</a>
                       <?php if($this->uri->segment(1)=='assignment'){
                         ?>
                         <div id="line">
                         </div>
+                        <script>document.getElementById('assignment').style.color='#5A4242';</script>
                       <?php
                       } ?>
                    </div>
                     <div class="col-lg-2" id="header-text">
-                     <a href="<?php echo base_url()?>case_study">Case Study</a>
+                     <a href="<?php echo base_url()?>case_study" id="case study">Case Study</a>
                       <?php if($this->uri->segment(1)=='case_study'){
                         ?>
                         <div id="line">
                         </div>
+                        <script>document.getElementById('case study').style.color='#5A4242';</script>
                       <?php
                       } ?>
                    </div>
                     <div class="col-lg-2" id="header-text" >
-                     <a href="<?php echo base_url()?>quiz">Quiz</a>
+                     <a href="<?php echo base_url()?>quiz" id="quiz">Quiz</a>
                      <?php if($this->uri->segment(1)=='quiz' || $this->uri->segment(1)=='mcq-test' || $this->uri->segment(1)=='mcq-test-result'){
                         ?>
                         <div id="line_last"  style="margin-left:-3px;">
                         </div>
+                        <script>document.getElementById('quiz').style.color='#5A4242';</script>
                       <?php
                       } ?>
                    </div>

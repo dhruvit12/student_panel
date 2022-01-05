@@ -73,9 +73,9 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       <link href="<?php echo base_url()?>assets/css/video/video-js.css" rel="stylesheet" />
       <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
       <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-      <!-- video js files ends -->
+      <!-- video js files ends oncontextmenu="return false" -->
    </head>
-   <body oncontextmenu="return false">
+   <body >
    <?php
                                              $query = "SELECT * FROM `user2` where `id` = $user_id";
                                              
@@ -492,120 +492,120 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
          ?>
       <script>
          // number input off
-         $(document).ready(function () {
-           $(".txtOnly").keypress(function (e) {
-             var key = e.keyCode;
-             if (key >= 48 && key <= 57) {
-               e.preventDefault();
-             }
-           });
-         });
+         // $(document).ready(function () {
+         //   $(".txtOnly").keypress(function (e) {
+         //     var key = e.keyCode;
+         //     if (key >= 48 && key <= 57) {
+         //       e.preventDefault();
+         //     }
+         //   });
+         // });
       </script>
    </body>
 </html>
 <script>
-   jQuery(".video-js").bind("contextmenu", function () {
-     return false;
-   });
+   // jQuery(".video-js").bind("contextmenu", function () {
+   //   return false;
+   // });
    
-   // prevent right click
-   $(document).on("contextmenu", function (e) {
-     e.preventDefault();
-   });
+   // // prevent right click
+   // $(document).on("contextmenu", function (e) {
+   //   e.preventDefault();
+   // });
 </script>
 <script>
-   $(document).keydown(function (event) {
-     if (event.keyCode == 123) {
-       // Prevent F12
-       window.location = "offline-session-suspicious-activity.php?r=f12_pressed";
-       disabledEvent(event);
+   // $(document).keydown(function (event) {
+   //   if (event.keyCode == 123) {
+   //     // Prevent F12
+   //     window.location = "offline-session-suspicious-activity.php?r=f12_pressed";
+   //     disabledEvent(event);
    
-       return false;
-     } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
-       // Prevent Ctrl+Shift+I
-       window.location =
-         "offline-session-suspicious-activity.php?r=ctrl+shift+I_pressed";
-       disabledEvent(event);
+   //     return false;
+   //   } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+   //     // Prevent Ctrl+Shift+I
+   //     window.location =
+   //       "offline-session-suspicious-activity.php?r=ctrl+shift+I_pressed";
+   //     disabledEvent(event);
    
-       return false;
-     } else if (event.ctrlKey && event.keyCode == 85) {
-       window.location =
-         "offline-session-suspicious-activity.php?r=ctrl+u_pressed";
-       disabledEvent(event);
+   //     return false;
+   //   } else if (event.ctrlKey && event.keyCode == 85) {
+   //     window.location =
+   //       "offline-session-suspicious-activity.php?r=ctrl+u_pressed";
+   //     disabledEvent(event);
    
-       return false;
-     }
-   });
+   //     return false;
+   //   }
+   // });
    
-   function disabledEvent(event) {
-     if (event.stopPropagation) {
-       event.stopPropagation();
-     } else if (window.event) {
-       window.event.cancelBubble = true;
-     }
-     event.preventDefault();
-     return false;
-   }
+   // function disabledEvent(event) {
+   //   if (event.stopPropagation) {
+   //     event.stopPropagation();
+   //   } else if (window.event) {
+   //     window.event.cancelBubble = true;
+   //   }
+   //   event.preventDefault();
+   //   return false;
+   // }
    
    //  detact developer option
    
-   !(function () {
-     function detectDevTool(allow) {
-       if (isNaN(+allow)) allow = 100;
-       var start = +new Date(); // Validation of built-in Object tamper prevention.
-       debugger;
-       var end = +new Date(); // Validates too.
-       if (isNaN(start) || isNaN(end) || end - start > allow) {
-         window.location =
-           "offline-session-suspicious-activity.php?r=detact developer option";
-       }
-     }
-     if (window.attachEvent) {
-       if (
-         document.readyState === "complete" ||
-         document.readyState === "interactive"
-       ) {
-         detectDevTool();
-         window.attachEvent("onresize", detectDevTool);
-         window.attachEvent("onmousemove", detectDevTool);
-         window.attachEvent("onfocus", detectDevTool);
-         window.attachEvent("onblur", detectDevTool);
-       } else {
-         setTimeout(argument.callee, 0);
-       }
-     } else {
-       window.addEventListener("load", detectDevTool);
-       window.addEventListener("resize", detectDevTool);
-       window.addEventListener("mousemove", detectDevTool);
-       window.addEventListener("focus", detectDevTool);
-       window.addEventListener("blur", detectDevTool);
-     }
-   })();
+   // !(function () {
+   //   function detectDevTool(allow) {
+   //     if (isNaN(+allow)) allow = 100;
+   //     var start = +new Date(); // Validation of built-in Object tamper prevention.
+   //     debugger;
+   //     var end = +new Date(); // Validates too.
+   //     if (isNaN(start) || isNaN(end) || end - start > allow) {
+   //       window.location =
+   //         "offline-session-suspicious-activity.php?r=detact developer option";
+   //     }
+   //   }
+   //   if (window.attachEvent) {
+   //     if (
+   //       document.readyState === "complete" ||
+   //       document.readyState === "interactive"
+   //     ) {
+   //       detectDevTool();
+   //       window.attachEvent("onresize", detectDevTool);
+   //       window.attachEvent("onmousemove", detectDevTool);
+   //       window.attachEvent("onfocus", detectDevTool);
+   //       window.attachEvent("onblur", detectDevTool);
+   //     } else {
+   //       setTimeout(argument.callee, 0);
+   //     }
+   //   } else {
+   //     window.addEventListener("load", detectDevTool);
+   //     window.addEventListener("resize", detectDevTool);
+   //     window.addEventListener("mousemove", detectDevTool);
+   //     window.addEventListener("focus", detectDevTool);
+   //     window.addEventListener("blur", detectDevTool);
+   //   }
+   // })();
    
    // detactiv idm downloader
 </script>
 <script>
-   function checkidm() {
-     $(document).ready(function () {
-       var idm_downloader = document
-         .getElementsByTagName("video")[0]
-         .getAttribute("__idm_id__");
-       // console.log(idm_downloader);
-       if (idm_downloader != null) {
-         // console.log("blast");
-         window.location =
-           "offline-session-suspicious-activity.php?r=idm_detacted";
-       }
-     });
-     checkidmpair();
-   }
+   // function checkidm() {
+   //   $(document).ready(function () {
+   //     var idm_downloader = document
+   //       .getElementsByTagName("video")[0]
+   //       .getAttribute("__idm_id__");
+   //     // console.log(idm_downloader);
+   //     if (idm_downloader != null) {
+   //       // console.log("blast");
+   //       window.location =
+   //         "offline-session-suspicious-activity.php?r=idm_detacted";
+   //     }
+   //   });
+   //   checkidmpair();
+   // }
    
-   function checkidmpair() {
-     setTimeout(() => {
-       checkidm();
-     }, 200);
-   }
-   checkidm();
+   // function checkidmpair() {
+   //   setTimeout(() => {
+   //     checkidm();
+   //   }, 200);
+   // }
+   // checkidm();
 </script>
 
 

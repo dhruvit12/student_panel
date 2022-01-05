@@ -28,7 +28,7 @@
    ?>
 <script>
    window.history.back()
-window.location = 'https://fingertips.co.in/en/auth/login.php';
+window.location = '<?php echo base_url()?>login';
 </script>
 <?php
    }  
@@ -42,7 +42,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       ?>
 <script>
    window.history.back()
-window.location = 'https://fingertips.co.in/en/auth/login.php';
+window.location = '<?php echo base_url()?>login';
 </script>
 <?php
    }  

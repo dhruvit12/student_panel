@@ -1,3 +1,10 @@
+<script>
+   //menu
+ document.getElementById('menu_programflow').classList.add("menu-active");
+ //icon
+ document.getElementById('sidebar_icon_4').style.fill='#E46F0E';
+
+</script>
 <style>
    .text{
       font-size: 25px;
@@ -13,16 +20,16 @@
 <link rel="icon" type="image/png"   href="program_assets/img/fevicon.png">    
 <!-- Latest compiled and minified CSS -->
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="program_assets/mastercss/bootstrap.css">
+<!-- <link rel="stylesheet" href="program_assets/mastercss/bootstrap.css"> -->
 
-<link rel="stylesheet" href="program_assets/mastercss/owl.theme.default.min.css">
-<link rel="stylesheet" href="program_assets/mastercss/owl.carousel.min.css">
-<link rel="stylesheet" href="program_assets/mastercss/animate.css">
-<link rel="stylesheet" href="program_assets/mastercss/aos.css">
-<script src="https://kit.fontawesome.com/5ded6d0b74.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="program_assets/mastercss/owl.theme.default.min.css"> -->
+<!-- <link rel="stylesheet" href="program_assets/mastercss/owl.carousel.min.css"> -->
+<!-- <link rel="stylesheet" href="program_assets/mastercss/animate.css"> -->
+<!-- <link rel="stylesheet" href="program_assets/mastercss/aos.css"> -->
+<!-- <script src="https://kit.fontawesome.com/5ded6d0b74.js" crossorigin="anonymous"></script> -->
 <link rel="stylesheet" href="program_assets/mastercss/design.css">
 <!-- remove this link -->
-<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>    
+<!-- <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>     -->
 <script type="text/javascript" src="program_assets/masterjs/jquery-1.11.0.min.js"></script>
 
 <div class="row" style="margin-left:-50px;">
@@ -31,7 +38,7 @@
     </div>
 </div>
 <div class="row">
-   <div class="col-lg-8 offset-lg-2" style="margin-left: 360px;">
+   <div class="col-lg-8 offset-lg-2"  style="margin-left:365px;" >
       <div class="mysql-data-section">
             <div class="C-static">
                <div class="C-static-data">

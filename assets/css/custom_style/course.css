@@ -61,18 +61,18 @@
 {
    border-bottom: 5px solid #E46F0A;
    width:45px;
-   border-radius: 20px;
+   border-radius: 100px;
    margin-left: 25px;
-   margin-top: 8px;
+   margin-top: 7px;
   
 }
 #line_last
 {
    border-bottom: 5px solid #E46F0A;
    width:45px;
-   border-radius: 20px;
+   border-radius: 100px;
    margin-left: -5px;
-   margin-top: 8px;
+   margin-top: 7px;
 }
 .line a:hover {
    border-bottom: 5px solid #E46F0A;
@@ -80,4 +80,8 @@
    border-radius: 20px;
    margin-left: 25px;
    margin-top: 5px;
+}
+.menus
+{
+  color:#000000;
 }

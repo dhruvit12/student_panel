@@ -1,10 +1,20 @@
+<script>
+   //menu
+ document.getElementById('menu_course').classList.add("menu-active");
+ //icon
+ document.getElementById('sidebar_icon_2').style.fill='#E46F0E';
+
+</script>
 <?php
    if (!isset($_SESSION['ftip69_uid'])) {
      header('location:../auth/login.php');
      
    } 
    ?>
-
+<script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
+      <!-- Bootstrap js-->
+      <!-- <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script> -->
+      <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
 <?php
    require_once 'dbcon.php';
    $user_id = $_SESSION['ftip69_uid'];
@@ -240,7 +250,7 @@
       var get_assignment_download_a_tag_9 = document.getElementById('assignment_download_a_tag_9');
       var get_assignment_download_a_tag_10 = document.getElementById('assignment_download_a_tag_10');
    
-      var link = '../uploads/session/material/';
+      var link = '<?php echo base_url()?>uploads/session/material/';
    no1 = no1.trim();
    get_assignment_download_a_tag_1.href = link+no1;
    
@@ -290,6 +300,7 @@
                   $runfetch = mysqli_query($con, $query);
                   $noofrow = mysqli_num_rows($runfetch);
                   if ($noofrow > 0 && $runfetch == TRUE) {
+                     $kp=1;
                      while ($data = mysqli_fetch_assoc($runfetch)) {
                         $session_id_assignment = $data['id'];
                         $course_id=$data['course'];
@@ -369,7 +380,7 @@
                                                 
                                                 </p>
                                                 
-                                                <div class="collapse" id="myCollapse<?php echo $data100['id'];?>" style="margin-top: -36px; padding: 0px;">
+                                                <div class="collapse" id="myCollapse<?php echo $kp;?>" style="margin-top: -36px; padding: 0px;">
                                                 <br>
                                                 
                                                 <div  style="margin-left:-50px;" >
@@ -436,7 +447,7 @@
                                              </div>
                                              <div class="col-lg-4 mt-5">
                                              <div class="pull-right">
-                                             <a href="#myCollapse<?php echo  $data100['id'];?>" data-bs-toggle="collapse" style="font-size:24px;color:gray;" >
+                                             <a href="#myCollapse<?php echo  $kp;?>" data-bs-toggle="collapse" style="font-size:24px;color:gray;" >
                                                 <i class="fas fa-angle-down" ></i>
                                                 </a>
                                               </div>
@@ -448,11 +459,11 @@
                                              }
                                              }else{
                                              echo "";
+                                             }$kp++;
                                              }
                                              }
                                              }
-                                             }
-                                          }}
+                                          } }
                                              ?>
 
                    

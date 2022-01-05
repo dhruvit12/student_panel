@@ -1,3 +1,10 @@
+<script>
+   //menu
+ document.getElementById('menu_editprofile').classList.add("menu-active");
+ //icon
+ document.getElementById('sidebar_icon_5').style.fill='#E46F0E';
+
+</script>
 <style type="text/css">
 	.header_logo{
 		

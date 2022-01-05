@@ -1,4 +1,11 @@
 
+<script>
+   //menu
+ document.getElementById('menu_course').classList.add("menu-active");
+ //icon
+ document.getElementById('sidebar_icon_2').style.fill='#E46F0E';
+
+</script>
 <?php  require_once('dbcon.php');
 if (!isset($_SESSION['ftip69_uid'])) {
   header('location:../auth/login.php');
@@ -98,11 +105,7 @@ $word = str_replace($numbers, '', $word);
 ?>
 <?php
 if (isset($_POST['start_test']) ||isset($_POST['start_test2'])) {
-
-   
-   
-   unset($_SESSION['ftip69_test_id']);
-
+    unset($_SESSION['ftip69_test_id']);
 
    $test_id  = $_POST['test_id'];
    $_SESSION['ftip69_test_id'] = $test_id;
@@ -154,10 +157,19 @@ if (isset($_POST['start_test']) ||isset($_POST['start_test2'])) {
        $student_id = $data100['student_id'];
     }
     }
-
+      //mark calculation first
+                                     $query100 = "SELECT `marks` FROM `mcq_test_questions` WHERE `test_id` = $test_id"; 
+                                    $runfetch100 = mysqli_query($con, $query100);
+                                    $noofrow100 = mysqli_num_rows($runfetch100);
+                                    $test_total_marks = 0;
+                                     if ($noofrow100 >0 && $runfetch100 == TRUE) { 
+                                      while ($data100 = mysqli_fetch_assoc($runfetch100)) {
+                                        $test_total_marks += $data100['marks'];
+                                      }
+                                    }
     $query3 = "INSERT INTO `mcq_test_log`(`id`, `test_id`, `test_start_time`, `given_by`,`student_id`,`test_status`) VALUES (NULL,$test_id,$test_start_time,$user_id,$student_id,'incomplete')";
 
-
+     
     if ($con->query($query3) === TRUE) { 
        $last_id = mysqli_insert_id($con); 
        $_SESSION['ftip69_mcq_test_log_id'] = $last_id;
@@ -284,12 +296,40 @@ echo "Error: " . $query3 . "<br>" . $con->error;
     border-radius: 27px;
     width: 200px;
    }
-  .background
+   .background
   {
     border-radius: 18px;
-    box-shadow:30px -0.4px 1px -0.5px #1DA218;0px 3px 6px 0px rgb(0 0 0 / 10%);
+    box-shadow:0px 3px 6px 0px rgb(0 0 0 / 10%);
     margin-left:-20px;
   }
+  
+.open {
+  width: 1px;
+  height: 168px;
+  background: green;
+  transition-property: width;
+  transition-duration: 5s;
+  z-index: -1;
+}
+
+.open:hover {
+  width: 400px;
+  background:.E42416;
+}
+.open1 {
+  width: 1px;
+  height: 168px;
+  background: green;
+  transition-property: width;
+  transition-duration: 5s;
+  z-index: -1;
+}
+
+.open1:hover {
+  width: 400px;
+  background:#E42416;
+}
+
   .course_button
   {
     background-color: #26266C;
@@ -305,6 +345,7 @@ echo "Error: " . $query3 . "<br>" . $con->error;
     margin-top:10px ;
     width:140px;
     }
+    
 </style>
    <span id="course_card" style="font-family: 'Poppins', sans-serif;"><b>Quiz</b></span>
    <br><br><br>
@@ -315,10 +356,10 @@ echo "Error: " . $query3 . "<br>" . $con->error;
                      $runfetch = mysqli_query($con, $query);
                      $noofrow = mysqli_num_rows($runfetch);
                      $indexnumber = 1;
-                     
+                     $datano=1;
                      if ($noofrow >0 && $runfetch == TRUE) { 
                         while ($data = mysqli_fetch_assoc($runfetch)) { 
-                     
+                          
                            $session_id_test = $data['id'];
                      
                            
@@ -413,9 +454,18 @@ echo "Error: " . $query3 . "<br>" . $con->error;
                                       
                                          
                                      </div>  
-                                     <div class="col-lg-1 close" >
+                                     <div onclick="myFunction1(<?php echo $datano;?>)"><div id="open<?php echo $datano;?>" style="margin-left:-45px;border-radius:20px;background:green;width:60px;height:170px;"  >
+                                            <i class="fa fa-arrow-right text-red ml-5" aria-hidden="true" style="font-size: 3em;margin-top:65px;margin-left:10px;color:#000"></i>
+                                     </div></div>
+                                     <div onclick="myFunction2(<?php echo $datano;?>)"><div  id="close<?php echo $datano;?>" style="margin-left:-55px;border-radius:20px;background:red;height:170px;width:200px;display:none"   >
+                                            <i class="fa fa-arrow-left text-red m-5" aria-hidden="true" style="font-size: 3em;margin-top:65px !important;margin-left:165px !important;color:#000"></i>
+                                             <span id="score_id" style="color:#fff"></span>
+                                          </div></div>
+                                     <?php $datano++?>
+                                  
+                               
 
-                                     </div>
+
                                           </div>
                                           
                                           <?php
@@ -441,3 +491,17 @@ echo "Error: " . $query3 . "<br>" . $con->error;
      </div>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
      
+     <script>
+     $('#close'+get_icon_number).hide();
+        function myFunction1(get_icon_number) {
+            $('#open'+get_icon_number).hide();
+            $('#close'+get_icon_number).show();
+         }
+         function myFunction2(get_icon_number) {
+            $('#open'+get_icon_number).show();
+            $('#close'+get_icon_number).hide();
+         
+         }
+     
+     </script>
+    
