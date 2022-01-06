@@ -232,48 +232,50 @@ window.location = 'http://localhost/student_portal/course';
    
    }
    
-</script>
-<script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
-<!-- Bootstrap js-->
-<script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
-<!-- feather icon js-->
-<script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
-<!-- Sidebar jquery-->
-<script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
-<script src="<?php echo base_url()?>assets/js/config.js"></script>
-<!-- Plugins JS start-->
-<script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>
-<script src="<?php echo base_url()?>assets/js/chart/chartjs/chart.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/chart/knob/knob.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/chart/knob/knob-chart.js"></script>
-<script src="<?php echo base_url()?>assets/js/prism/prism.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/clipboard/clipboard.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/counter/jquery.waypoints.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/counter/jquery.counterup.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/counter/counter-custom.js"></script>
-<script src="<?php echo base_url()?>assets/js/custom-card/custom-card.js"></script>
-<script src="<?php echo base_url()?>assets/js/dashboard/university-custom.js"></script>
-<script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.js"></script>
-<script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.en.js"></script>
-<script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.custom.js"></script>
-<!-- <script src="<?php echo base_url()?>assets/js/tour/intro.js"></script> -->
-<!-- <script src="<?php echo base_url()?>assets/js/tour/intro-init.js"></script> -->
-<script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
-<script src="<?php echo base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
-<script src="<?php echo base_url()?>assets/js/typeahead/typeahead.custom.js"></script>
-<script src="<?php echo base_url()?>assets/js/chat-menu.js"></script>
-<script src="<?php echo base_url()?>assets/js/height-equal.js"></script>
-<script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
-<script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
-<script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
-<!-- Plugins JS Ends-->
-<!-- Theme js-->
-<script src="<?php echo base_url()?>assets/js/script.js"></script>
-<!-- Plugin used-->
-<!-- custom js starts -->
-<script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
+</script>  <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
+      <!-- Bootstrap js-->
+      <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
+      <!-- feather icon js-->
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
+      <!-- Sidebar jquery-->
+      <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/config.js"></script>
+      <!-- Plugins JS start-->
+      <script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>
+      <script src="<?php echo base_url()?>assets/js/chart/chartjs/chart.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/chart/knob/knob.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/chart/knob/knob-chart.js"></script>
+      <script src="<?php echo base_url()?>assets/js/prism/prism.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/clipboard/clipboard.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/counter/jquery.waypoints.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/counter/jquery.counterup.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/counter/counter-custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/custom-card/custom-card.js"></script>
+      <script src="<?php echo base_url()?>assets/js/dashboard/university-custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.js"></script>
+      <script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.en.js"></script>
+      <script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+      <!-- <script src="<?php echo base_url()?>assets/js/tour/intro.js"></script> -->
+      <!-- <script src="<?php echo base_url()?>assets/js/tour/intro-init.js"></script> -->
+      <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/chat-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/height-equal.js"></script>
+      <script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
+      <!-- Plugins JS Ends-->
+      <!-- Theme js-->
+      <script src="<?php echo base_url()?>assets/js/script.js"></script>
+      <!-- Plugin used-->
+      <!-- custom js starts -->
+      <script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
+      <!-- custom js ends -->
+          <!--  -->
+      <script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>
 <script>
    function goBack(){
      console.log('go back call');

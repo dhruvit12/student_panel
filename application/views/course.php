@@ -106,7 +106,6 @@
                                                    data-target="#reading_material_list"
                                                     <?php   
                                                       $query100 = "SELECT * FROM `offline_session` WHERE `id` =$session_data->id;";
-                                                      print_r($query100);
                                                       $runfetch100 = mysqli_query($con, $query100);
                                                       $noofrow100 = mysqli_num_rows($runfetch100);
                                                       $indexnumber100 = 1;

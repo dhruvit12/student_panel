@@ -1273,12 +1273,15 @@
                                  ?>
                                     <div class="row">
                                     <div class="col-lg-6 offset-lg-1">
-                                       <img src="<?php echo base_url()?>assets/attendance/<?php echo $attendacePercentage;?>.png" alt="Nature" style="height: auto;width:320px;margin-left:-20px;;">
+                                
+                                       <img  src="<?php echo base_url()?>assets/attendance/<?php echo $attendacePercentage;?>.png" alt="Nature" style="height: auto;width:320px;margin-left:-20px;;">
                                        <br>
                                        <div id="chart"></div>
                                           <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
                                           </div>
-                                          <img src="<?php echo base_url()?>assets/images/logo/attendance.png" alt="Nature" style="margin-left: 10px;">
+                                          <img  src="<?php echo base_url()?>assets/images/logo/attendance.png" alt="Nature" style="margin-left: 10px;">
+                                         
+ </div>
                                        </div>
                                       </div>
                                      </div>
@@ -1316,24 +1319,6 @@
       <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
       <!-- Sidebar jquery-->
       <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
-      <script src="<?php echo base_url()?>assets/js/config.js"></script>
-      <!-- Plugins JS start-->
-      <script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>
-      <script src="<?php echo base_url()?>assets/js/chart/chartjs/chart.min.js"></script>
-      <script src="<?php echo base_url()?>assets/js/chart/knob/knob.min.js"></script>
-      <script src="<?php echo base_url()?>assets/js/chart/knob/knob-chart.js"></script>
-      <script src="<?php echo base_url()?>assets/js/prism/prism.min.js"></script>
-      <script src="<?php echo base_url()?>assets/js/clipboard/clipboard.min.js"></script>
-      <script src="<?php echo base_url()?>assets/js/counter/jquery.waypoints.min.js"></script>
-      <script src="<?php echo base_url()?>assets/js/counter/jquery.counterup.min.js"></script>
-      <script src="<?php echo base_url()?>assets/js/counter/counter-custom.js"></script>
-      <script src="<?php echo base_url()?>assets/js/custom-card/custom-card.js"></script>
-      <script src="<?php echo base_url()?>assets/js/dashboard/university-custom.js"></script>
-      <script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.js"></script>
-      <script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.en.js"></script>
-      <script src="<?php echo base_url()?>assets/js/datepicker/date-picker/datepicker.custom.js"></script>
-      <!-- <script src="<?php echo base_url()?>assets/js/tour/intro.js"></script> -->
-      <!-- <script src="<?php echo base_url()?>assets/js/tour/intro-init.js"></script> -->
       <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.custom.js"></script>
@@ -1350,7 +1335,6 @@
       <script src="<?php echo base_url()?>assets/js/student-dashboard-modal-create.js"></script>
       <!-- custom js ends -->
           <!--  -->
-      <script src="<?php echo base_url()?>assets/js/chart/chartist/chartist.js"></script>
       <div class="modal fade" id="reading_material_list" >
                         <div class="modal-dialog modal-md modal-dialog-centered"  >
                            <div class="modal-content">
@@ -1419,4 +1403,4 @@
                               </div>
                            </div>
                         </div>
-                     </div>
+                
