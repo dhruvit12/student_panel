@@ -118,6 +118,7 @@ if (isset($_POST['start_test']) ||isset($_POST['start_test2'])) {
 
    //allowed attempt
    $query100 = "SELECT `allowed_attempt` FROM `mcq_test` WHERE `id` = $test_id"; 
+  
     $runfetch100 = mysqli_query($con, $query100);
     $noofrow100 = mysqli_num_rows($runfetch100);
     $attempt_count = 0;
@@ -473,7 +474,6 @@ echo "Error: " . $query3 . "<br>" . $con->error;
                                              }else{
                                              
                                                 if($test_complete_no_data_found != 1){
-                                                   // echo "<div class='text-center'>No Data Found :(</div>";
                                                    
                                                 }
                                                 $test_complete_no_data_found = 1;
@@ -504,4 +504,8 @@ echo "Error: " . $query3 . "<br>" . $con->error;
          }
      
      </script>
-    
+     <script>
+         var get_test_timer = document.getElementById('score_id');
+          get_test_timer.innerHTML = "<?php echo $score."/".$test_total_marks."(".(($score/$test_total_marks)*100)."%)"; ?>";
+         
+      </script>

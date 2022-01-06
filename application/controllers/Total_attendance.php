@@ -24,20 +24,6 @@ class Total_attendance extends CI_Controller {
         $this->db->where('id',$user_id);
 		$data=$this->db->get('user2')->result();
         $student_id = $data[0]->student_id;
-        
-
-       
-        
-        
-
-
-
-
-
-
-
-
-        
         $this->db->where('student_id',$student_id);
         
 		$data['attendance']=$this->db->get('attendance')->result();
