@@ -8,7 +8,9 @@
 </script>
 <?php  require_once('dbcon.php');
 if (!isset($_SESSION['ftip69_uid'])) {
-  header('location:../auth/login.php');
+    ?><script>window.history.back()
+	  window.location = '<?php echo base_url()?>';
+	  </script><?php
 } 
 ?>
 <?php
@@ -105,6 +107,7 @@ $word = str_replace($numbers, '', $word);
 ?>
 <?php
 if (isset($_POST['start_test']) ||isset($_POST['start_test2'])) {
+   print_r("hi");
     unset($_SESSION['ftip69_test_id']);
 
    $test_id  = $_POST['test_id'];

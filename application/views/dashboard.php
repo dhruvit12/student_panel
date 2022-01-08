@@ -39,7 +39,7 @@
    ?>
    <script>
    window.history.back()
-   window.location = 'https://fingertips.co.in/en/auth/login.php';
+   window.location = '<?php echo base_url()?>';
   </script>
   <?php
    }  
@@ -1311,13 +1311,12 @@
          </style> -->
                     
           <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
-      <!-- Bootstrap js-->
       <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
       <!-- feather icon js-->
-      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
+      <!-- <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
-      <!-- Sidebar jquery-->
+    Sidebar jquery-->
       <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
@@ -1326,7 +1325,7 @@
       <script src="<?php echo base_url()?>assets/js/height-equal.js"></script>
       <script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
-      <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script> -->
       <!-- Plugins JS Ends-->
       <!-- Theme js-->
       <script src="<?php echo base_url()?>assets/js/script.js"></script>

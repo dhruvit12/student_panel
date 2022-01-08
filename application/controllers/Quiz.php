@@ -18,18 +18,33 @@ class Quiz extends CI_Controller {
 	}
 	public function mcq_test()
 	{
-		$this->load->view('one_sidebar');
-		$this->load->view('course_header');
+		// $this->load->view('elements/header');
+		// $this->load->view('elements/compact_sidebar_admin');
 		$data['id']=$this->uri->segment(2);
 	    $this->load->view('test/mcq-test-view',$data);
+		// $this->load->view('elements/footer');
 	 }
 	 public function mcq_test_result()
 	 {
-		$this->load->view('one_sidebar');
-		$this->load->view('course_header');
+	
 		$data['id']=$this->uri->segment(2);
 	    $this->load->view('test/mcq-test-result',$data);
 	 
 	 }
+	//  public function mcq_test_list()
+	//  {
+		 
+	// 	$this->load->view('one_sidebar');
+	// 	$this->load->view('course_header');
+	//     $this->load->view('test/mcq-test-list');
+	 
+	//  }
+	//  public function add_test()
+	//  {
+	// 	$this->load->view('one_sidebar');
+	// 	$this->load->view('course_header');
+	//     $this->load->view('test/add-test');
+	//  }
+	 
 }
 ?>

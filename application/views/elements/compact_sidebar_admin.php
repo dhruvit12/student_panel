@@ -1,5 +1,8 @@
 <?php
- require '../../dbcon.php';
+ $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
+ if (!$con) {
+   echo "Connection Failed!";
+ }
  $user_id = $_SESSION['ftip69_uid'];
  $query10 = "SELECT `user_img` FROM `user2` WHERE is_deleted = 0 AND id = $user_id;";
     $runfetch10 = mysqli_query($con, $query10);
@@ -17,7 +20,7 @@
     <div class="logo-wrapper text-center">
       <a href="" class="text-center" style="width:100%;"
         ><img
-          src="../../assets/images/logo/compact-logo-1.png"
+          src="<?php echo base_url()?>assets/images/logo/compact-logo-1.png"
           alt=""
           class="img-60 "
           
@@ -29,7 +32,7 @@
       <div>
         <img
           class="img-50 rounded-circle"
-          src="../uploads/user/user-img/<?php echo $user_img; ?>"
+          src="<?php echo base_url()?>uploads/user/user-img/<?php echo $user_img; ?>"
           alt="#"
         />
         <div class="profile-edit">

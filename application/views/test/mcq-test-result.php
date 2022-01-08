@@ -1,14 +1,27 @@
-<?php
+
+<script>
+   //menu
+ document.getElementById('menu_course').classList.add("menu-active");
+ //icon
+ document.getElementById('sidebar_icon_2').style.fill='#E46F0E';
+
+</script><?php
+// print_r($_SESSION);exit;
    if (!isset($_SESSION['ftip69_uid'])) {
-     header('location:login');
+      ?>
+      <script>
+         window.history.back()
+      window.location = '<?php echo base_url()?>';
+      </script>
+      <?php
    } 
    ?>
 
 <?php
-        $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
-        if (!$con) {
-          echo "Connection Failed!";
-        }
+         $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
+         if (!$con) {
+           echo "Connection Failed!";
+         }
          $user_id = $_SESSION['ftip69_uid'];
          $query = "SELECT * FROM `user2` WHERE `id` = $user_id;";
          $run = mysqli_query($con, $query);
@@ -28,7 +41,7 @@
    ?>
 <script>
    window.history.back()
-window.location = '<?php echo base_url()?>login';
+window.location = '<?php echo base_url()?>';
 </script>
 <?php
    }  
@@ -42,7 +55,7 @@ window.location = '<?php echo base_url()?>login';
       ?>
 <script>
    window.history.back()
-window.location = '<?php echo base_url()?>login';
+window.location = '<?php echo base_url()?>';
 </script>
 <?php
    }  
@@ -82,7 +95,81 @@ window.location = '<?php echo base_url()?>login';
    
    
    ?>
-
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+         name="description"
+         content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
+         />
+      <meta
+         name="keywords"
+         content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
+         />
+      <meta name="author" content="pixelstrap" />
+      <link
+         rel="icon"
+         href="<?php echo base_url()?>assets/images/favicon.png"
+         type="image/x-icon"
+         />
+      <link
+         rel="shortcut icon"
+         href="<?php echo base_url()?>assets/images/favicon.png"
+         type="image/x-icon"
+         />
+      <title>Test | Fingertip Portal</title>
+      <!-- Google font-->
+      <link
+         href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+         rel="stylesheet"
+         />
+      <!-- Font Awesome-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/fontawesome.css"
+         />
+      <!-- ico-font-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/icofont.css"
+         />
+      <!-- Themify icon-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/themify.css"
+         />
+      <!-- Flag icon-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/flag-icon.css"
+         />
+      <!-- Feather icon-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/feather-icon.css"
+         />
+      <!-- Plugins css start-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/datatables.css"
+         />
       <!-- Plugins css Ends-->
       <!-- Bootstrap css-->
       <link
@@ -117,21 +204,37 @@ window.location = '<?php echo base_url()?>login';
          />
    </head>
    <body>
-      <div class="compact-wrapper">
+      <!-- Loader starts-->
+      <!-- <div class="loader-wrapper">
+         <div class="loader bg-white">
+            <div class="whirly-loader"></div>
+         </div>
+      </div> -->
+      <div class="page-wrapper">
+         <div class="page-body-wrapper ">
+          <?php 
+       $this->load->view('elements/header.php'); 
+         ?>
          <div class="page-body-wrapper sidebar-icon">
-            <div class="page-body">
+            <!-- sidebar-icon -->
+            <!-- Page Sidebar Start-->
+            <?php 
+            // $this->load->view('elements/compact_sidebar_admin.php'); 
+            ?>
+            <div class="page-body" >
+              
                <div class="container-fluid">
                   <div class="page-header">
                      <div class="row">
                         <div class="col">
                            <div class="page-header-left">
-                              <h1>Result</h1>
-                              <!-- <ol class="breadcrumb">
+                              <h3>Test</h3>
+                              <ol class="breadcrumb">
                                  <li class="breadcrumb-item">
-                                    <a href="<?php echo base_url()?>login"><i data-feather="home"></i></a>
+                                    <a href="<?php echo base_url()?>"><i data-feather="home"></i></a>
                                  </li>
                                  <li class="breadcrumb-item active">Test</li>
-                              </ol> -->
+                              </ol>
                            </div>
                         </div>
                      </div>
@@ -162,7 +265,7 @@ window.location = '<?php echo base_url()?>login';
                                     }
                                     }
                                     ?>
-                                 <div class="card-header " style="background-color:#26266C;color:#ffffff;">
+                                 <div class="card-header bg-primary">
                                     <h4><?php echo $test_name; ?></h4>
                                     <p><strong>Topic: </strong><?php echo $topic_name; ?></p>
                                     <div class="pull-right">
@@ -362,14 +465,18 @@ window.location = '<?php echo base_url()?>login';
                                     $runfetch100 = mysqli_query($con, $query100);
                                     $noofrow100 = mysqli_num_rows($runfetch100);
                                     $test_total_marks = 0;
+                                    
                                      if ($noofrow100 >0 && $runfetch100 == TRUE) { 
-                                      while ($data100 = mysqli_fetch_assoc($runfetch100)) {
-                                        $test_total_marks += $data100['marks'];
+                                    while ($data100 = mysqli_fetch_assoc($runfetch100)) {
+                                      $test_total_marks += $data100['marks'];
                                       }
                                     }
+                                    
+                                    
+                                    
+                                    
                                     // derive data from mcq test question log table and counting total incomplete complete and in review question  
                                     $query100 = "SELECT * FROM `mcq_test_questions_log` WHERE `mcq_test_log_id` = $mcq_test_log_id"; 
-                                 
                                     $runfetch100 = mysqli_query($con, $query100);
                                     $noofrow100 = mysqli_num_rows($runfetch100);
                                     $completed_question = 0;
@@ -449,10 +556,10 @@ window.location = '<?php echo base_url()?>login';
                                        <div class="form-layout-footer mt-3">
                                           <a
                                           href="<?php echo base_url()?>dashboard"
-                                             class="btn waves-effect btn-block btn-lg"
+                                             class="btn btn-primary waves-effect btn-block btn-lg"
                                              type="submit"
                                              name="add_degree"
-                                             style="background-color:#26266C;color:#ffffff;">
+                                             >
                                              <!-- <i class="fas fa-plus-circle"></i> -->
                                              View Progress
                                           </a>

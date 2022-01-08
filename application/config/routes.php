@@ -32,6 +32,8 @@ $route['download_material']='Reading_material/download_material';
 $route['download-solution']='Reading_material/download_solution';
 $route['mcq-test/(:num)']='Quiz/mcq_test/$1';
 $route['mcq-test-result/(:num)']='Quiz/mcq_test_result/$1';
+// $route['mcq-test-list']='quiz/mcq_test_list';
+// $route['add-test']='quiz/add_test';
 
 //video play
 $route['video-play']='Video/play';

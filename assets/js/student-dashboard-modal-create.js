@@ -593,7 +593,6 @@ function prepareSessionResourceListModal(
   clearsessionResourceList();
    
   if (no1 != undefined) {
-    alert(topic1,no1);
     var form = document.createElement("form");
     form.setAttribute("action", "download_material");
     form.setAttribute("method", "post");

@@ -26,7 +26,9 @@
 	}
 </style>
 <?php  if (!isset($_SESSION['ftip69_uid'])) {
-     header('location:auth/login.php');
+      ?><script>window.history.back()
+	  window.location = '<?php echo base_url()?>';
+	  </script><?php
    } 
    $user_id=$_SESSION['ftip69_uid'];  
  

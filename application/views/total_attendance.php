@@ -1,3 +1,10 @@
+<script>
+   //menu
+ document.getElementById('menu_dashboard').classList.add("menu-active");
+ //icon
+ document.getElementById('sidebar_icon_1').style.fill='#E46F0E';
+
+</script>
 <style>
     body{font-family: 'Poppins', sans-serif;}
 </style>           

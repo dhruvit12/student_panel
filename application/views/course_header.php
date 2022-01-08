@@ -93,7 +93,7 @@
                       } ?>
                    </div>
                     <div class="col-lg-2" id="header-text">
-                     <a href="assignment" id="assignment">Assignment</a>
+                     <a href="<?php echo base_url()?>assignment" id="assignment">Assignment</a>
                       <?php if($this->uri->segment(1)=='assignment'){
                         ?>
                         <div id="line">

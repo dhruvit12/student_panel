@@ -1,12 +1,19 @@
 <?php
-   session_start();
    if (!isset($_SESSION['ftip69_uid'])) {
-     header('location:../auth/login.php');
+      ?>
+      <script>
+         window.history.back()
+      window.location = '<?php echo base_url()?>';
+      </script>
+      <?php
    } 
    ?>
 
 <?php
-         require_once '../../dbcon.php';
+        $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
+        if (!$con) {
+          echo "Connection Failed!";
+        }
          $user_id = $_SESSION['ftip69_uid'];
          $query = "SELECT * FROM `user2` WHERE `id` = $user_id;";
          $run = mysqli_query($con, $query);
@@ -25,7 +32,7 @@
    ?>
 <script>
    window.history.back()
-window.location = 'https://fingertips.co.in/en/auth/login.php';
+window.location = '<?php echo base_url()?>';
 </script>
 <?php
    }  
@@ -47,12 +54,12 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       <meta name="author" content="pixelstrap" />
       <link
          rel="icon"
-         href="../../assets/images/favicon.png"
+         href="<?php echo base_url()?>assets/images/favicon.png"
          type="image/x-icon"
          />
       <link
          rel="shortcut icon"
-         href="../../assets/images/favicon.png"
+         href="<?php echo base_url()?>assets/images/favicon.png"
          type="image/x-icon"
          />
       <title>Add Test | Fingertip</title>
@@ -73,31 +80,31 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/fontawesome.css"
+         href="<?php echo base_url()?>assets/css/fontawesome.css"
          />
       <!-- ico-font-->
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/icofont.css"
+         href="<?php echo base_url()?>assets/css/icofont.css"
          />
       <!-- Themify icon-->
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/themify.css"
+         href="<?php echo base_url()?>assets/css/themify.css"
          />
       <!-- Flag icon-->
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/flag-icon.css"
+         href="<?php echo base_url()?>assets/css/flag-icon.css"
          />
       <!-- Feather icon-->
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/feather-icon.css"
+         href="<?php echo base_url()?>assets/css/feather-icon.css"
          />
       <!-- Plugins css start-->
       <!-- Plugins css Ends-->
@@ -105,21 +112,21 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/bootstrap.css"
+         href="<?php echo base_url()?>assets/css/bootstrap.css"
          />
       <!-- App css-->
-      <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+      <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css" /> -->
       <link
          id="color"
          rel="stylesheet"
-         href="../../assets/css/light-1.css"
+         href="<?php echo base_url()?>assets/css/light-1.css"
          media="screen"
          />
       <!-- Responsive css-->
       <link
          rel="stylesheet"
          type="text/css"
-         href="../../assets/css/responsive.css"
+         href="<?php echo base_url()?>assets/css/responsive.css"
          />
       <link
          rel="stylesheet"
@@ -139,14 +146,12 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
       <!-- page-wrapper Start-->
       <div class="page-wrapper compact-wrapper">
          <!--change compact-wrapper-->
-         <?php require_once '../elements/header.php' ?>
          <!-- Page Body Start-->
          <div class="page-body-wrapper sidebar-icon">
             <!-- sidebar-icon -->
             <!-- Page Sidebar Start-->
-            <?php require_once '../elements/compact_sidebar_admin.php' ?>
             <!-- Page Sidebar Ends-->
-            <div class="page-body">
+            <div class="page-body" style="background-color:#ffffff !important;margin-top:-50px !important">
                <div class="container-fluid">
                   <div class="page-header">
                      <div class="row">
@@ -155,7 +160,7 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                               <h3>Add Test</h3>
                               <ol class="breadcrumb">
                                  <li class="breadcrumb-item">
-                                    <a href="../auth/login.php"><i data-feather="home"></i></a>
+                                    <a href="dashboard"><i data-feather="home"></i></a>
                                  </li>
                                  <li class="breadcrumb-item active">Test</li>
                               </ol>
@@ -423,31 +428,30 @@ window.location = 'https://fingertips.co.in/en/auth/login.php';
                <!-- Container-fluid Ends-->
             </div>
             <!-- footer start-->
-            <?php require_once '../elements/footer.php' ?>
          </div>
       </div>
       <!-- latest jquery-->
-      <script src="../../assets/js/jquery-3.2.1.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
       <!-- Bootstrap js-->
-      <script src="../../assets/js/bootstrap/popper.min.js"></script>
-      <script src="../../assets/js/bootstrap/bootstrap.js"></script>
+      <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
       <!-- feather icon js-->
-      <script src="../../assets/js/icons/feather-icon/feather.min.js"></script>
-      <script src="../../assets/js/icons/feather-icon/feather-icon.js"></script>
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
+      <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
       <!-- Sidebar jquery-->
-      <script src="../../assets/js/sidebar-menu.js"></script>
-      <script src="../../assets/js/config.js"></script>
+      <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/config.js"></script>
       <!-- Plugins JS start-->
-      <script src="../../assets/js/typeahead/handlebars.js"></script>
-      <script src="../../assets/js/typeahead/typeahead.bundle.js"></script>
-      <script src="../../assets/js/typeahead/typeahead.custom.js"></script>
-      <script src="../../assets/js/chat-menu.js"></script>
-      <script src="../../assets/js/tooltip-init.js"></script>
-      <script src="../../assets/js/typeahead-search/handlebars.js"></script>
-      <script src="../../assets/js/typeahead-search/typeahead-custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead/typeahead.custom.js"></script>
+      <script src="<?php echo base_url()?>assets/js/chat-menu.js"></script>
+      <script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
+      <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
       <!-- Plugins JS Ends-->
       <!-- Theme js-->
-      <script src="../../assets/js/script.js"></script>
+      <script src="<?php echo base_url()?>assets/js/script.js"></script>
       <!-- Plugin used-->
    </body>
 </html>

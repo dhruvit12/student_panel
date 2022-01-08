@@ -1,14 +1,24 @@
+<script>
+ document.getElementById('menu_course').classList.add("menu-active");
+ document.getElementById('sidebar_icon_2').style.fill='#E46F0E';
+
+</script>
 <?php
    if (!isset($_SESSION['ftip69_uid'])) {
-     header('location:login');
+      ?>
+      <script>
+         window.history.back()
+      window.location = '<?php echo base_url()?>';
+      </script>
+      <?php
    } 
    ?>
 
 <?php
-        $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
-        if (!$con) {
-          echo "Connection Failed!";
-        }
+          $con = mysqli_connect('localhost', 'root', '', 'jvfdbhhs_fingertips_portal');
+          if (!$con) {
+            echo "Connection Failed!";
+          }
          $user_id = $_SESSION['ftip69_uid'];
          $query = "SELECT * FROM `user2` WHERE `id` = $user_id;";
          $run = mysqli_query($con, $query);
@@ -32,7 +42,7 @@ window.location = '<?php echo base_url()?>';
    ?>
 <?php
    // to check if parameters are provided
-   if (isset($id)) {
+    if (isset($id)) {
     $question_number = $id;
    
     if($question_number <= 0){
@@ -51,7 +61,7 @@ window.location = '<?php echo base_url()?>';
    if(!isset($_SESSION['ftip69_test_id'])){
      ?>
       <script>
-        window.location = "http://fingertips.co.in/cloud/"
+        window.location = "<?php echo base_url()?>"
       </script>
      <?php
    }else{
@@ -61,7 +71,7 @@ window.location = '<?php echo base_url()?>';
       // echo 'test_id'.$test_id;
        ?>
 <script>
-window.location = "http://fingertips.co.in/cloud/"
+window.location = "<?php echo base_url()?>"
 </script>
        <?php
     }else{
@@ -108,7 +118,7 @@ window.location = "http://fingertips.co.in/cloud/"
        ?>
 <script>
    window.history.back()
-window.location = 'https://fingertips.co.in/en/auth/login.php';
+window.location = '<?php echo base_url()?>';
 </script>
 <?php
    }
@@ -134,7 +144,7 @@ if (isset($_POST['cancel_test'])) {
    unset($_SESSION['ftip69_test_start_time']);
     ?>
 <script>
-window.location = "../test/mcq-test-list.php" ;
+window.location = "<?php echo base_url()?>quiz" ;
 </script>
 <?php
     
@@ -145,13 +155,99 @@ window.location = "../test/mcq-test-list.php" ;
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+         name="description"
+         content="endless admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities."
+         />
+      <meta
+         name="keywords"
+         content="admin template, endless admin template, dashboard template, flat admin template, responsive admin template, web app"
+         />
+      <meta name="author" content="pixelstrap" />
+      <link
+         rel="icon"
+         href="<?php echo base_url()?>assets/images/favicon.png"
+         type="image/x-icon"
+         />
+      <link
+         rel="shortcut icon"
+         href="<?php echo base_url()?>assets/images/favicon.png"
+         type="image/x-icon"
+         />
+      <title>Test | Fingertip Portal</title>
+      <!-- Google font-->
+      <link
+         href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+         rel="stylesheet"
+         />
+      <!-- Font Awesome-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/fontawesome.css"
+         />
+      <!-- ico-font-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/icofont.css"
+         />
+      <!-- Themify icon-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/themify.css"
+         />
+      <!-- Flag icon-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/flag-icon.css"
+         />
+      <!-- Feather icon-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/feather-icon.css"
+         />
+      <!-- Plugins css start-->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="<?php echo base_url()?>assets/css/datatables.css"
+         />
+      <!-- Plugins css Ends-->
+      <!-- Bootstrap css-->
       <link
          rel="stylesheet"
          type="text/css"
          href="<?php echo base_url()?>assets/css/bootstrap.css"
          />
+
       <!-- App css-->
       <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css" />
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/card/2.5.4/card.css"> -->
+      <link
+         id="color"
+         rel="stylesheet"
+         href="<?php echo base_url()?>assets/css/light-1.css"
+         media="screen"
+         />
       <!-- Responsive css-->
       <link
          rel="stylesheet"
@@ -160,32 +256,57 @@ window.location = "../test/mcq-test-list.php" ;
          />
       <link
          rel="stylesheet"
+         href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+         crossorigin="anonymous"
+         />
+      <link
+         rel="stylesheet"
          type="text/css"
          href="<?php echo base_url()?>assets/css/rounded-circle.css"
          />
    </head>
    <body>
-    
+      
+   <div class="loader-wrapper">
+         <div class="loader bg-white">
+            <div class="whirly-loader"></div>
+         </div>
+      </div>
+      <!-- Loader ends-->
+      <div class="page-wrapper compact-wrapper">
+         <!--change compact-wrapper-->
+         <?php 
+         $this->load->view('elements/header'); 
+         ?>
+         <!-- Page Body Start-->
+         <div class="page-body-wrapper ">
+            <!-- sidebar-icon -->
+            <!-- Page Sidebar Start-->
+            <?php 
+            // require_once '../elements/compact_sidebar_admin.php' 
+            ?>
+            <!-- Page Sidebar Ends-->
             <div class="page-body">
                <div class="container-fluid">
                   <div class="page-header">
                      <div class="row">
                         <div class="col">
-                           <!-- <div class="page-header-left">
+                           <div class="page-header-left">
                               <h3>Test</h3>
                               <ol class="breadcrumb">
                                  <li class="breadcrumb-item">
-                                    <a href="login"><i data-feather="home"></i></a>
+                                    <a href="<?php echo base_url()?>dashboard"><i data-feather="home"></i></a>
                                  </li>
                                  <li class="breadcrumb-item active">Test</li>
                               </ol>
-                           </div> -->
+                           </div>
                         </div>
                         <div class="col">
                            <div class="pull-right">
                            
-                              <form action="login" method="post">
-                              <input type="submit" name="cancel_test" value="Cancel Test" class="btn  btn-sm waves-effect" style="padding: 5px 10px;background-color:#26266C;color:#ffffff;">
+                              <form action="" method="post">
+                              <input type="submit" name="cancel_test" value="Cancel Test" class="btn btn-primary btn-sm waves-effect" style="padding: 5px 10px;">
                               
                               
                               </form>
@@ -194,6 +315,7 @@ window.location = "../test/mcq-test-list.php" ;
                      </div>
                   </div>
                </div>
+               <!-- Container-fluid starts-->
                <div class="container-fluid">
                   <div class="row">
                      <div class="col-md-7">
@@ -218,7 +340,7 @@ window.location = "../test/mcq-test-list.php" ;
                                     }
                                     }
                                     ?>
-                                 <div class="card-header" style="background-color:#26266C;color:#ffffff;">
+                                 <div class="card-header bg-primary">
                                     <h4><?php echo $test_name; ?></h4>
                                     <p><strong>Topic: </strong><?php echo $topic_name; ?></p>
                                     <div class="pull-right">
@@ -233,7 +355,7 @@ window.location = "../test/mcq-test-list.php" ;
                                           // derive data from mcq test question table and counting total marks 
                                           $offset = $question_number-1;
                                           $query100 = "SELECT * FROM `mcq_test_questions` WHERE `test_id` = $test_id ORDER BY `id` DESC LIMIT 1 OFFSET $offset"; 
-                                         $runfetch100 = mysqli_query($con, $query100);
+                                          $runfetch100 = mysqli_query($con, $query100);
                                           $noofrow100 = mysqli_num_rows($runfetch100);
                                           
                                           
@@ -417,7 +539,7 @@ window.location = "../test/mcq-test-list.php" ;
                                    <a href="<?php echo base_url()?>mcq-test/<?php echo $question_number+1; ?>"><div class="btn btn-light">Skip </div></a>
 
                                    
-                                   <input type="submit" class="btn " name="mark_for_review" value="Mark For Review" style="background-color:#26266C;color:#ffffff;">
+                                   <input type="submit" class="btn btn-primary" name="mark_for_review" value="Mark For Review">
                                    <input type="submit" class="btn btn-success float-right" name="mark_completed" value="Save & Next">
                                    
                 
@@ -593,11 +715,10 @@ window.location = "../test/mcq-test-list.php" ;
                                           <div class="form-layout-footer mt-3">
                                              <a
                                                 href = "<?php echo base_url()?>mcq-test-result/<?php echo $test_id ?>"
-                                                class="btn  waves-effect btn-block btn-lg"
+                                                class="btn btn-primary waves-effect btn-block btn-lg"
                                                 type="submit"
                                                 name="complete_test"
-                                                onclick="Hello(); "
-                                                style="background-color:#26266C;color:#ffffff;">
+                                                >
                                                 <!-- <i class="fas fa-plus-circle"></i> -->
                                                 Complete Test
                                              </a>
@@ -623,24 +744,24 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
                   <br>
                   <br>
                </div>
+               <!-- Container-fluid Ends-->
             </div>
+         
          </div>
       </div>
-      <!-- <script>
-		function Hello(){
-         if ($('input:checkbox').filter(':checked').length < 1){
-                  alert("Please Complete test!");
-            return false;
-            }
-		}
-   </script> -->
+      <!-- latest jquery-->
       <script src="<?php echo base_url()?>assets/js/jquery-3.2.1.min.js"></script>
+      <!-- Bootstrap js-->
       <script src="<?php echo base_url()?>assets/js/bootstrap/popper.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/bootstrap/bootstrap.js"></script>
+      <!-- feather icon js-->
       <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/icons/feather-icon/feather-icon.js"></script>
+      <!-- Sidebar jquery-->
       <script src="<?php echo base_url()?>assets/js/sidebar-menu.js"></script>
       <script src="<?php echo base_url()?>assets/js/config.js"></script>
+      <!-- Plugins JS start-->
+      <!-- Plugins JS start-->
       <script src="<?php echo base_url()?>assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
       <script src="<?php echo base_url()?>assets/js/datatable/datatables/datatable.custom.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead/handlebars.js"></script>
@@ -650,7 +771,10 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
       <script src="<?php echo base_url()?>assets/js/tooltip-init.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead-search/handlebars.js"></script>
       <script src="<?php echo base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
+      <!-- Plugins JS Ends-->
+      <!-- Theme js-->
       <script src="<?php echo base_url()?>assets/js/script.js"></script>
+      <!-- Plugin used-->
       <script>
          if (su == 1) {
            var element = document.getElementById("success");
@@ -674,7 +798,7 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
            );
            if (hintDisplayCount % 2 != 0) {
              // show
-            get_hint_btn.innerHTML = "Hide Hint";
+             get_hint_btn.innerHTML = "Hide Hint";
              get_hint_col.style.display = "block";
            } else {
              // hide
@@ -707,7 +831,7 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
          
          if (time_left < 0){
            console.log('exam timeout');
-           window.location = "<?php echo $test_id ?>"
+           window.location = "<?php echo base_url()?>mcq-test-result/<?php echo $test_id ?>"
          }
          get_test_timer.innerHTML = timer_minutes +':'+timer_seconds;
          getTimerUpdatePair();
@@ -731,7 +855,7 @@ if (isset($_POST['mark_completed'])) {
    if ($con->query($query3)){
      ?>
  <script>
- window.location = "<?php echo $question_number+1;?>";
+ window.location = "<?php echo base_url()?>mcq-test/<?php echo $question_number+1;  ?>";
  </script>
      <?php
      
@@ -739,7 +863,7 @@ if (isset($_POST['mark_completed'])) {
       ?>
       <script>
       window.history.back()
-window.location = 'login';
+window.location = '<?php echo base_url()?>';
       </script>
           <?php
       
@@ -754,7 +878,7 @@ window.location = 'login';
    if ($con->query($query3)){
      ?>
  <script>
- window.location = "<?php echo $question_number+1;  ?>";
+ window.location = "<?php echo base_url()?>mcq-test/<?php echo $question_number+1;  ?>";
  </script>
      <?php
      

@@ -1,4 +1,4 @@
-body {
+  body {
 	background-color:#ffffff;
 	font-size: 14px;
 	overflow-x: hidden;
@@ -21,12 +21,12 @@ ul {
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important
 }
-
 p {
 	font-size: 13px;
 	line-height: 1.7;
 	letter-spacing: .7px
 }
+
 
 code {
 	color: #4466f2 !important;
@@ -61,10 +61,11 @@ blockquote.text-right {
 	opacity: 0.5
 }
 
+/* 
 svg {
 	vertical-align: baseline
 }
-
+*/
 input:focus {
 	outline-color: rgba(0, 0, 0, 0)
 }
@@ -190,7 +191,7 @@ a:hover {
 	box-shadow: none;
 	color: #fff;
 	line-height: 1.4;
-	font-weight: 100
+	font-weight: 100 
 }
 
 @-webkit-keyframes whirly-loader {
