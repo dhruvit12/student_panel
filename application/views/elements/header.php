@@ -14,12 +14,12 @@ $user_img = $data10['user_img']; } } ?>
 <!-- Page Header Start-->
 <div class="page-main-header" id="header_row">
   <div class="main-header-right row">
-    <div class="main-header-left d-lg-none">
+    <div class="main-header-right d-lg-none">
       <div class="logo-wrapper"></div>
     </div>
     <!-- how can create div -->
    <div class="nav-right col p-0">
-      <ul class="nav-menus" >
+      <ul class="nav-menus">
         <li class="onhover-dropdown">
           
         </li>

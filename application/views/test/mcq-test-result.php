@@ -231,7 +231,7 @@ window.location = '<?php echo base_url()?>';
                               <h3>Test</h3>
                               <ol class="breadcrumb">
                                  <li class="breadcrumb-item">
-                                    <a href="<?php echo base_url()?>"><i data-feather="home"></i></a>
+                                    <a href="<?php echo base_url()?>dashboard"><i data-feather="home"></i></a>
                                  </li>
                                  <li class="breadcrumb-item active">Test</li>
                               </ol>
@@ -631,8 +631,10 @@ window.location = 'https://fingertips.co.in/cloud/en/auth/login.php';"
      
       <script>
          var get_test_timer = document.getElementById('score_id');
+       
         get_test_timer.innerHTML = "<?php echo $score."/".$test_total_marks."(".(($score/$test_total_marks)*100)."%)"; ?>";
-         
+        <?php $this->session->set_userdata('data',$score);
+              echo $this->session->userdata('data');?>
       </script>
    </body>
 </html>

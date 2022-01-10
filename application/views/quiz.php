@@ -463,7 +463,7 @@ echo "Error: " . $query3 . "<br>" . $con->error;
                                      </div></div>
                                      <div onclick="myFunction2(<?php echo $datano;?>)"><div  id="close<?php echo $datano;?>" style="margin-left:-55px;border-radius:20px;background:red;height:170px;width:200px;display:none"   >
                                             <i class="fa fa-arrow-left text-red m-5" aria-hidden="true" style="font-size: 3em;margin-top:65px !important;margin-left:165px !important;color:#000"></i>
-                                             <span id="score_id" style="color:#fff"></span>
+                                            <p><?php echo $this->session->userdata('data');?></p>
                                           </div></div>
                                      <?php $datano++?>
                                   
@@ -507,8 +507,9 @@ echo "Error: " . $query3 . "<br>" . $con->error;
          }
      
      </script>
-     <script>
+     <!-- <script>
          var get_test_timer = document.getElementById('score_id');
           get_test_timer.innerHTML = "<?php echo $score."/".$test_total_marks."(".(($score/$test_total_marks)*100)."%)"; ?>";
          
       </script>
+       -->

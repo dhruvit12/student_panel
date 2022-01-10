@@ -577,31 +577,13 @@
 
                                                 for($i= 0; $i < $no_of_test-1; $i++){
 
-                                                   
-
-                                             
-
                                                    $query10 = "SELECT * FROM `mcq_test_log` WHERE `given_by` = $user_id  AND `test_id` = $test_array[$i];";
 
                                                    $runfetch10 = mysqli_query($con, $query10);
 
                                                    $noofrow10 = mysqli_num_rows($runfetch10);
 
-                                                   
-
-                                             
-
                                                    if ($noofrow10 == 0){
-
-                                                      // echo $assignment_array[$i].'<br>';  
-
-                                             
-
-                                             
-
-                                                      // deriving submission date
-
-                                             
 
                                                 $query1000 = "SELECT * FROM `offline_session_log` WHERE `session_id` = $session_id_test;";
 
@@ -610,8 +592,6 @@
                                                 $noofrow1000 = mysqli_num_rows($runfetch1000);
 
                                                 $indexnumber1000 = 1;
-
-                                                
 
                                                 if ($noofrow1000 > 0 && $runfetch1000 == TRUE) { 
 
@@ -635,18 +615,9 @@
 
                                                 }else{
 
-                                                   // echo "Error: " . $query1000 . "<br>" . $con->error;
-
                                                    continue;
 
                                                 }
-
-                                             
-
-                                             
-
-                                             
-
                                                    $query100 = "SELECT * FROM `mcq_test` WHERE `id` = $test_array[$i];";
 
                                                    $runfetch100 = mysqli_query($con, $query100);
@@ -654,17 +625,9 @@
                                                    $noofrow100 = mysqli_num_rows($runfetch100);
 
                                                    $indexnumber = 1;
-
-                                                   
-
                                                    if ($noofrow100 >0 && $runfetch100 == TRUE) { 
 
                                                       while ($data100 = mysqli_fetch_assoc($runfetch100)) { 
-
-                                             
-
-                                             
-
                                                       ?>
                                              <!--  <div class="upcoming-innner media"  style="width:100%;margin-left:-45px;padding-top:0px;">
                                                                <img src="<?php echo base_url()?>assets/images/student_portal_icon/Group 59.png" >

@@ -3316,14 +3316,14 @@ body.dark-sidebar-body-mix .page-wrapper .page-body-wrapper .page-sidebar .sideb
 	z-index: 15;
 	-webkit-box-shadow: 0 0 10px 1px rgba(68, 102, 242, 0.05);
 	box-shadow: 0 0 10px 1px rgba(68, 102, 242, 0.05);
-	width: calc(100% - 255px);
+	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-left: 255px;
+	margin-left: 0px;
 	-webkit-transition: .3s;
 	transition: .3s
 }
@@ -4135,8 +4135,8 @@ ul .submenu input {
 }
 
 .page-wrapper.compact-wrapper .page-main-header {
-	margin-left: 145px;
-	width: calc(100% - 145px);
+	margin-left: 0px;
+	width:100%; 
 	-webkit-box-shadow: 2px 0 3px 1px rgba(68, 102, 242, 0.1);
 	box-shadow: 2px 0 3px 1px rgba(68, 102, 242, 0.1);
 	-webkit-transition: .3s;
@@ -39892,7 +39892,8 @@ footer.blockquote-footer {
 }
 
 [main-theme-layout="rtl"] ul.nav-menus {
-	border-bottom: none
+	border-bottom: none;
+	
 }
 
 [main-theme-layout="rtl"] ul.notification-dropdown.onhover-show-div li {
